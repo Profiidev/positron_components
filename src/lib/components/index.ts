@@ -1,7 +1,5 @@
-import * as form from './form/index.js';
-import * as nav from './nav/index.js';
-import * as table from './table/index.js';
-import * as ui from './ui/index.js';
-import * as util from './util/index.js';
-
-export { form, nav, table, ui, util };
+export * from './form/index.js';
+export * from './nav/index.js';
+export * from './table/index.js';
+export * from './ui/index.js';
+export * from './util/index.js';

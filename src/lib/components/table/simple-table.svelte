@@ -1,9 +1,7 @@
 <script lang="ts" generics="C extends ZodRawShape, E extends ZodRawShape, D extends ZodRawShape, T">
-	import { userData } from '$lib/backend/account/info.svelte';
-	import { Permission } from '$lib/backend/management/types.svelte';
-	import type { Error, FormSchema } from '$lib/components/form/form.svelte';
+	import type { Error, FormSchema } from '$lib/components/form/super-form.svelte';
 	import { createTable } from '$lib/components/table/helpers.svelte';
-	import Table from '$lib/components/table/table.svelte';
+	import Table from '$lib/components/table/base-table.svelte';
 	import { toast } from 'svelte-sonner';
 	import type { ColumnDef, Row } from '@tanstack/table-core';
 	import { RequestError } from '$lib/backend/types.svelte';
@@ -15,12 +13,7 @@
 	interface Props {
 		data: T[] | undefined;
 		filter_keys: string[];
-		columns: (
-			permissions: Permission[],
-			access_level: number,
-			editFn: (id: string) => void,
-			deleteFn: (id: string) => void
-		) => ColumnDef<T>[];
+		columns: (editFn: (id: string) => void, deleteFn: (id: string) => void) => ColumnDef<T>[];
 		label: string;
 		createItemFn: (form: SuperValidated<C>) => Promise<RequestError | undefined>;
 		editItemFn: (item: T) => Promise<RequestError | undefined>;
@@ -50,7 +43,6 @@
 				}
 			]
 		>;
-		createPermission: Permission;
 		createForm: FormSchema<C>;
 		editForm: FormSchema<any>;
 		deleteForm: FormSchema<D>;
@@ -77,7 +69,6 @@
 		description,
 		editDialog,
 		createDialog,
-		createPermission,
 		createForm,
 		editForm,
 		deleteForm,
@@ -89,7 +80,6 @@
 	}: Props = $props();
 
 	let isLoading = $state(false);
-	let userInfo = $derived(userData.value?.[0]);
 	let labelLower = $derived(label.toLocaleLowerCase());
 	let fieldProps = $derived({ disabled: isLoading });
 
@@ -117,8 +107,6 @@
 		createTable(
 			[],
 			columns(
-				[],
-				0,
 				() => {},
 				() => {}
 			),
@@ -127,11 +115,7 @@
 	);
 
 	$effect(() => {
-		table = createTable(
-			data || [],
-			columns(userInfo?.permissions || [], userInfo?.access_level ?? 0, editItem, deleteItem),
-			filterFn
-		);
+		table = createTable(data || [], columns(editItem, deleteItem), filterFn);
 	});
 
 	const createItem = async (form: SuperValidated<C>) => {
@@ -222,7 +206,7 @@
 	class={editClass}
 >
 	{#snippet children({ props })}
-		{#if selected && userInfo}
+		{#if selected}
 			{@render editDialog?.({
 				props: { ...props, ...fieldProps },
 				item: selected
@@ -245,8 +229,7 @@
 			trigger={{
 				text: `Create ${label}`,
 				variant: 'secondary',
-				class: 'ml-2',
-				disabled: !userInfo?.permissions.includes(createPermission)
+				class: 'ml-2'
 			}}
 			onsubmit={createItem}
 			onopen={startCreate}

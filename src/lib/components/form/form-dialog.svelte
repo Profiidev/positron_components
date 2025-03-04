@@ -5,8 +5,8 @@
 	import { LoaderCircle } from 'lucide-svelte';
 	import { type SuperForm, type SuperValidated } from 'sveltekit-superforms';
 	import type { ZodRawShape } from 'zod';
-	import type { Error, FormSchema } from './form.svelte';
-	import Form from './form.svelte';
+	import type { Error, FormSchema } from './super-form.svelte';
+	import Form from './super-form.svelte';
 	import { wait_for } from '$lib/util/interval.svelte';
 
 	interface Props {
