@@ -9,7 +9,7 @@ import {
 	type Table,
 	type VisibilityState
 } from '@tanstack/table-core';
-import { createSvelteTable, renderComponent, renderSnippet } from '$lib/components/ui/data-table';
+import { createSvelteTable, renderComponent, renderSnippet } from '../ui/data-table/index.js';
 import { createRawSnippet } from 'svelte';
 import TableHead from './table-head.svelte';
 

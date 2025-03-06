@@ -1,10 +1,10 @@
 <script lang="ts">
-	import * as Popover from '$lib/components/ui/popover';
-	import * as Command from '$lib/components/ui/command';
-	import { Button } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
-	import { Check } from 'lucide-svelte';
-	import { ScrollArea } from '$lib/components/ui/scroll-area';
+	import * as Popover from '../ui/popover/index.js';
+	import * as Command from '../ui/command/index.js';
+	import { Button } from '../ui/button/index.js';
+	import { cn } from '../../utils.js';
+	import Check from 'lucide-svelte/icons/check';
+	import { ScrollArea } from '../ui/scroll-area/index.js';
 
 	type T = $$Generic;
 

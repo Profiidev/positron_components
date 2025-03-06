@@ -1,6 +1,6 @@
 <script lang="ts">
-	import * as InputOtp from '$lib/components/ui/input-otp';
-	import * as Form from '$lib/components/ui/form';
+	import * as InputOtp from '../ui/input-otp/index.js';
+	import * as Form from '../ui/form/index.js';
 	import type { SuperForm } from 'sveltekit-superforms';
 
 	interface Props {

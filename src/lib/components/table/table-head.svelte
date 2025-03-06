@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { ArrowUpDown } from 'lucide-svelte';
-	import { Button } from '$lib/components/ui/button';
+	import ArrowUpDown from 'lucide-svelte/icons/arrow-up-down';
+	import { Button } from '../ui/button/index.js';
 	import type { ComponentProps } from 'svelte';
 
 	let { variant = 'ghost', title, ...restProps }: ComponentProps<typeof Button> = $props();

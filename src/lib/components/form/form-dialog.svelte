@@ -1,12 +1,12 @@
 <script lang="ts" generics="T extends ZodRawShape">
-	import * as Dialog from '$lib/components/ui/dialog';
+	import * as Dialog from '../ui/dialog/index.js';
 	import type { Snippet, SvelteComponent } from 'svelte';
-	import { Button, type ButtonSize, type ButtonVariant } from '$lib/components/ui/button';
-	import { LoaderCircle } from 'lucide-svelte';
+	import { Button, type ButtonSize, type ButtonVariant } from '../ui/button/index.js';
+	import LoaderCircle from 'lucide-svelte/icons/loader-circle';
 	import { type SuperForm, type SuperValidated } from 'sveltekit-superforms';
 	import type { ZodRawShape } from 'zod';
-	import type { Error, FormSchema } from './super-form.svelte';
-	import Form from './super-form.svelte';
+	import type { Error, FormSchema } from './types.js';
+	import Form from './base-form.svelte';
 	import { wait_for } from '$lib/util/interval.svelte';
 
 	interface Props {

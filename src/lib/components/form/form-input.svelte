@@ -1,7 +1,7 @@
 <script lang="ts">
-	import * as Form from '$lib/components/ui/form';
+	import * as Form from '../ui/form/index.js';
 	import { type SuperForm } from 'sveltekit-superforms';
-	import { Input } from '$lib/components/ui/input';
+	import { Input } from '../ui/input/index.js';
 	import type { HTMLInputAttributes } from 'svelte/elements';
 
 	interface Props {
