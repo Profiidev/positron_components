@@ -1,26 +1,15 @@
-<script lang="ts" module>
+<script lang="ts" generics="T extends ZodRawShape">
 	import type { Snippet } from 'svelte';
 	import { get } from 'svelte/store';
 	import { setError, superForm, type SuperForm, type SuperValidated } from 'sveltekit-superforms';
 	import { zodClient } from 'sveltekit-superforms/adapters';
-	import type { ZodEffects, ZodObject, ZodRawShape } from 'zod';
-	import { FormButton } from '$lib/components/ui/form';
-	import { LoaderCircle } from 'lucide-svelte';
-	import type { ButtonVariant } from '$lib/components/ui/button';
-	import { cn } from '$lib/utils';
+	import type { ZodRawShape } from 'zod';
+	import { FormButton } from '../ui/form/index.js';
+	import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+	import type { ButtonVariant } from '../ui/button/index.js';
+	import { cn } from '../../utils.js';
+	import type { Error, FormSchema } from './types.js';
 
-	export interface FormSchema<T extends ZodRawShape> {
-		schema: ZodObject<T> | ZodEffects<ZodObject<T>>;
-		form: SuperValidated<T, any, T>;
-	}
-
-	export interface Error {
-		field?: string;
-		error: string;
-	}
-</script>
-
-<script lang="ts" generics="T extends ZodRawShape">
 	interface Props {
 		form: FormSchema<T>;
 		onsubmit: (form: SuperValidated<T>) => Error | undefined | Promise<Error | undefined>;

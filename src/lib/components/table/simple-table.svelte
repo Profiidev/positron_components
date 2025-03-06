@@ -1,19 +1,26 @@
-<script lang="ts" generics="C extends ZodRawShape, E extends ZodRawShape, D extends ZodRawShape, T">
-	import type { Error, FormSchema } from '$lib/components/form/super-form.svelte';
-	import { createTable } from '$lib/components/table/helpers.svelte';
-	import Table from '$lib/components/table/base-table.svelte';
+<script
+	lang="ts"
+	generics="C extends ZodRawShape, E extends ZodRawShape, D extends ZodRawShape, T, CD"
+>
+	import type { Error, FormSchema } from '../form/types.js';
+	import { createTable } from '../table/helpers.svelte';
+	import Table from '../table/base-table.svelte';
 	import { toast } from 'svelte-sonner';
 	import type { ColumnDef, Row } from '@tanstack/table-core';
 	import { RequestError } from '$lib/backend/types.svelte';
 	import type { Snippet, SvelteComponent } from 'svelte';
 	import type { SuperForm, SuperValidated } from 'sveltekit-superforms';
 	import type { ZodRawShape } from 'zod';
-	import FormDialog from '$lib/components/form/form-dialog.svelte';
+	import FormDialog from '../form/form-dialog.svelte';
 
 	interface Props {
 		data: T[] | undefined;
 		filter_keys: string[];
-		columns: (editFn: (id: string) => void, deleteFn: (id: string) => void) => ColumnDef<T>[];
+		columns: (
+			editFn: (id: string) => void,
+			deleteFn: (id: string) => void,
+			data: CD
+		) => ColumnDef<T>[];
 		label: string;
 		createItemFn: (form: SuperValidated<C>) => Promise<RequestError | undefined>;
 		editItemFn: (item: T) => Promise<RequestError | undefined>;
@@ -43,6 +50,7 @@
 				}
 			]
 		>;
+		createButtonDisabled: boolean;
 		createForm: FormSchema<C>;
 		editForm: FormSchema<any>;
 		deleteForm: FormSchema<D>;
@@ -53,6 +61,7 @@
 		errorMappings?: {
 			[key in RequestError]?: Error;
 		};
+		columnData: CD;
 	}
 
 	let {
@@ -69,6 +78,7 @@
 		description,
 		editDialog,
 		createDialog,
+		createButtonDisabled,
 		createForm,
 		editForm,
 		deleteForm,
@@ -76,7 +86,8 @@
 		startEdit,
 		createClass,
 		editClass,
-		errorMappings
+		errorMappings,
+		columnData
 	}: Props = $props();
 
 	let isLoading = $state(false);
@@ -108,14 +119,15 @@
 			[],
 			columns(
 				() => {},
-				() => {}
+				() => {},
+				columnData
 			),
 			filterFn
 		)
 	);
 
 	$effect(() => {
-		table = createTable(data || [], columns(editItem, deleteItem), filterFn);
+		table = createTable(data || [], columns(editItem, deleteItem, columnData), filterFn);
 	});
 
 	const createItem = async (form: SuperValidated<C>) => {
@@ -229,7 +241,8 @@
 			trigger={{
 				text: `Create ${label}`,
 				variant: 'secondary',
-				class: 'ml-2'
+				class: 'ml-2',
+				disabled: createButtonDisabled
 			}}
 			onsubmit={createItem}
 			onopen={startCreate}

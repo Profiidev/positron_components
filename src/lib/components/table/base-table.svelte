@@ -1,14 +1,14 @@
 <script lang="ts">
-	import * as Table from '$lib/components/ui/table';
-	import * as Dropdown from '$lib/components/ui/dropdown-menu';
-	import { FlexRender } from '$lib/components/ui/data-table';
-	import { Input } from '$lib/components/ui/input';
-	import { ScrollArea } from '$lib/components/ui/scroll-area';
+	import * as Table from '../ui/table/index.js';
+	import * as Dropdown from '../ui/dropdown-menu/index.js';
+	import { FlexRender } from '../ui/data-table/index.js';
+	import { Input } from '../ui/input/index.js';
+	import { ScrollArea } from '../ui/scroll-area/index.js';
 	import type { Table as TableType } from '@tanstack/table-core';
-	import { Button } from '$lib/components/ui/button';
-	import { ChevronDown } from 'lucide-svelte';
+	import { Button } from '../ui/button/index.js';
+	import ChevronDown from 'lucide-svelte/icons/chevron-down';
 	import type { Snippet } from 'svelte';
-	import { cn } from '$lib/utils';
+	import { cn } from '../../utils.js';
 
 	type T = $$Generic;
 
@@ -44,8 +44,7 @@
 				{#each table.getAllColumns().filter((col) => col.getCanHide()) as column}
 					<Dropdown.CheckboxItem
 						class="capitalize"
-						controlledChecked
-						checked={column.getIsVisible()}
+						bind:checked={() => column.getIsVisible(), () => {}}
 						onCheckedChange={(value) => column.toggleVisibility(!!value)}
 					>
 						{column.id}

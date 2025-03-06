@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { Pencil, Trash } from 'lucide-svelte';
-	import { Button } from '$lib/components/ui/button';
+	import Trash from 'lucide-svelte/icons/trash';
+	import Pencil from 'lucide-svelte/icons/pencil';
+	import { Button } from '../ui/button/index.js';
 
 	interface Props {
 		edit_disabled: boolean;

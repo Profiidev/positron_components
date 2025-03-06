@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { KeyRound, LoaderCircle } from 'lucide-svelte';
-	import { Button } from '$lib/components/ui/button';
+	import KeyRound from 'lucide-svelte/icons/key-round';
+	import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+	import { Button } from '../ui/button/index.js';
 
 	interface Props {
 		isLoading: boolean;
