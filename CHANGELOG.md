@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.0.0...positron-components-v1.0.1) (2025-03-06)
+
+
+### Bug Fixes
+
+* remaining errors ([b2639e0](https://github.com/Profiidev/positron_components/commit/b2639e066139bda0158393ef31b4ccefed589a29))
+* remaining errors ([419e9fc](https://github.com/Profiidev/positron_components/commit/419e9fcff6ee30860f00701e352ff3e7c1a795df))
+
 ## 1.0.0 (2025-03-04)
 
 
