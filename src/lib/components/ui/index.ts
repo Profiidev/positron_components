@@ -30,3 +30,6 @@ export { Toaster } from './sonner/index.js';
 export * as Table from './table/index.js';
 export * as Tabs from './tabs/index.js';
 export * as Tooltip from './tooltip/index.js';
+
+export { ModeWatcher } from 'mode-watcher';
+export { toast, type ToasterProps } from 'svelte-sonner';
