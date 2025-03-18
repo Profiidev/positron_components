@@ -1,7 +1,13 @@
 export { AspectRatio } from './aspect-ratio/index.js';
 export * as Avatar from './avatar/index.js';
-export * as Badge from './badge/index.js';
-export * as Button from './button/index.js';
+export { Badge, type BadgeVariant, badgeVariants } from './badge/index.js';
+export {
+	Button,
+	type ButtonProps,
+	type ButtonSize,
+	type ButtonVariant,
+	buttonVariants
+} from './button/index.js';
 export * as Calendar from './calendar/index.js';
 export * as Card from './card/index.js';
 export * as Collapsible from './collapsible/index.js';
