@@ -1,3 +1,15 @@
+<script lang="ts" module>
+  export interface Group<T> {
+    label: string;
+    items: Item<T>[];
+  }
+
+  export interface Item<T> {
+    label: string;
+    value: T;
+  }
+</script>
+
 <script lang="ts">
   import * as Popover from '../ui/popover/index.js';
   import * as Command from '../ui/command/index.js';
@@ -8,12 +20,7 @@
 
   type T = $$Generic;
 
-  interface Group {
-    label: string;
-    items: Item[];
-  }
-
-  const isGroups = (object: any[]): object is Group[] => {
+  const isGroups = (object: any[]): object is Group<T>[] => {
     return (
       object.length > 0 &&
       typeof object[0] === 'object' &&
@@ -22,15 +29,9 @@
     );
   };
 
-  interface Item {
-    label: string;
-    value: T;
-  }
-
-  interface Props {
-    data: Group[] | Item[];
-    filter?: (data: Item) => boolean;
-    selected: T[];
+  interface PropsBase {
+    data: Group<T>[] | Item<T>[];
+    filter?: (data: Item<T>) => boolean;
     label: string;
     compare?: (a: T, b: T) => boolean;
     disabled?: boolean;
@@ -38,19 +39,65 @@
 
   let {
     data,
-    selected = $bindable([]),
     filter = () => true,
     label,
     compare = (a, b) => a === b,
-    disabled
-  }: Props = $props();
+    disabled,
+    single,
+    selected = $bindable(single ? undefined : [])
+  }: PropsBase &
+    (
+      | {
+          single: true;
+          selected: T | undefined;
+        }
+      | {
+          single?: false;
+          selected: T[];
+        }
+    ) = $props();
+
+  let selectedInner: T[] = $state([]);
+
+  $effect(() => {
+    let newSelected;
+    if (single) {
+      newSelected = selected ? [selected] : [];
+    } else {
+      newSelected = selected;
+    }
+
+    //@ts-ignore
+    if (!selectedInner.every((v, i) => compare(newSelected[i], v))) {
+      //@ts-ignore
+      selectedInner = newSelected;
+    }
+  });
+
+  $effect(() => {
+    if (single) {
+      //@ts-ignore
+      if (!compare(selected, selectedInner[0])) {
+        selected = selectedInner[0];
+      }
+    } else {
+      //@ts-ignore
+      if (!selectedInner.every((v, i) => compare(selected[i], v))) {
+        selected = selectedInner;
+      }
+    }
+  });
 
   const select = (value: T) => {
-    let index = selected.findIndex((i) => compare(i, value));
-    if (index !== -1) {
-      selected.splice(index, 1);
+    if (single) {
+      selectedInner = [value];
     } else {
-      selected.push(value);
+      let index = selectedInner.findIndex((i) => compare(i, value));
+      if (index !== -1) {
+        selectedInner.splice(index, 1);
+      } else {
+        selectedInner.push(value);
+      }
     }
   };
 
@@ -72,7 +119,7 @@
     }
   });
 
-  const find_element = (value: T): Item | undefined => {
+  const find_element = (value: T): Item<T> | undefined => {
     return filtered
       .map(
         (g) =>
@@ -94,10 +141,10 @@
         class="h-10 text-wrap opacity-100!"
         {disabled}
       >
-        {#if selected.length === 0}
+        {#if selectedInner.length === 0}
           No {label}
         {:else}
-          {selected.map((s) => find_element(s)?.label).join(', ')}
+          {selectedInner.map((s) => find_element(s)?.label).join(', ')}
         {/if}
       </Button>
     {/snippet}
@@ -118,7 +165,7 @@
                   <Check
                     class={cn(
                       'mr-2 size-4',
-                      !selected.some((i) => compare(i, item.value)) &&
+                      !selectedInner.some((i) => compare(i, item.value)) &&
                         'text-transparent'
                     )}
                   />
