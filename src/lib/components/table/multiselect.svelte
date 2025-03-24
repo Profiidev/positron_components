@@ -29,12 +29,14 @@
     );
   };
 
-  interface PropsBase {
+  interface Props {
     data: Group<T>[] | Item<T>[];
     filter?: (data: Item<T>) => boolean;
     label: string;
     compare?: (a: T, b: T) => boolean;
     disabled?: boolean;
+    single?: boolean;
+    selected: T[];
   }
 
   let {
@@ -44,59 +46,18 @@
     compare = (a, b) => a === b,
     disabled,
     single,
-    selected = $bindable(single ? undefined : [])
-  }: PropsBase &
-    (
-      | {
-          single: true;
-          selected: T | undefined;
-        }
-      | {
-          single?: false;
-          selected: T[];
-        }
-    ) = $props();
-
-  let selectedInner: T[] = $state([]);
-
-  $effect(() => {
-    let newSelected;
-    if (single) {
-      newSelected = selected ? [selected] : [];
-    } else {
-      newSelected = selected;
-    }
-
-    //@ts-ignore
-    if (!selectedInner.every((v, i) => compare(newSelected[i], v))) {
-      //@ts-ignore
-      selectedInner = newSelected;
-    }
-  });
-
-  $effect(() => {
-    if (single) {
-      //@ts-ignore
-      if (!compare(selected, selectedInner[0])) {
-        selected = selectedInner[0];
-      }
-    } else {
-      //@ts-ignore
-      if (!selectedInner.every((v, i) => compare(selected[i], v))) {
-        selected = selectedInner;
-      }
-    }
-  });
+    selected = $bindable([])
+  }: Props = $props();
 
   const select = (value: T) => {
     if (single) {
-      selectedInner = [value];
+      selected = [value];
     } else {
-      let index = selectedInner.findIndex((i) => compare(i, value));
+      let index = selected.findIndex((i) => compare(i, value));
       if (index !== -1) {
-        selectedInner.splice(index, 1);
+        selected.splice(index, 1);
       } else {
-        selectedInner.push(value);
+        selected.push(value);
       }
     }
   };
@@ -141,10 +102,10 @@
         class="h-10 text-wrap opacity-100!"
         {disabled}
       >
-        {#if selectedInner.length === 0}
+        {#if selected.length === 0}
           No {label}
         {:else}
-          {selectedInner.map((s) => find_element(s)?.label).join(', ')}
+          {selected.map((s) => find_element(s)?.label).join(', ')}
         {/if}
       </Button>
     {/snippet}
@@ -165,7 +126,7 @@
                   <Check
                     class={cn(
                       'mr-2 size-4',
-                      !selectedInner.some((i) => compare(i, item.value)) &&
+                      !selected.some((i) => compare(i, item.value)) &&
                         'text-transparent'
                     )}
                   />
