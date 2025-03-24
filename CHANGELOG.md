@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.1...positron-components-v1.1.2) (2025-03-24)
+
+### Bug Fixes
+
+- form select import missing ([d9ec8e6](https://github.com/Profiidev/positron_components/commit/d9ec8e62c42dfbbbcf60a8adcd35f89714ba5f3c))
+- form select import missing ([6ef198e](https://github.com/Profiidev/positron_components/commit/6ef198e564d16b5b6ccd5f6958c95d31be9b87c3))
+
 ## [1.1.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.0...positron-components-v1.1.1) (2025-03-24)
 
 ### Bug Fixes
