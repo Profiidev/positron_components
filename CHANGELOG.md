@@ -2,11 +2,10 @@
 
 ## [1.1.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.0...positron-components-v1.1.1) (2025-03-24)
 
-
 ### Bug Fixes
 
-* item and group multiselect export missing ([481a90a](https://github.com/Profiidev/positron_components/commit/481a90ae9577145d3859ba0910dc6fd85830ffbd))
-* item and group multiselect export missing ([d2a1723](https://github.com/Profiidev/positron_components/commit/d2a1723cb2314f7e1333cc6384b81aea664d9f1b))
+- item and group multiselect export missing ([481a90a](https://github.com/Profiidev/positron_components/commit/481a90ae9577145d3859ba0910dc6fd85830ffbd))
+- item and group multiselect export missing ([d2a1723](https://github.com/Profiidev/positron_components/commit/d2a1723cb2314f7e1333cc6384b81aea664d9f1b))
 
 ## [1.1.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.0.2...positron-components-v1.1.0) (2025-03-24)
 
