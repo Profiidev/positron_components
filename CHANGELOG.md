@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.0.2...positron-components-v1.1.0) (2025-03-24)
+
+### Features
+
+- added form-select ([f9ed3df](https://github.com/Profiidev/positron_components/commit/f9ed3dfae1e833f212dc39aca9f3ff87246db86c))
+- added form-select ([cb5ca17](https://github.com/Profiidev/positron_components/commit/cb5ca177cfb6bd1919ceb22443a4437e3fb3314d))
+
+### Bug Fixes
+
+- multiselect wrong bind ([e6d80a4](https://github.com/Profiidev/positron_components/commit/e6d80a40390518e2374b4cfa9a7de435ff6a9b22))
+- multiselect wrong bind ([8adf32e](https://github.com/Profiidev/positron_components/commit/8adf32eea5513c77d089b1e65eafef75ad645cd0))
+
 ## [1.0.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.0.1...positron-components-v1.0.2) (2025-03-18)
 
 ### Bug Fixes
