@@ -16,7 +16,6 @@
   import { Button } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
   import Check from 'lucide-svelte/icons/check';
-  import { ScrollArea } from '../ui/scroll-area/index.js';
 
   type T = $$Generic;
 
@@ -113,30 +112,28 @@
   <Popover.Content>
     <Command.Root>
       <Command.Input placeholder={`Search ${label.toLowerCase()}...`} />
-      <ScrollArea orientation="vertical" class="h-full w-full">
-        <Command.List class="overflow-visible">
-          <Command.Empty>No {label} found</Command.Empty>
-          {#each filtered as group}
-            <Command.Group heading={group.label}>
-              {#each group.items as item}
-                <Command.Item
-                  value={item.label}
-                  onSelect={() => select(item.value)}
-                >
-                  <Check
-                    class={cn(
-                      'mr-2 size-4',
-                      !selected.some((i) => compare(i, item.value)) &&
-                        'text-transparent'
-                    )}
-                  />
-                  {item.label}
-                </Command.Item>
-              {/each}
-            </Command.Group>
-          {/each}
-        </Command.List>
-      </ScrollArea>
+      <Command.List>
+        <Command.Empty>No {label} found</Command.Empty>
+        {#each filtered as group}
+          <Command.Group heading={group.label}>
+            {#each group.items as item}
+              <Command.Item
+                value={item.label}
+                onSelect={() => select(item.value)}
+              >
+                <Check
+                  class={cn(
+                    'mr-2 size-4',
+                    !selected.some((i) => compare(i, item.value)) &&
+                      'text-transparent'
+                  )}
+                />
+                {item.label}
+              </Command.Item>
+            {/each}
+          </Command.Group>
+        {/each}
+      </Command.List>
     </Command.Root>
   </Popover.Content>
 </Popover.Root>
