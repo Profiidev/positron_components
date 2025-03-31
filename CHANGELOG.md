@@ -2,11 +2,10 @@
 
 ## [1.1.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.2...positron-components-v1.1.3) (2025-03-31)
 
-
 ### Bug Fixes
 
-* **Multiselect:** removed scroll area from multiselect ([52cbe74](https://github.com/Profiidev/positron_components/commit/52cbe7474784f87409aee6a0ccb1932fb6761d41))
-* **Multiselect:** removed scroll area from multiselect ([9b4d42a](https://github.com/Profiidev/positron_components/commit/9b4d42a4c0e8ee72c696055c1d0f4514272fa226))
+- **Multiselect:** removed scroll area from multiselect ([52cbe74](https://github.com/Profiidev/positron_components/commit/52cbe7474784f87409aee6a0ccb1932fb6761d41))
+- **Multiselect:** removed scroll area from multiselect ([9b4d42a](https://github.com/Profiidev/positron_components/commit/9b4d42a4c0e8ee72c696055c1d0f4514272fa226))
 
 ## [1.1.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.1...positron-components-v1.1.2) (2025-03-24)
 
