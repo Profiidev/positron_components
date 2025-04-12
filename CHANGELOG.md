@@ -2,11 +2,10 @@
 
 ## [1.2.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.3...positron-components-v1.2.0) (2025-04-12)
 
-
 ### Features
 
-* added additional shadcn comps ([598de41](https://github.com/Profiidev/positron_components/commit/598de4137a794700744cec6611765c9fc3bb12c1))
-* added additional shadcn comps ([b069c21](https://github.com/Profiidev/positron_components/commit/b069c21e2602c8a8e0f194a8e1149a0d81b21452))
+- added additional shadcn comps ([598de41](https://github.com/Profiidev/positron_components/commit/598de4137a794700744cec6611765c9fc3bb12c1))
+- added additional shadcn comps ([b069c21](https://github.com/Profiidev/positron_components/commit/b069c21e2602c8a8e0f194a8e1149a0d81b21452))
 
 ## [1.1.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.2...positron-components-v1.1.3) (2025-03-31)
 
