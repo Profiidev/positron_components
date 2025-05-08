@@ -1,6 +1,6 @@
 {
   "name": "positron-components",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "repository": "github:profiidev/positron_components",
   "scripts": {
     "dev": "vite dev",
