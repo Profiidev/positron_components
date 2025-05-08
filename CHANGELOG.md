@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.0...positron-components-v1.2.1) (2025-05-08)
+
+
+### Bug Fixes
+
+* wrong from input props ([4db2cc8](https://github.com/Profiidev/positron_components/commit/4db2cc84f75bb93a6e6906e097707990cf7735d9))
+
 ## [1.2.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.1.3...positron-components-v1.2.0) (2025-04-12)
 
 ### Features
