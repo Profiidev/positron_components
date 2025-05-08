@@ -2,7 +2,21 @@
   import * as Form from '../ui/form/index.js';
   import { type SuperForm } from 'sveltekit-superforms';
   import { Input } from '../ui/input/index.js';
-  import type { HTMLInputAttributes } from 'svelte/elements';
+  import type {
+    HTMLInputAttributes,
+    HTMLInputTypeAttribute
+  } from 'svelte/elements';
+  import type { WithElementRef } from 'bits-ui';
+
+  type InputType = Exclude<HTMLInputTypeAttribute, 'file'>;
+
+  type InputProps = WithElementRef<
+    Omit<HTMLInputAttributes, 'type'> &
+      (
+        | { type: 'file'; files?: FileList }
+        | { type?: InputType; files?: undefined }
+      )
+  >;
 
   interface Props {
     formData: SuperForm<any>;
@@ -17,7 +31,7 @@
     label,
     disabled,
     ...restProps
-  }: HTMLInputAttributes & Props = $props();
+  }: InputProps & Props = $props();
 
   const { form: formData } = $derived(form);
 </script>
