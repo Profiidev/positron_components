@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.1...positron-components-v1.2.2) (2025-05-12)
+
+### Bug Fixes
+
+- moved alle required deps to nonDev ([a55b346](https://github.com/Profiidev/positron_components/commit/a55b346a45894112460743c251448ed2155074f0))
+- removed pkg lock from lib ([f0ded7c](https://github.com/Profiidev/positron_components/commit/f0ded7c62dd3c340e0f1f9701ce9d0e29fdc9fb6))
+
 ## [1.2.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.0...positron-components-v1.2.1) (2025-05-08)
 
 ### Bug Fixes
