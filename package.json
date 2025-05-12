@@ -72,6 +72,8 @@
     }
   },
   "dependencies": {
+    "@internationalized/date": "^3.8.0",
+    "@lucide/svelte": "^0.508.0",
     "@sveltejs/kit": "^2.20.7",
     "@sveltejs/vite-plugin-svelte": "^5.0.0",
     "@tailwindcss/postcss": "^4.1.4",
@@ -79,33 +81,31 @@
     "@tailwindcss/vite": "^4.1.4",
     "@tanstack/table-core": "^8.21.3",
     "@types/luxon": "^3.6.2",
+    "bits-ui": "^1.4.6",
     "clsx": "^2.1.1",
     "lucide-svelte": "^0.488.0",
     "luxon": "^3.6.1",
+    "mode-watcher": "^1.0.6",
     "svelte": "^5.26.3",
+    "svelte-sonner": "^0.3.28",
+    "sveltekit-superforms": "^2.25.0",
     "tailwind-merge": "^3.2.0",
     "tailwind-variants": "^1.0.0",
     "tailwindcss": "^4.0.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.24.4"
   },
   "devDependencies": {
-    "@internationalized/date": "^3.8.0",
-    "@lucide/svelte": "^0.508.0",
     "@sveltejs/adapter-auto": "^6.0.0",
     "@sveltejs/package": "^2.3.11",
-    "bits-ui": "^1.4.6",
     "formsnap": "^2.0.1",
-    "mode-watcher": "^1.0.6",
     "prettier": "^3.4.2",
     "prettier-plugin-svelte": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "publint": "^0.3.12",
     "svelte": "^5.26.3",
     "svelte-check": "^4.1.6",
-    "svelte-sonner": "^0.3.28",
-    "sveltekit-superforms": "^2.25.0",
     "typescript": "^5.8.3",
-    "vite": "^6.3.4",
-    "zod": "^3.24.4"
+    "vite": "^6.3.4"
   }
 }
