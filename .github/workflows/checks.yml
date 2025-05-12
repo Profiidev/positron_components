@@ -15,6 +15,8 @@ jobs:
           token: ${{ secrets.RELEASE_PLZ_TOKEN }}
 
       - uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
 
       - name: Set frontend env
         run: |
