@@ -61,17 +61,26 @@ export const wait_for = (
       return;
     }
 
+    let timeout: undefined | number = undefined;
     const interval = setInterval(() => {
       if (condition()) {
         clearInterval(interval);
+        if (timeout) {
+          clearTimeout(timeout);
+        }
         resolve(true);
       }
     }, intervalTime);
 
-    setTimeout(() => {
-      clearInterval(interval);
-      resolve(false);
-    }, max);
+    if (max) {
+      timeout = setTimeout(() => {
+        clearInterval(interval);
+        if (timeout) {
+          clearTimeout(timeout);
+        }
+        resolve(false);
+      }, max);
+    }
   });
 };
 
