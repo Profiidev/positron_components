@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.2...positron-components-v1.2.3) (2025-05-14)
+
+
+### Bug Fixes
+
+* wait for instantly returning when not setting max ([477b317](https://github.com/Profiidev/positron_components/commit/477b31717e574bfe965e3a84431a1fa77543adaf))
+* wait for instantly returning when not setting max ([4fc1c6d](https://github.com/Profiidev/positron_components/commit/4fc1c6d81e10cf2d55d1242ad75c075781d0d5da))
+
 ## [1.2.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.1...positron-components-v1.2.2) (2025-05-12)
 
 ### Bug Fixes
