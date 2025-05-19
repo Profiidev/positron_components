@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.3.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.3...positron-components-v1.3.0) (2025-05-19)
+
+
+### Features
+
+* updated shadcn comps ([01fa99d](https://github.com/Profiidev/positron_components/commit/01fa99d151859b9aa4c91c851bde43dd1b1f8237))
+* updated tailwindcss config to pure css ([cea9b7d](https://github.com/Profiidev/positron_components/commit/cea9b7da2f3ffcc1fc8dd611a36ac5ba86a23882))
+
+
+### Bug Fixes
+
+* updated shadcn config ([899d681](https://github.com/Profiidev/positron_components/commit/899d68197a6b2488452d5dfc9712c0f1c5d2e833))
+* updated to new lucide svelte ([9d24f0d](https://github.com/Profiidev/positron_components/commit/9d24f0d4b743a6e04fcda8ae6b2a51c3984f5dc6))
+
 ## [1.2.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.2...positron-components-v1.2.3) (2025-05-14)
 
 ### Bug Fixes
