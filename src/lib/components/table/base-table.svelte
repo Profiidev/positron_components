@@ -6,7 +6,7 @@
   import { ScrollArea } from '../ui/scroll-area/index.js';
   import type { Table as TableType } from '@tanstack/table-core';
   import { Button } from '../ui/button/index.js';
-  import ChevronDown from 'lucide-svelte/icons/chevron-down';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
   import type { Snippet } from 'svelte';
   import { cn } from '../../utils.js';
 

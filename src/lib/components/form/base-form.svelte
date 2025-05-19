@@ -10,7 +10,7 @@
   import { zodClient } from 'sveltekit-superforms/adapters';
   import type { ZodRawShape } from 'zod';
   import { FormButton } from '../ui/form/index.js';
-  import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+  import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import type { ButtonVariant } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
   import type { Error, FormSchema } from './types.js';

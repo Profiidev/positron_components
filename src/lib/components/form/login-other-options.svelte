@@ -1,6 +1,6 @@
 <script lang="ts">
-  import KeyRound from 'lucide-svelte/icons/key-round';
-  import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+  import KeyRound from '@lucide/svelte/icons/key-round';
+  import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { Button } from '../ui/button/index.js';
 
   interface Props {
