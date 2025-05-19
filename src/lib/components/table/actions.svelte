@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Trash from 'lucide-svelte/icons/trash';
-  import Pencil from 'lucide-svelte/icons/pencil';
+  import Trash from '@lucide/svelte/icons/trash';
+  import Pencil from '@lucide/svelte/icons/pencil';
   import { Button } from '../ui/button/index.js';
 
   interface Props {

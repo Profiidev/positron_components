@@ -6,7 +6,7 @@
     type ButtonSize,
     type ButtonVariant
   } from '../ui/button/index.js';
-  import LoaderCircle from 'lucide-svelte/icons/loader-circle';
+  import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { type SuperForm, type SuperValidated } from 'sveltekit-superforms';
   import type { ZodRawShape } from 'zod';
   import type { Error, FormSchema } from './types.js';

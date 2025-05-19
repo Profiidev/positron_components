@@ -15,7 +15,7 @@
   import * as Command from '../ui/command/index.js';
   import { Button } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
-  import Check from 'lucide-svelte/icons/check';
+  import Check from '@lucide/svelte/icons/check';
 
   type T = $$Generic;
 
