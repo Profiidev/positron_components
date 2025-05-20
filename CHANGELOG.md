@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.0...positron-components-v1.3.1) (2025-05-20)
+
+
+### Bug Fixes
+
+* added multiselect scrollbar ([96dc613](https://github.com/Profiidev/positron_components/commit/96dc6138d01dd7fbc3d7819d9992e64e4747770e))
+* added multiselect scrollbar ([751f505](https://github.com/Profiidev/positron_components/commit/751f505704c772fe882b63f16e27d2d3b02c0f9f))
+
 ## [1.3.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.2.3...positron-components-v1.3.0) (2025-05-19)
 
 ### Features
