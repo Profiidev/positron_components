@@ -16,6 +16,7 @@
   import { Button } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
   import Check from '@lucide/svelte/icons/check';
+  import { ScrollArea } from '../ui/scroll-area/index.js';
 
   type T = $$Generic;
 
@@ -112,27 +113,29 @@
   <Popover.Content>
     <Command.Root>
       <Command.Input placeholder={`Search ${label.toLowerCase()}...`} />
-      <Command.List>
-        <Command.Empty>No {label} found</Command.Empty>
-        {#each filtered as group}
-          <Command.Group heading={group.label}>
-            {#each group.items as item}
-              <Command.Item
-                value={item.label}
-                onSelect={() => select(item.value)}
-              >
-                <Check
-                  class={cn(
-                    'mr-2 size-4',
-                    !selected.some((i) => compare(i, item.value)) &&
-                      'text-transparent'
-                  )}
-                />
-                {item.label}
-              </Command.Item>
-            {/each}
-          </Command.Group>
-        {/each}
+      <Command.List class="h-full overflow-hidden">
+        <ScrollArea class="h-[300px]">
+          <Command.Empty>No {label} found</Command.Empty>
+          {#each filtered as group}
+            <Command.Group heading={group.label}>
+              {#each group.items as item}
+                <Command.Item
+                  value={item.label}
+                  onSelect={() => select(item.value)}
+                >
+                  <Check
+                    class={cn(
+                      'mr-2 size-4',
+                      !selected.some((i) => compare(i, item.value)) &&
+                        'text-transparent'
+                    )}
+                  />
+                  {item.label}
+                </Command.Item>
+              {/each}
+            </Command.Group>
+          {/each}
+        </ScrollArea>
       </Command.List>
     </Command.Root>
   </Popover.Content>
