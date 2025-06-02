@@ -1,9 +1,15 @@
 import type { SuperValidated } from 'sveltekit-superforms';
-import type { ZodEffects, ZodObject, ZodRawShape } from 'zod';
+import type { ZodValidation } from 'sveltekit-superforms/adapters';
 
-export interface FormSchema<T extends ZodRawShape> {
-  schema: ZodObject<T> | ZodEffects<ZodObject<T>>;
-  form: SuperValidated<T, any, T>;
+export type FormRecord = Record<string, unknown>;
+
+export interface FormSchema<
+  Z extends ZodValidation,
+  T extends FormRecord = FormRecord,
+  In extends FormRecord = T
+> {
+  schema: Z;
+  form: SuperValidated<T, any, In> | T;
 }
 
 export interface Error {

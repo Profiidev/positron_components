@@ -1,4 +1,7 @@
-<script lang="ts" generics="T extends ZodRawShape">
+<script
+  lang="ts"
+  generics="S extends ZodValidation, T extends FormRecord = FormRecord, In extends FormRecord = T"
+>
   import * as Dialog from '../ui/dialog/index.js';
   import type { Snippet, SvelteComponent } from 'svelte';
   import {
@@ -8,10 +11,10 @@
   } from '../ui/button/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { type SuperForm, type SuperValidated } from 'sveltekit-superforms';
-  import type { ZodRawShape } from 'zod';
-  import type { Error, FormSchema } from './types.js';
+  import type { Error, FormSchema, FormRecord } from './types.js';
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
+  import { type ZodValidation } from 'sveltekit-superforms/adapters';
 
   interface Props {
     title: string;
@@ -31,13 +34,13 @@
     };
     onopen?: () => boolean | Promise<boolean>;
     onsubmit: (
-      form: SuperValidated<T>
+      form: SuperValidated<T, any, In>
     ) => Error | undefined | Promise<Error | undefined>;
     children?: Snippet<
       [{ props: { formData: SuperForm<T>; disabled: boolean } }]
     >;
     triggerInner?: Snippet;
-    form: FormSchema<T>;
+    form: FormSchema<S, T, In>;
   }
 
   let {

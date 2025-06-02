@@ -1,17 +1,16 @@
-<script lang="ts">
+<script lang="ts" generics="T, S extends FormRecord = FormRecord">
   import * as Form from '../ui/form/index.js';
-  import { type SuperForm } from 'sveltekit-superforms';
+  import { type FormPath, type SuperForm } from 'sveltekit-superforms';
   import type { HTMLInputAttributes } from 'svelte/elements';
   import Multiselect, {
     type Group,
     type Item
   } from '../table/multiselect.svelte';
-
-  type T = $$Generic;
+  import type { FormRecord } from './types.js';
 
   interface Props {
-    formData: SuperForm<any>;
-    key: string;
+    formData: SuperForm<S>;
+    key: FormPath<S>;
     label: string;
     disabled?: boolean;
     data: Group<T>[] | Item<T>[];
@@ -35,6 +34,7 @@
   <Form.Control>
     {#snippet children({ props })}
       <Form.Label>{label}</Form.Label>
+      {/* @ts-ignore */ null}
       <Multiselect
         {disabled}
         {label}
