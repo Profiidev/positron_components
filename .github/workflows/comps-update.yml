@@ -1,0 +1,33 @@
+name: Components Update
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight UTC
+
+jobs:
+  update-components:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
+
+      - name: Update components
+        run: |
+          npx -y shadcn-svelte@next update -ay
+          npx -y prettier -cw .
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.RELEASE_PLZ_TOKEN }}
+          commit-message: "Update components"
+          branch: "update-components-${{ github.run_id }}"
+          title: "Update components"
+          body: "This PR updates the components to the latest versions."
+          base: main
+          sign-commits: true
+          labels: components-update
