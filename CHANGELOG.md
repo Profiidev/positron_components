@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.5](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.4...positron-components-v1.3.5) (2025-06-11)
+
+
+### Bug Fixes
+
+* moved deps to non dev ([6ca9c93](https://github.com/Profiidev/positron_components/commit/6ca9c932dca8001cd0b2086b5879ca12ccc13f72))
+* moved deps to non dev ([fe93f79](https://github.com/Profiidev/positron_components/commit/fe93f792eaa7393bed7d47db82ab152beb5f403f))
+
 ## [1.3.4](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.3...positron-components-v1.3.4) (2025-06-11)
 
 ### Bug Fixes
