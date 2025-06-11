@@ -1,6 +1,6 @@
 <script
   lang="ts"
-  generics="CD, T, CS extends ZodValidation, ES extends ZodValidation, DS extends ZodValidation, CT extends FormRecord = FormRecord, CIn extends FormRecord = CT, ET extends FormRecord = FormRecord, EIn extends FormRecord = ET, DT extends FormRecord = FormRecord, DIn extends FormRecord = DT"
+  generics="CD, T, CS extends ZodValidation | ZodType, ES extends ZodValidation, DS extends ZodValidation, CT extends FormRecord = FormRecord, CIn extends FormRecord = CT, ET extends FormRecord = FormRecord, EIn extends FormRecord = ET, DT extends FormRecord = FormRecord, DIn extends FormRecord = DT"
 >
   import type { Error, FormRecord, FormSchema } from '../form/types.js';
   import { createTable } from '../table/helpers.svelte';
@@ -12,6 +12,7 @@
   import type { SuperForm, SuperValidated } from 'sveltekit-superforms';
   import FormDialog from '../form/form-dialog.svelte';
   import type { ZodValidation } from 'sveltekit-superforms/adapters';
+  import { ZodType } from 'zod';
 
   interface Props {
     data: T[] | undefined;

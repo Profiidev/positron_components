@@ -1,6 +1,6 @@
 <script
   lang="ts"
-  generics="S extends ZodValidation, T extends FormRecord = FormRecord, In extends FormRecord = T"
+  generics="S extends ZodValidation | ZodType, T extends FormRecord = FormRecord, In extends FormRecord = T"
 >
   import * as Dialog from '../ui/dialog/index.js';
   import type { Snippet, SvelteComponent } from 'svelte';
@@ -15,6 +15,7 @@
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
   import { type ZodValidation } from 'sveltekit-superforms/adapters';
+  import { ZodType } from 'zod';
 
   interface Props {
     title: string;

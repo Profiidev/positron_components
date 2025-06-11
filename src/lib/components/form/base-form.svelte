@@ -1,6 +1,6 @@
 <script
   lang="ts"
-  generics="S extends ZodValidation, T extends FormRecord = FormRecord, In extends FormRecord = T"
+  generics="S extends ZodValidation | ZodType, T extends FormRecord = FormRecord, In extends FormRecord = T"
 >
   import type { Snippet } from 'svelte';
   import { get } from 'svelte/store';
@@ -16,6 +16,7 @@
   import type { ButtonVariant } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
   import type { Error, FormRecord, FormSchema } from './types.js';
+  import { ZodType } from 'zod';
 
   interface Props {
     form: FormSchema<S, T, In>;
