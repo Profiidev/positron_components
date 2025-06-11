@@ -19,6 +19,8 @@ jobs:
         run: |
           npx -y shadcn-svelte@latest update -ay
           npx -y prettier -cw .
+          git restore package-lock.json
+          git restore package.json
 
       - name: Create PR
         uses: peter-evans/create-pull-request@v7
