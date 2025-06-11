@@ -17,7 +17,7 @@ jobs:
 
       - name: Update components
         run: |
-          npx -y shadcn-svelte@next update -ay
+          npx -y shadcn-svelte@latest update -ay
           npx -y prettier -cw .
 
       - name: Create PR
