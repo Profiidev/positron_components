@@ -24,9 +24,9 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.RELEASE_PLZ_TOKEN }}
-          commit-message: "Update components"
-          branch: "update-components-${{ github.run_id }}"
-          title: "Update components"
+          commit-message: "chore: updated components"
+          branch: "chore/update-components-${{ github.run_id }}"
+          title: "chore: update components"
           body: "This PR updates the components to the latest versions."
           base: main
           sign-commits: true
