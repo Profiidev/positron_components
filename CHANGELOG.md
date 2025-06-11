@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.2...positron-components-v1.3.3) (2025-06-11)
+
+
+### Bug Fixes
+
+* added backend exports to main exports ([02f24ed](https://github.com/Profiidev/positron_components/commit/02f24ed15bb79995d3f154bf7d52f76614729a70))
+
 ## [1.3.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.1...positron-components-v1.3.2) (2025-06-02)
 
 ### Bug Fixes
