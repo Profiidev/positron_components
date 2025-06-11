@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.4](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.3...positron-components-v1.3.4) (2025-06-11)
+
+### Bug Fixes
+
+- wrong form types ([9702546](https://github.com/Profiidev/positron_components/commit/970254682f7cbc598158461e24a200da46266e0e))
+- wrong form types ([53ec01f](https://github.com/Profiidev/positron_components/commit/53ec01f82439d9f303270072f0d49aeec263ce9a))
+
 ## [1.3.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.2...positron-components-v1.3.3) (2025-06-11)
 
 ### Bug Fixes
