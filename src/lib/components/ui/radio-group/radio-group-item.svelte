@@ -25,7 +25,9 @@
       class="relative flex items-center justify-center"
     >
       {#if checked}
-        <CircleIcon class="fill-primary text-primary-foreground size-2.5" />
+        <CircleIcon
+          class="fill-primary absolute top-1/2 left-1/2 size-2 -translate-x-1/2 -translate-y-1/2"
+        />
       {/if}
     </div>
   {/snippet}
