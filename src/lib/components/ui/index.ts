@@ -30,6 +30,7 @@ export { Input } from './input/index.js';
 export * as InputOtp from './input-otp/index.js';
 export { Label } from './label/index.js';
 export * as Menubar from './menubar/index.js';
+export * as NavigationMenu from './navigation-menu/index.js';
 export * as Pagination from './pagination/index.js';
 export * as Popover from './popover/index.js';
 export { Progress } from './progress/index.js';
