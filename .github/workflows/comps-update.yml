@@ -3,7 +3,7 @@ name: Components Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * 0' # Every Sunday at midnight UTC
+    - cron: '0 0 * * 1' # Every Monday at midnight UTC
 
 jobs:
   update-components:
@@ -19,7 +19,6 @@ jobs:
         run: |
           npx -y shadcn-svelte@latest update -ay
           npx -y prettier -cw .
-          git restore package-lock.json
           git restore package.json
 
       - name: Create PR
