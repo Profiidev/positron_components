@@ -1,18 +1,21 @@
 <script
   lang="ts"
-  generics="CD, T, CS extends ZodValidation | ZodType, ES extends ZodValidation, DS extends ZodValidation, CT extends FormRecord = FormRecord, CIn extends FormRecord = CT, ET extends FormRecord = FormRecord, EIn extends FormRecord = ET, DT extends FormRecord = FormRecord, DIn extends FormRecord = DT"
+  generics="CD, T, CT extends FormRecord = FormRecord, CIn extends FormRecord = CT, ET extends FormRecord = FormRecord, EIn extends FormRecord = ET, DT extends FormRecord = FormRecord, DIn extends FormRecord = DT"
 >
-  import type { Error, FormRecord, FormSchema } from '../form/types.js';
+  import type {
+    Error,
+    FormRecord,
+    FormSchema,
+    FormType
+  } from '../form/types.js';
   import { createTable } from '../table/helpers.svelte';
   import Table from '../table/base-table.svelte';
   import { toast } from 'svelte-sonner';
   import type { ColumnDef, Row } from '@tanstack/table-core';
   import { RequestError } from '$lib/backend/types.svelte';
   import type { Snippet, SvelteComponent } from 'svelte';
-  import type { SuperForm, SuperValidated } from 'sveltekit-superforms';
+  import type { SuperForm } from 'sveltekit-superforms';
   import FormDialog from '../form/form-dialog.svelte';
-  import type { ZodValidation } from 'sveltekit-superforms/adapters';
-  import { ZodType } from 'zod';
 
   interface Props {
     data: T[] | undefined;
@@ -24,7 +27,7 @@
     ) => ColumnDef<T>[];
     label: string;
     createItemFn: (
-      form: SuperValidated<CT, any, CIn>
+      form: FormType<CT, CIn>
     ) => Promise<RequestError | undefined>;
     editItemFn: (item: T) => Promise<RequestError | undefined>;
     deleteItemFn: (id: string) => Promise<RequestError | undefined>;
@@ -54,9 +57,9 @@
       ]
     >;
     createButtonDisabled: boolean;
-    createForm: FormSchema<CS, CT, CIn>;
-    editForm: FormSchema<ES, ET, EIn>;
-    deleteForm: FormSchema<DS, DT, DIn>;
+    createForm: FormSchema<CT, CIn>;
+    editForm: FormSchema<ET, EIn>;
+    deleteForm: FormSchema<DT, DIn>;
     startCreate?: () => boolean | Promise<boolean>;
     startEdit?: (item: T) => void | Promise<void>;
     createClass?: string;
@@ -139,7 +142,7 @@
     );
   });
 
-  const createItem = async (form: SuperValidated<CT>) => {
+  const createItem = async (form: FormType<CT, CIn>) => {
     let ret = await createItemFn(form);
 
     if (ret) {
@@ -167,10 +170,10 @@
     deleteOpen = true;
   };
 
-  const editItemConfirm = async (form: SuperValidated<ET, any, EIn>) => {
+  const editItemConfirm = async (form: FormType<ET, EIn>) => {
     selected = {
       ...selected,
-      ...form.data
+      ...(form.data as any)
     } as any;
 
     if (!selected) {

@@ -1,6 +1,6 @@
 <script
   lang="ts"
-  generics="S extends ZodValidation | ZodType, T extends FormRecord = FormRecord, In extends FormRecord = T"
+  generics="T extends FormRecord = FormRecord, In extends FormRecord = T"
 >
   import * as Dialog from '../ui/dialog/index.js';
   import type { Snippet, SvelteComponent } from 'svelte';
@@ -10,12 +10,10 @@
     type ButtonVariant
   } from '../ui/button/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
-  import { type SuperForm, type SuperValidated } from 'sveltekit-superforms';
-  import type { Error, FormSchema, FormRecord } from './types.js';
+  import { type SuperForm } from 'sveltekit-superforms';
+  import type { Error, FormSchema, FormRecord, FormType } from './types.js';
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
-  import { type ZodValidation } from 'sveltekit-superforms/adapters';
-  import { ZodType } from 'zod';
 
   interface Props {
     title: string;
@@ -35,13 +33,13 @@
     };
     onopen?: () => boolean | Promise<boolean>;
     onsubmit: (
-      form: SuperValidated<T, any, In>
+      form: FormType<T, In>
     ) => Error | undefined | Promise<Error | undefined>;
     children?: Snippet<
       [{ props: { formData: SuperForm<T>; disabled: boolean } }]
     >;
     triggerInner?: Snippet;
-    form: FormSchema<S, T, In>;
+    form: FormSchema<T, In>;
   }
 
   let {
@@ -66,7 +64,7 @@
     formComp?.setValue
   );
 
-  const submit = async (form: SuperValidated<T>) => {
+  const submit = async (form: FormType<T, In>) => {
     let ret = await onsubmit(form);
     if (!ret) {
       open = false;

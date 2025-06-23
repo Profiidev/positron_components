@@ -1,17 +1,19 @@
-import type { SuperValidated } from 'sveltekit-superforms';
-import type { ZodValidation } from 'sveltekit-superforms/adapters';
-import type { ZodType } from 'zod';
+import type { superForm } from 'sveltekit-superforms';
 
 export type FormRecord = Record<string, unknown>;
 
 export interface FormSchema<
-  Z extends ZodValidation | ZodType,
   T extends FormRecord = FormRecord,
   In extends FormRecord = T
 > {
-  schema: Z;
-  form: SuperValidated<T, any, In> | T;
+  schema: any;
+  form: FormType<T, In>;
 }
+
+export type FormType<
+  T extends FormRecord = FormRecord,
+  In extends FormRecord = T
+> = Parameters<typeof superForm<T, any, In>>[0];
 
 export interface Error {
   field?: string;
