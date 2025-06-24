@@ -1,4 +1,3 @@
-import { PUBLIC_BACKEND_URL } from '$env/static/public';
 import { ContentType, RequestError, ResponseType } from './types.svelte';
 
 export const post = async <T>(
@@ -35,7 +34,7 @@ const request = async <T>(
   }
 
   try {
-    let res = await fetch!(`${PUBLIC_BACKEND_URL}${path}`, {
+    let res = await fetch!(`${path}`, {
       method,
       headers,
       body,
