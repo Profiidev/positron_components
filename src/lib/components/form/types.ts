@@ -1,5 +1,7 @@
 import type { superForm } from 'sveltekit-superforms';
 
+export type { SuperForm, FormPath } from 'sveltekit-superforms';
+
 export type FormRecord = Record<string, unknown>;
 
 export interface FormSchema<
