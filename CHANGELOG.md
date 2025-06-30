@@ -2,16 +2,14 @@
 
 ## [1.5.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.4.0...positron-components-v1.5.0) (2025-06-30)
 
-
 ### Features
 
-* added form switch ([39a80e4](https://github.com/Profiidev/positron_components/commit/39a80e4d7cb0747efb364cb6d1514c0f991a9a8e))
-* added form switch ([07adddc](https://github.com/Profiidev/positron_components/commit/07adddcfd4afa973f249c4c81889649ca072ff5f))
-
+- added form switch ([39a80e4](https://github.com/Profiidev/positron_components/commit/39a80e4d7cb0747efb364cb6d1514c0f991a9a8e))
+- added form switch ([07adddc](https://github.com/Profiidev/positron_components/commit/07adddcfd4afa973f249c4c81889649ca072ff5f))
 
 ### Bug Fixes
 
-* imports ([e825d0a](https://github.com/Profiidev/positron_components/commit/e825d0ade6bd10c70f0a79a20ec38734878c090a))
+- imports ([e825d0a](https://github.com/Profiidev/positron_components/commit/e825d0ade6bd10c70f0a79a20ec38734878c090a))
 
 ## [1.4.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.3.5...positron-components-v1.4.0) (2025-06-23)
 
