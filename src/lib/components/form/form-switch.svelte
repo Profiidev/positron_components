@@ -1,7 +1,8 @@
 <script lang="ts" generics="S extends FormRecord = FormRecord">
-  import { type FormRecord } from 'positron-components/components/form';
-  import { Switch, Form } from 'positron-components/components/ui';
+  import { Switch } from '../ui/switch/index.js';
+  import * as Form from '../ui/form/index.js';
   import type { FormPath, SuperForm } from 'sveltekit-superforms';
+  import type { FormRecord } from './types.js';
 
   interface Props {
     formData: SuperForm<S>;
