@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.0...positron-components-v1.5.1) (2025-07-23)
+
+### Bug Fixes
+
+- multiselect menu to high when only using a few items ([d58aba6](https://github.com/Profiidev/positron_components/commit/d58aba60adee86a510d2121e5bc22f036e1d7727))
+- multiselect menu to high when only using a few items ([1aeef5c](https://github.com/Profiidev/positron_components/commit/1aeef5c0b6f9df080e217d28a7cb729544be781f))
+- only y auto overflow ([1df78b6](https://github.com/Profiidev/positron_components/commit/1df78b6b47e3a5efe45903ccf1f298339f115d62))
+
 ## [1.5.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.4.0...positron-components-v1.5.0) (2025-06-30)
 
 ### Features
