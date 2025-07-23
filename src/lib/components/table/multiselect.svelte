@@ -53,9 +53,12 @@
     class: className
   }: Props = $props();
 
+  let open = $state(false);
+
   const select = (value: T) => {
     if (single) {
       selected = [value];
+      open = false;
     } else {
       let index = selected.findIndex((i) => compare(i, value));
       if (index !== -1) {
@@ -96,7 +99,7 @@
   };
 </script>
 
-<Popover.Root>
+<Popover.Root bind:open>
   <Popover.Trigger>
     {#snippet child({ props })}
       <Button
