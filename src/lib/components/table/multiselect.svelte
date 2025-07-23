@@ -118,7 +118,7 @@
     <Command.Root>
       <Command.Input placeholder={`Search ${label.toLowerCase()}...`} />
       <Command.List class="h-full overflow-hidden">
-        <ScrollArea class="max-h-[300px] overflow-auto">
+        <ScrollArea class="max-h-[300px] overflow-y-auto">
           <Command.Empty>No {label} found</Command.Empty>
           {#each filtered as group}
             <Command.Group heading={group.label}>
