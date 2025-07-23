@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.1...positron-components-v1.5.2) (2025-07-23)
+
+### Bug Fixes
+
+- close select menu when an item is selected in single select mode ([feb089e](https://github.com/Profiidev/positron_components/commit/feb089e3cd1b6f4b222d3cf07960a8f31a042223))
+- close select menu when an item is selected in single select mode ([d5faf91](https://github.com/Profiidev/positron_components/commit/d5faf912b9acca4bc04bb9afef0a0f364bb9b981))
+
 ## [1.5.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.0...positron-components-v1.5.1) (2025-07-23)
 
 ### Bug Fixes
