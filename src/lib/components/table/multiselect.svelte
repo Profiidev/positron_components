@@ -37,6 +37,8 @@
     disabled?: boolean;
     single?: boolean;
     selected: T[];
+    buttonPrefix?: string;
+    class?: string;
   }
 
   let {
@@ -46,7 +48,9 @@
     compare = (a, b) => a === b,
     disabled,
     single,
-    selected = $bindable([])
+    selected = $bindable([]),
+    buttonPrefix,
+    class: className
   }: Props = $props();
 
   const select = (value: T) => {
@@ -99,11 +103,11 @@
         variant="outline"
         {...props}
         role="combobox"
-        class="h-10 text-wrap opacity-100!"
+        class={cn('block truncate', className)}
         {disabled}
       >
         {#if selected.length === 0}
-          No {label}
+          {buttonPrefix ?? 'No'} {label}
         {:else}
           {selected.map((s) => find_element(s)?.label).join(', ')}
         {/if}
@@ -114,7 +118,7 @@
     <Command.Root>
       <Command.Input placeholder={`Search ${label.toLowerCase()}...`} />
       <Command.List class="h-full overflow-hidden">
-        <ScrollArea class="h-[300px]">
+        <ScrollArea class="max-h-[300px] overflow-auto">
           <Command.Empty>No {label} found</Command.Empty>
           {#each filtered as group}
             <Command.Group heading={group.label}>
