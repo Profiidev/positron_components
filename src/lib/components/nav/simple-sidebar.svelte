@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import { cn } from '../../utils.js';
   import { crossfade } from 'svelte/transition';
   import Button from '../ui/button/button.svelte';
@@ -22,7 +22,7 @@
   class={cn('flex space-x-2 lg:flex-col lg:space-y-1 lg:space-x-0', className)}
 >
   {#each items as item}
-    {@const isActive = $page.url.pathname === item.href}
+    {@const isActive = page.url.pathname + page.url.search === item.href}
 
     <Button
       href={item.href}
