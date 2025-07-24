@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.2...positron-components-v1.5.3) (2025-07-24)
+
+### Bug Fixes
+
+- sidebar active check with query param ([82a57b8](https://github.com/Profiidev/positron_components/commit/82a57b878918a08874d0a902ef8f59e979159354))
+- sidebar active check with query param ([2be178c](https://github.com/Profiidev/positron_components/commit/2be178ccde15cd2f62c59b85b1b5846ea820a0d7))
+
 ## [1.5.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.1...positron-components-v1.5.2) (2025-07-23)
 
 ### Bug Fixes
