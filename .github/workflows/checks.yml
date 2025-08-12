@@ -10,7 +10,7 @@ jobs:
       checks: write
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           token: ${{ secrets.RELEASE_PLZ_TOKEN }}
 
