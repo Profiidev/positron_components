@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.5.4](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.3...positron-components-v1.5.4) (2025-09-08)
+
+
+### Bug Fixes
+
+* reexport date stuff ([1dca09b](https://github.com/Profiidev/positron_components/commit/1dca09bd0ff3cd3caf2229f6867a9351722e35b0))
+* reexport date stuff ([c073ee9](https://github.com/Profiidev/positron_components/commit/c073ee98e37e69698d58ed95d6c90fabed468ee9))
+
 ## [1.5.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.2...positron-components-v1.5.3) (2025-07-24)
 
 ### Bug Fixes
