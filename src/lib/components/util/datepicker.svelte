@@ -1,3 +1,7 @@
+<script lang="ts" module>
+  export * from '@internationalized/date';
+</script>
+
 <script lang="ts">
   import CalendarIcon from '@lucide/svelte/icons/calendar';
   import {
