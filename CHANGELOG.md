@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.5...positron-components-v1.6.0) (2025-09-24)
+
+### Features
+
+- added reexport of shadcn extra ([d0d06b1](https://github.com/Profiidev/positron_components/commit/d0d06b124f0bc87875986c79564cf91519e04438))
+- added shadcn svelte extra components ([173936d](https://github.com/Profiidev/positron_components/commit/173936d778b27146799e1fef0865a856c26058c2))
+
+### Bug Fixes
+
+- remove component that requires the root css file to work ([fd9caef](https://github.com/Profiidev/positron_components/commit/fd9caef767a131e9fc847985a4bc54648c0aa906))
+
 ## [1.5.5](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.4...positron-components-v1.5.5) (2025-09-08)
 
 ### Bug Fixes
