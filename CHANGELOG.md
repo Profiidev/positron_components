@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.6.0...positron-components-v1.7.0) (2025-09-27)
+
+### Features
+
+- hideable input ([20a8074](https://github.com/Profiidev/positron_components/commit/20a8074cc83a0c149ab26418927b2f45a8aaf148))
+- hideable input ([d2a91e6](https://github.com/Profiidev/positron_components/commit/d2a91e68e49944475f651579ae604de53b723bda))
+
 ## [1.6.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.5.5...positron-components-v1.6.0) (2025-09-24)
 
 ### Features
