@@ -5,6 +5,7 @@ import FormSwitch from './form-switch.svelte';
 import BaseForm from './base-form.svelte';
 import LoginOtherOptions from './login-other-options.svelte';
 import Totp_6 from './totp-6.svelte';
+import HideableInput from './hideable-input.svelte';
 
 export {
   FormDialog,
@@ -13,6 +14,7 @@ export {
   FormSwitch,
   BaseForm,
   LoginOtherOptions,
-  Totp_6
+  Totp_6,
+  HideableInput
 };
 export * from './types.js';
