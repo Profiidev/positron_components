@@ -6,7 +6,7 @@
   import { cn } from '$lib/util/utils';
   import StarHalfIcon from '@lucide/svelte/icons/star-half';
   import StarIcon from '@lucide/svelte/icons/star';
-  import { RatingGroup } from 'bits-ui';
+  import { unstable_RatingGroup as RatingGroup } from 'bits-ui';
   import type { StarRatingStarProps } from './types';
 
   let { index, state, class: className }: StarRatingStarProps = $props();
