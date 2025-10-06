@@ -13,7 +13,6 @@ export {
   type IPv4AddressInputProps,
   type IPv4AddressInputPropsWithoutHTML
 } from './ipv4address-input/index.js';
-export { Kbd } from './kbd/index.js';
 export {
   LanguageSwitcher,
   type Language,

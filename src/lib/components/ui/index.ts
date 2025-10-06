@@ -12,6 +12,7 @@ export {
   type ButtonVariant,
   buttonVariants
 } from './button/index.js';
+export * as ButtonGroup from './button-group/index.js';
 export * as Calendar from './calendar/index.js';
 export * as Card from './card/index.js';
 export * as Carousel from './carousel/index.js';
@@ -24,10 +25,15 @@ export * as DataTable from './data-table/index.js';
 export * as Dialog from './dialog/index.js';
 export * as Drawer from './drawer/index.js';
 export * as DropdownMenu from './dropdown-menu/index.js';
+export * as Empty from './empty/index.js';
+export * as Field from './field/index.js';
 export * as Form from './form/index.js';
 export * as HoverCard from './hover-card/index.js';
 export { Input } from './input/index.js';
+export * as InputGroup from './input-group/index.js';
 export * as InputOtp from './input-otp/index.js';
+export * as Item from './item/index.js';
+export * as Kbd from './kbd/index.js';
 export { Label } from './label/index.js';
 export * as Menubar from './menubar/index.js';
 export * as NavigationMenu from './navigation-menu/index.js';
@@ -45,6 +51,7 @@ export * as Sidebar from './sidebar/index.js';
 export { Skeleton } from './skeleton/index.js';
 export { Slider } from './slider/index.js';
 export { Toaster } from './sonner/index.js';
+export { Spinner } from './spinner/index.js';
 export { Switch } from './switch/index.js';
 export * as Table from './table/index.js';
 export * as Tabs from './tabs/index.js';
