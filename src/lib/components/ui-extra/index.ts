@@ -35,7 +35,6 @@ export {
 export { PMCommand } from './pm-command/index.js';
 export * as Rename from './rename/index.js';
 export { Snippet } from './snippet/index.js';
-export * as StarRating from './star-rating/index.js';
 export {
   TagsInput,
   type TagsInputProps,
