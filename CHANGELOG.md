@@ -2,10 +2,9 @@
 
 ## [1.7.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.0...positron-components-v1.7.1) (2025-10-23)
 
-
 ### Miscellaneous Chores
 
-* release 1.7.1 ([d2937e9](https://github.com/Profiidev/positron_components/commit/d2937e98fc85d5abf7bec745eb3e5844231f30ce))
+- release 1.7.1 ([d2937e9](https://github.com/Profiidev/positron_components/commit/d2937e98fc85d5abf7bec745eb3e5844231f30ce))
 
 ## [1.7.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.6.0...positron-components-v1.7.0) (2025-09-27)
 
