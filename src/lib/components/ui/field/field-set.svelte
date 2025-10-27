@@ -1,15 +1,17 @@
 <script lang="ts">
-  import { cn } from '$lib/utils.js';
+  import { cn, type WithElementRef } from '$lib/utils.js';
   import type { HTMLFieldsetAttributes } from 'svelte/elements';
 
   let {
+    ref = $bindable(null),
     class: className,
     children,
     ...restProps
-  }: HTMLFieldsetAttributes = $props();
+  }: WithElementRef<HTMLFieldsetAttributes> = $props();
 </script>
 
 <fieldset
+  bind:this={ref}
   data-slot="field-set"
   class={cn(
     'flex flex-col gap-6',
