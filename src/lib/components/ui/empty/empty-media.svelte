@@ -20,20 +20,22 @@
 </script>
 
 <script lang="ts">
-  import { cn } from '$lib/utils.js';
+  import { cn, type WithElementRef } from '$lib/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
 
   let {
+    ref = $bindable(null),
     class: className,
     children,
     variant = 'default',
     ...restProps
-  }: HTMLAttributes<HTMLDivElement> & {
+  }: WithElementRef<HTMLAttributes<HTMLDivElement>> & {
     variant?: EmptyMediaVariant;
   } = $props();
 </script>
 
 <div
+  bind:this={ref}
   data-slot="empty-icon"
   data-variant={variant}
   class={cn(emptyMediaVariants({ variant }), className)}
