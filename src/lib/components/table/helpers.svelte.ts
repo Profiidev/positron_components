@@ -38,12 +38,13 @@ export const createColumnCell = <T, C>(
   return {
     accessorKey: key,
     cell: ({ row }) => {
-      const valueSnippet = createRawSnippet<[T]>((getValue) => {
+      let value_raw: T = row.getValue(key);
+      const valueSnippet = createRawSnippet<[T]>(() => {
         let value: string;
         if (formatter) {
-          value = formatter(getValue());
+          value = formatter(value_raw);
         } else {
-          value = getValue() as string;
+          value = value_raw as string;
         }
 
         return {
@@ -52,7 +53,7 @@ export const createColumnCell = <T, C>(
         };
       });
 
-      return renderSnippet(valueSnippet, row.getValue(key));
+      return renderSnippet(valueSnippet);
     }
   };
 };
