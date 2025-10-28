@@ -1,6 +1,6 @@
 {
   "name": "positron-components",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "repository": "github:profiidev/positron_components",
   "sideEffects": [
     "**/*.css"
