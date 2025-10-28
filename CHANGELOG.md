@@ -2,11 +2,10 @@
 
 ## [1.7.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.1...positron-components-v1.7.2) (2025-10-28)
 
-
 ### Bug Fixes
 
-* table cell value passing ([f24062a](https://github.com/Profiidev/positron_components/commit/f24062a157be71692ae036c0c62f043ab4e54a2a))
-* table cell value passing ([338826f](https://github.com/Profiidev/positron_components/commit/338826ffd1ac381d90c2595668347d9837d1141c))
+- table cell value passing ([f24062a](https://github.com/Profiidev/positron_components/commit/f24062a157be71692ae036c0c62f043ab4e54a2a))
+- table cell value passing ([338826f](https://github.com/Profiidev/positron_components/commit/338826ffd1ac381d90c2595668347d9837d1141c))
 
 ## [1.7.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.0...positron-components-v1.7.1) (2025-10-23)
 
