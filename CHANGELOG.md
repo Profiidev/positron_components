@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.8.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.2...positron-components-v1.8.0) (2025-11-02)
+
+
+### Features
+
+* better request methods ([0f2ada2](https://github.com/Profiidev/positron_components/commit/0f2ada242d94488b92055054fe14f7ebb16d09f3))
+* better request methods ([475fd29](https://github.com/Profiidev/positron_components/commit/475fd296bdd5289a663e0b80dd900784814fdd12))
+
 ## [1.7.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.1...positron-components-v1.7.2) (2025-10-28)
 
 ### Bug Fixes
