@@ -10,9 +10,3 @@ export enum ResponseType {
   Text = 'Text',
   None = 'None'
 }
-
-export enum ContentType {
-  Json = 'application/json',
-  UrlFrom = 'x-www-form-urlencoded',
-  Bytes = 'application/octet-stream'
-}
