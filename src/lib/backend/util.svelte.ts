@@ -57,16 +57,16 @@ export const request = async <T>(
   content_type?: string,
   signal?: AbortSignal
 ): Promise<T | RequestError> => {
-  let body_data = body;
-
   if (body instanceof ArrayBuffer) {
     content_type = 'application/octet-stream';
   } else if (body instanceof Blob) {
     content_type = body.type;
+    body = body.stream();
   } else if (typeof body === 'string') {
     content_type = 'text/plain';
   } else if (typeof body === 'object' && body !== null) {
     content_type = 'application/json';
+    body = JSON.stringify(body);
   }
 
   let headers: HeadersInit = {};
@@ -78,7 +78,7 @@ export const request = async <T>(
     let res = await fetch!(`${path}`, {
       method,
       headers,
-      body: body_data,
+      body,
       signal
     });
 
