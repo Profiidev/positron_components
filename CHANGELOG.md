@@ -2,11 +2,10 @@
 
 ## [1.8.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.0...positron-components-v1.8.1) (2025-11-02)
 
-
 ### Bug Fixes
 
-* json request body ([e2bb80b](https://github.com/Profiidev/positron_components/commit/e2bb80b9ce6a6b0dd04eb2b006b0c94df9627e9f))
-* json request body ([277fe58](https://github.com/Profiidev/positron_components/commit/277fe5876e5cad58545b860abf3428febbf40a2f))
+- json request body ([e2bb80b](https://github.com/Profiidev/positron_components/commit/e2bb80b9ce6a6b0dd04eb2b006b0c94df9627e9f))
+- json request body ([277fe58](https://github.com/Profiidev/positron_components/commit/277fe5876e5cad58545b860abf3428febbf40a2f))
 
 ## [1.8.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.7.2...positron-components-v1.8.0) (2025-11-02)
 
