@@ -118,12 +118,11 @@
       form={formInfo}
       {schema}
       onsubmit={submit}
-      {confirm}
       {children}
     >
       {#snippet footer({ defaultBtn })}
         <Dialog.Footer class="mt-4">
-          {@render defaultBtn({ variant: confirmVariant })}
+          {@render defaultBtn({ variant: confirmVariant, content: confirm })}
         </Dialog.Footer>
       {/snippet}
     </Form>

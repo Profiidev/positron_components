@@ -25,14 +25,13 @@
       [
         {
           defaultBtn: Snippet<
-            [{ className?: string; variant?: ButtonVariant }?]
+            [{ className?: string; variant?: ButtonVariant; content: string }?]
           >;
           isLoading: boolean;
         }
       ]
     >;
     isLoading?: boolean;
-    confirm: string;
     error?: string;
     class?: string;
   }
@@ -44,7 +43,6 @@
     children,
     footer = defaultFooter,
     isLoading = $bindable(false),
-    confirm,
     error = $bindable(''),
     class: className
   }: Props = $props();
@@ -99,7 +97,9 @@
 {/snippet}
 
 {#snippet formButton(
-  props: { className?: string; variant?: ButtonVariant } | undefined
+  props:
+    | { className?: string; variant?: ButtonVariant; content: string }
+    | undefined
 )}
   {@const prop = { ...props }}
   <FormButton
@@ -111,6 +111,6 @@
     {#if isLoading}
       <LoaderCircle class="mr-2 h-4 w-4 animate-spin" />
     {/if}
-    {confirm}
+    {prop.content}
   </FormButton>
 {/snippet}
