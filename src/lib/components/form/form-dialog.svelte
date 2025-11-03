@@ -11,7 +11,7 @@
   } from '../ui/button/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { type SuperForm } from 'sveltekit-superforms';
-  import type { Error, FormSchema, FormRecord, FormType } from './types.js';
+  import type { Error, FormRecord, FormType } from './types.js';
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
 
@@ -39,7 +39,8 @@
       [{ props: { formData: SuperForm<T>; disabled: boolean } }]
     >;
     triggerInner?: Snippet;
-    form: FormSchema<T, In>;
+    form: FormType<T, In>;
+    schema: any;
   }
 
   let {
@@ -55,7 +56,8 @@
     onsubmit,
     children,
     triggerInner,
-    form: formInfo
+    form: formInfo,
+    schema
   }: Props = $props();
 
   let formComp: SvelteComponent | undefined = $state();
@@ -114,14 +116,14 @@
       bind:isLoading
       bind:error
       form={formInfo}
-      {confirmVariant}
+      {schema}
       onsubmit={submit}
       {confirm}
       {children}
     >
-      {#snippet footer({ children })}
+      {#snippet footer({ defaultBtn })}
         <Dialog.Footer class="mt-4">
-          {@render children()}
+          {@render defaultBtn({ variant: confirmVariant })}
         </Dialog.Footer>
       {/snippet}
     </Form>
