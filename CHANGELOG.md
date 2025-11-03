@@ -2,11 +2,10 @@
 
 ## [1.8.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.2...positron-components-v1.8.3) (2025-11-03)
 
-
 ### Bug Fixes
 
-* remove required confirm text from form ([a223f32](https://github.com/Profiidev/positron_components/commit/a223f3224850f6ce93c9af9fe6108d7236b1f568))
-* remove required confirm text from form ([24a4c5f](https://github.com/Profiidev/positron_components/commit/24a4c5f76d69fb92236731421bfbbfa070e35162))
+- remove required confirm text from form ([a223f32](https://github.com/Profiidev/positron_components/commit/a223f3224850f6ce93c9af9fe6108d7236b1f568))
+- remove required confirm text from form ([24a4c5f](https://github.com/Profiidev/positron_components/commit/24a4c5f76d69fb92236731421bfbbfa070e35162))
 
 ## [1.8.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.1...positron-components-v1.8.2) (2025-11-03)
 
