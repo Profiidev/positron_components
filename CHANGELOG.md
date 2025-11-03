@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.1...positron-components-v1.8.2) (2025-11-03)
+
+### Bug Fixes
+
+- better handling of form footer and less required props ([c345571](https://github.com/Profiidev/positron_components/commit/c345571e5dbd803dab780ccde09de1b0005a4003))
+- better handling of form footer and less required props ([e7598ce](https://github.com/Profiidev/positron_components/commit/e7598cea0c5806e31b9650cf2988fd0e0843734c))
+
 ## [1.8.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.0...positron-components-v1.8.1) (2025-11-02)
 
 ### Bug Fixes
