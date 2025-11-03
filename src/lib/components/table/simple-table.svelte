@@ -2,12 +2,7 @@
   lang="ts"
   generics="CD, T, CT extends FormRecord = FormRecord, CIn extends FormRecord = CT, ET extends FormRecord = FormRecord, EIn extends FormRecord = ET, DT extends FormRecord = FormRecord, DIn extends FormRecord = DT"
 >
-  import type {
-    Error,
-    FormRecord,
-    FormSchema,
-    FormType
-  } from '../form/types.js';
+  import type { Error, FormRecord, FormType } from '../form/types.js';
   import { createTable } from '../table/helpers.svelte';
   import Table from '../table/base-table.svelte';
   import { toast } from 'svelte-sonner';
@@ -57,9 +52,12 @@
       ]
     >;
     createButtonDisabled: boolean;
-    createForm: FormSchema<CT, CIn>;
-    editForm: FormSchema<ET, EIn>;
-    deleteForm: FormSchema<DT, DIn>;
+    createForm: FormType<CT, CIn>;
+    createSchema: any;
+    editForm: FormType<ET, EIn>;
+    editSchema: any;
+    deleteForm: FormType<DT, DIn>;
+    deleteSchema: any;
     startCreate?: () => boolean | Promise<boolean>;
     startEdit?: (item: T) => void | Promise<void>;
     createClass?: string;
@@ -93,7 +91,10 @@
     createClass,
     editClass,
     errorMappings,
-    columnData
+    columnData,
+    createSchema,
+    editSchema,
+    deleteSchema
   }: Props = $props();
 
   let isLoading = $state(false);
@@ -217,6 +218,7 @@
   bind:open={deleteOpen}
   bind:isLoading
   form={deleteForm}
+  schema={deleteSchema}
 />
 <FormDialog
   bind:this={editComp}
@@ -228,6 +230,7 @@
   bind:isLoading
   form={editForm}
   class={editClass}
+  schema={editSchema}
 >
   {#snippet children({ props })}
     {#if selected}
@@ -260,6 +263,7 @@
       onopen={startCreate}
       bind:isLoading
       form={createForm}
+      schema={createSchema}
       class={createClass}
     >
       {#snippet children({ props })}

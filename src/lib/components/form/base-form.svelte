@@ -10,19 +10,28 @@
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import type { ButtonVariant } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
-  import type { Error, FormRecord, FormSchema, FormType } from './types.js';
+  import type { Error, FormRecord, FormType } from './types.js';
 
   interface Props {
-    form: FormSchema<T, In>;
+    form: FormType<T, In>;
+    schema: any;
     onsubmit: (
       form: FormType<T, In>
     ) => Error | undefined | Promise<Error | undefined>;
     children?: Snippet<
       [{ props: { formData: SuperForm<T>; disabled: boolean } }]
     >;
-    footer: Snippet<[{ children: Snippet<[{ className?: string }?]> }]>;
-    isLoading: boolean;
-    confirmVariant?: ButtonVariant;
+    footer?: Snippet<
+      [
+        {
+          defaultBtn: Snippet<
+            [{ className?: string; variant?: ButtonVariant }?]
+          >;
+          isLoading: boolean;
+        }
+      ]
+    >;
+    isLoading?: boolean;
     confirm: string;
     error?: string;
     class?: string;
@@ -30,18 +39,18 @@
 
   let {
     form: formInfo,
+    schema,
     onsubmit,
     children,
-    footer,
+    footer = defaultFooter,
     isLoading = $bindable(false),
-    confirmVariant = 'default',
     confirm,
     error = $bindable(''),
     class: className
   }: Props = $props();
 
-  let form = superForm(formInfo.form, {
-    validators: zodClient(formInfo.schema),
+  let form = superForm(formInfo, {
+    validators: zodClient(schema),
     SPA: true,
     onUpdate: async ({ form, cancel }) => {
       if (!form.valid) return;
@@ -82,16 +91,22 @@
   {#if error}
     <span class="text-destructive truncate text-sm">{error}</span>
   {/if}
-  {@render footer({ children: formButton })}
+  {@render footer({ defaultBtn: formButton, isLoading })}
 </form>
 
-{#snippet formButton(props: { className?: string } | undefined)}
+{#snippet defaultFooter({ defaultBtn }: { defaultBtn: Snippet })}
+  {@render defaultBtn()}
+{/snippet}
+
+{#snippet formButton(
+  props: { className?: string; variant?: ButtonVariant } | undefined
+)}
   {@const prop = { ...props }}
   <FormButton
     class={prop.className}
     type="submit"
     disabled={isLoading}
-    variant={confirmVariant}
+    variant={prop.variant}
   >
     {#if isLoading}
       <LoaderCircle class="mr-2 h-4 w-4 animate-spin" />
