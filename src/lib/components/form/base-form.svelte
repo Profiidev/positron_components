@@ -20,6 +20,7 @@
 
   interface Props {
     schema: V;
+    initialValue?: Partial<FormValue<V>>;
     onsubmit: (
       form: FormValue<V>
     ) => Error | undefined | void | Promise<Error | undefined | void>;
@@ -43,6 +44,7 @@
 
   let {
     schema,
+    initialValue,
     onsubmit,
     children,
     footer = defaultFooter,
@@ -52,7 +54,7 @@
   }: Props = $props();
 
   let form = superForm(
-    defaults(zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>),
+    defaults(initialValue, zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>),
     {
       validators: zod4(schema),
       SPA: true,

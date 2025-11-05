@@ -39,6 +39,7 @@
     >;
     triggerInner?: Snippet;
     schema: V;
+    initialValue?: FormValue<V>;
   }
 
   let {
@@ -54,7 +55,8 @@
     onsubmit,
     children,
     triggerInner,
-    schema
+    schema,
+    initialValue
   }: Props = $props();
 
   let formComp: BaseForm<V> | undefined = $state();
@@ -118,6 +120,7 @@
       bind:isLoading
       bind:error
       {schema}
+      {initialValue}
       onsubmit={submit}
       {children}
     >
