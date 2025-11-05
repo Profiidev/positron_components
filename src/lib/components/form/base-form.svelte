@@ -54,7 +54,10 @@
   }: Props = $props();
 
   let form = superForm(
-    defaults(initialValue, zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>),
+    defaults(
+      initialValue,
+      zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>
+    ),
     {
       validators: zod4(schema),
       SPA: true,
