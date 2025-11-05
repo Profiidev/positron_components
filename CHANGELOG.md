@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.10.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.9.0...positron-components-v1.10.0) (2025-11-05)
+
+
+### Features
+
+* added option for initial form value ([39d7da5](https://github.com/Profiidev/positron_components/commit/39d7da59a70b17d54ad2b0df1620d0beb4ca01e6))
+* added option for initial form value ([d135974](https://github.com/Profiidev/positron_components/commit/d135974b3e4a05a2c021c0a1cb76da77acb63257))
+
 ## [1.9.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.3...positron-components-v1.9.0) (2025-11-05)
 
 ### Features
