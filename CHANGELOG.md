@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.3...positron-components-v1.9.0) (2025-11-05)
+
+
+### Features
+
+* added form get value ([2779b2d](https://github.com/Profiidev/positron_components/commit/2779b2d90ed810bdd09fc1a054479827f10cc796))
+
 ## [1.8.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.8.2...positron-components-v1.8.3) (2025-11-03)
 
 ### Bug Fixes
