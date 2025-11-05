@@ -1,25 +1,30 @@
-<script
-  lang="ts"
-  generics="T extends FormRecord = FormRecord, In extends FormRecord = T"
->
+<script lang="ts" generics="V extends ZodValidationSchema">
   import type { Snippet } from 'svelte';
   import { get } from 'svelte/store';
-  import { setError, superForm, type SuperForm } from 'sveltekit-superforms';
-  import { zodClient } from 'sveltekit-superforms/adapters';
+  import {
+    defaults,
+    setError,
+    superForm,
+    type SuperForm
+  } from 'sveltekit-superforms';
+  import {
+    zod4,
+    type ValidationAdapter,
+    type ZodValidationSchema
+  } from 'sveltekit-superforms/adapters';
   import { FormButton } from '../ui/form/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import type { ButtonVariant } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
-  import type { Error, FormRecord, FormType } from './types.js';
+  import type { Error, FormValue } from './types.js';
 
   interface Props {
-    form: FormType<T, In>;
-    schema: any;
+    schema: V;
     onsubmit: (
-      form: FormType<T, In>
-    ) => Error | undefined | Promise<Error | undefined>;
+      form: FormValue<V>
+    ) => Error | undefined | void | Promise<Error | undefined | void>;
     children?: Snippet<
-      [{ props: { formData: SuperForm<T>; disabled: boolean } }]
+      [{ props: { formData: SuperForm<FormValue<V>>; disabled: boolean } }]
     >;
     footer?: Snippet<
       [
@@ -37,7 +42,6 @@
   }
 
   let {
-    form: formInfo,
     schema,
     onsubmit,
     children,
@@ -47,40 +51,48 @@
     class: className
   }: Props = $props();
 
-  let form = superForm(formInfo, {
-    validators: zodClient(schema),
-    SPA: true,
-    onUpdate: async ({ form, cancel }) => {
-      if (!form.valid) return;
+  let form = superForm(
+    defaults(zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>),
+    {
+      validators: zod4(schema),
+      SPA: true,
+      onUpdate: async ({ form, cancel }) => {
+        if (!form.valid) return;
 
-      error = '';
-      isLoading = true;
+        error = '';
+        isLoading = true;
 
-      let ret = await onsubmit(form);
+        let ret = await onsubmit(form.data);
 
-      isLoading = false;
-      if (ret) {
-        if (ret.field) {
-          setError(form, ret.field as '', ret.error, undefined);
-        } else {
-          if (ret.error !== '') error = ret.error;
-          cancel();
+        isLoading = false;
+        if (ret) {
+          if (ret.field) {
+            setError(form, ret.field as '', ret.error, undefined);
+          } else {
+            if (ret.error !== '') error = ret.error;
+            cancel();
+          }
         }
       }
     }
-  });
+  );
 
   let { enhance } = form;
 
-  export const setValue = (value: T) => {
+  export const setValue = (value: FormValue<V>) => {
     let old = get(form.form);
 
-    let newValue: T = {} as any;
+    //@ts-ignore
+    let newValue: FormValue<V> = {};
     for (const key in old) {
       newValue[key] = value[key] ?? old[key];
     }
 
     form.form.set(newValue);
+  };
+
+  export const getValue = () => {
+    return get(form.form);
   };
 </script>
 

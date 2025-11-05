@@ -1,9 +1,6 @@
-<script
-  lang="ts"
-  generics="T extends FormRecord = FormRecord, In extends FormRecord = T"
->
+<script lang="ts" generics="V extends ZodValidationSchema">
   import * as Dialog from '../ui/dialog/index.js';
-  import type { Snippet, SvelteComponent } from 'svelte';
+  import type { Snippet } from 'svelte';
   import {
     Button,
     type ButtonSize,
@@ -11,9 +8,11 @@
   } from '../ui/button/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { type SuperForm } from 'sveltekit-superforms';
-  import type { Error, FormRecord, FormType } from './types.js';
+  import type { Error, FormValue } from './types.js';
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
+  import { type ZodValidationSchema } from 'sveltekit-superforms/adapters';
+  import BaseForm from './base-form.svelte';
 
   interface Props {
     title: string;
@@ -33,14 +32,13 @@
     };
     onopen?: () => boolean | Promise<boolean>;
     onsubmit: (
-      form: FormType<T, In>
-    ) => Error | undefined | Promise<Error | undefined>;
+      form: FormValue<V>
+    ) => Error | undefined | void | Promise<Error | undefined | void>;
     children?: Snippet<
-      [{ props: { formData: SuperForm<T>; disabled: boolean } }]
+      [{ props: { formData: SuperForm<FormValue<V>>; disabled: boolean } }]
     >;
     triggerInner?: Snippet;
-    form: FormType<T, In>;
-    schema: any;
+    schema: V;
   }
 
   let {
@@ -56,17 +54,15 @@
     onsubmit,
     children,
     triggerInner,
-    form: formInfo,
     schema
   }: Props = $props();
 
-  let formComp: SvelteComponent | undefined = $state();
+  let formComp: BaseForm<V> | undefined = $state();
   let error = $state('');
-  let formSetValue: undefined | ((value: T) => void) = $derived(
-    formComp?.setValue
-  );
+  let formSetValue = $derived(formComp?.setValue);
+  let formGetValue = $derived(formComp?.getValue);
 
-  const submit = async (form: FormType<T, In>) => {
+  const submit = async (form: FormValue<V>) => {
     let ret = await onsubmit(form);
     if (!ret) {
       open = false;
@@ -83,9 +79,15 @@
     isLoading = false;
   };
 
-  export const setValue = async (value: T) => {
-    if (await wait_for(() => formSetValue !== undefined, 10, 5000)) {
+  export const setValue = async (value: FormValue<V>) => {
+    if (await wait_for(() => formSetValue !== undefined, 10, 500)) {
       formSetValue!(value);
+    }
+  };
+
+  export const getValue = () => {
+    if (formGetValue) {
+      return formGetValue();
     }
   };
 </script>
@@ -115,7 +117,6 @@
       bind:this={formComp}
       bind:isLoading
       bind:error
-      form={formInfo}
       {schema}
       onsubmit={submit}
       {children}

@@ -27,7 +27,7 @@
     ...restProps
   }: HTMLInputAttributes & Props = $props();
 
-  const { form: formData } = $derived(form);
+  let formData = $derived(form.form);
 </script>
 
 <Form.Field {form} name={key} class="gap-1/2 grid">

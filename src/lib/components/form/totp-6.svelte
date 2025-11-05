@@ -20,7 +20,7 @@
     disabled
   }: Props = $props();
 
-  let { form: formData } = $derived(form);
+  let formData = $derived(form.form);
 </script>
 
 <Form.Field {form} name={key}>
