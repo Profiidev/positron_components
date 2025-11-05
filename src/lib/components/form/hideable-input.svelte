@@ -12,7 +12,8 @@
   }
 
   const { formData: form, key, id, value, children }: Props = $props();
-  let { form: formData } = $derived(form);
+
+  let formData = $derived(form.form);
 </script>
 
 {#if $formData[key]}

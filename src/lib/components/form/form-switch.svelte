@@ -13,7 +13,7 @@
 
   let { formData: form, key, label, disabled, ...restProps }: Props = $props();
 
-  const { form: formData } = $derived(form as any);
+  let formData: any = $derived(form.form);
 </script>
 
 <Form.Field {form} name={key} class="mt-2 flex w-full items-center">
