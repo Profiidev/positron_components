@@ -3,6 +3,8 @@
   import * as Form from '../ui/form/index.js';
   import type { FormPath, SuperForm } from 'sveltekit-superforms';
   import type { FormRecord } from './types.js';
+  import type { WithoutChildrenOrChild } from '$lib/utils.js';
+  import { Switch as SwitchPrimitive } from 'bits-ui';
 
   interface Props {
     formData: SuperForm<S>;
@@ -11,7 +13,13 @@
     disabled?: boolean;
   }
 
-  let { formData: form, key, label, disabled, ...restProps }: Props = $props();
+  let {
+    formData: form,
+    key,
+    label,
+    disabled,
+    ...restProps
+  }: Props & WithoutChildrenOrChild<SwitchPrimitive.RootProps> = $props();
 
   let formData: any = $derived(form.form);
 </script>
