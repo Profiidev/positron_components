@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.10.0...positron-components-v1.10.1) (2025-11-18)
+
+### Bug Fixes
+
+- proper type for props of from switch ([64e9d8e](https://github.com/Profiidev/positron_components/commit/64e9d8e42018e1cc654e57031b4dc279c3ca0a18))
+- proper type for props of from switch ([c32dabb](https://github.com/Profiidev/positron_components/commit/c32dabb32d7a1e4f7673f0c2b5a05010e79ba38a))
+
 ## [1.10.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.9.0...positron-components-v1.10.0) (2025-11-05)
 
 ### Features
