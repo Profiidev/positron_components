@@ -39,6 +39,7 @@
     selected: T[];
     buttonPrefix?: string;
     class?: string;
+    onSelectChange?: (selected: T[]) => void;
   }
 
   let {
@@ -50,7 +51,8 @@
     single,
     selected = $bindable([]),
     buttonPrefix,
-    class: className
+    class: className,
+    onSelectChange
   }: Props = $props();
 
   let open = $state(false);
@@ -67,6 +69,7 @@
         selected.push(value);
       }
     }
+    onSelectChange?.(selected);
   };
 
   let filtered = $derived.by(() => {

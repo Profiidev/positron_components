@@ -17,6 +17,7 @@
     filter?: (data: Item<T>) => boolean;
     compare?: (a: T, b: T) => boolean;
     single?: boolean;
+    onSelectChange?: (selected: T[]) => void;
   }
 
   let {
