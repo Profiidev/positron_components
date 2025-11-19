@@ -36,7 +36,7 @@
     compare?: (a: T, b: T) => boolean;
     disabled?: boolean;
     single?: boolean;
-    selected: T[];
+    selected?: T[];
     buttonPrefix?: string;
     class?: string;
     onSelectChange?: (selected: T[]) => void;
