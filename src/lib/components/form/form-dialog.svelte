@@ -8,7 +8,7 @@
   } from '../ui/button/index.js';
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import { type SuperForm } from 'sveltekit-superforms';
-  import type { Error, FormValue } from './types.js';
+  import type { Error, FormEnctype, FormValue } from './types.js';
   import Form from './base-form.svelte';
   import { wait_for } from '$lib/util/interval.svelte';
   import { type ZodValidationSchema } from 'sveltekit-superforms/adapters';
@@ -40,6 +40,7 @@
     triggerInner?: Snippet;
     schema: V;
     initialValue?: FormValue<V>;
+    enctype?: FormEnctype;
   }
 
   let {
@@ -56,7 +57,8 @@
     children,
     triggerInner,
     schema,
-    initialValue
+    initialValue,
+    enctype
   }: Props = $props();
 
   let formComp: BaseForm<V> | undefined = $state();
@@ -121,6 +123,7 @@
       bind:error
       {schema}
       {initialValue}
+      {enctype}
       onsubmit={submit}
       {children}
     >
