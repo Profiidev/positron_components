@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.11.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.10.1...positron-components-v1.11.0) (2025-11-19)
+
+### Features
+
+- added selection change event to form select and multiselect ([ede2e58](https://github.com/Profiidev/positron_components/commit/ede2e58fdf5c1fd04b058527992415211ffde7e6))
+
+### Bug Fixes
+
+- made selected on multiselect optional ([42b184e](https://github.com/Profiidev/positron_components/commit/42b184e5858a538bba6ba1dab30b0a4b893cabfe))
+
 ## [1.10.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.10.0...positron-components-v1.10.1) (2025-11-18)
 
 ### Bug Fixes
