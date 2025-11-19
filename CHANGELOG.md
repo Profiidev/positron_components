@@ -2,11 +2,10 @@
 
 ## [1.12.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.12.0...positron-components-v1.12.1) (2025-11-19)
 
-
 ### Bug Fixes
 
-* form file export ([92c53a6](https://github.com/Profiidev/positron_components/commit/92c53a694d6e3659b3e3e5cd420e8f3c02661914))
-* form file export ([84c9ff4](https://github.com/Profiidev/positron_components/commit/84c9ff40b8be17190386532739b33807c2c6267a))
+- form file export ([92c53a6](https://github.com/Profiidev/positron_components/commit/92c53a694d6e3659b3e3e5cd420e8f3c02661914))
+- form file export ([84c9ff4](https://github.com/Profiidev/positron_components/commit/84c9ff40b8be17190386532739b33807c2c6267a))
 
 ## [1.12.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.11.0...positron-components-v1.12.0) (2025-11-19)
 
