@@ -16,7 +16,7 @@
   import LoaderCircle from '@lucide/svelte/icons/loader-circle';
   import type { ButtonVariant } from '../ui/button/index.js';
   import { cn } from '../../utils.js';
-  import type { Error, FormValue } from './types.js';
+  import type { Error, FormEnctype, FormValue } from './types.js';
 
   interface Props {
     schema: V;
@@ -40,6 +40,7 @@
     isLoading?: boolean;
     error?: string;
     class?: string;
+    enctype?: FormEnctype;
   }
 
   let {
@@ -50,7 +51,8 @@
     footer = defaultFooter,
     isLoading = $bindable(false),
     error = $bindable(''),
-    class: className
+    class: className,
+    enctype
   }: Props = $props();
 
   let form = superForm(
@@ -101,7 +103,7 @@
   };
 </script>
 
-<form method="POST" class={cn('grid gap-3', className)} use:enhance>
+<form method="POST" class={cn('grid gap-3', className)} use:enhance {enctype}>
   {@render children?.({ props: { formData: form, disabled: isLoading } })}
   {#if error}
     <span class="text-destructive truncate text-sm">{error}</span>
