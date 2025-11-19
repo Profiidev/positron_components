@@ -1,5 +1,6 @@
 import FormDialog from './form-dialog.svelte';
 import FormInput from './form-input.svelte';
+import FormFile from './form-file.svelte';
 import FormSelect from './form-select.svelte';
 import FormSwitch from './form-switch.svelte';
 import BaseForm from './base-form.svelte';
@@ -10,6 +11,7 @@ import HideableInput from './hideable-input.svelte';
 export {
   FormDialog,
   FormInput,
+  FormFile,
   FormSelect,
   FormSwitch,
   BaseForm,
