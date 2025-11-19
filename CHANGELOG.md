@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.12.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.11.0...positron-components-v1.12.0) (2025-11-19)
+
+### Features
+
+- added form input for files ([9d95e76](https://github.com/Profiidev/positron_components/commit/9d95e76f95622660977641c86994d4e4c88de7ae))
+- added form input for files ([fda01ad](https://github.com/Profiidev/positron_components/commit/fda01ad70dbc5fcf74c97c2555486b542dcebc5f))
+
 ## [1.11.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.10.1...positron-components-v1.11.0) (2025-11-19)
 
 ### Features
