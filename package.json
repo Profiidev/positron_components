@@ -132,7 +132,6 @@
       "svelte": "./dist/components/ui-extra/drawer/index.js"
     },
     "./components/ui-extra/dropdown-menu": {
-      "types": "./dist/components/ui-extra/dropdown-menu/index.d.ts",
       "svelte": "./dist/components/ui-extra/dropdown-menu/index.js"
     },
     "./components/ui-extra/emoji-picker": {
@@ -328,7 +327,6 @@
       "svelte": "./dist/components/ui/drawer/index.js"
     },
     "./components/ui/dropdown-menu": {
-      "types": "./dist/components/ui/dropdown-menu/index.d.ts",
       "svelte": "./dist/components/ui/dropdown-menu/index.js"
     },
     "./components/ui/empty": {
@@ -578,14 +576,14 @@
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
     "@internationalized/date": "3.10.0",
-    "@lucide/svelte": "^0.552.0",
+    "@lucide/svelte": "^0.555.0",
     "@shikijs/langs": "^3.13.0",
     "@shikijs/themes": "^3.13.0",
-    "@sveltejs/kit": "2.48.4",
-    "@sveltejs/package": "2.5.4",
+    "@sveltejs/kit": "2.49.0",
+    "@sveltejs/package": "2.5.6",
     "@sveltejs/vite-plugin-svelte": "6.2.1",
     "@tailwindcss/typography": "0.5.19",
-    "@tailwindcss/vite": "4.1.16",
+    "@tailwindcss/vite": "4.1.17",
     "@tanstack/table-core": "8.21.3",
     "@types/luxon": "3.7.1",
     "@zxcvbn-ts/core": "^3.0.4",
@@ -597,35 +595,35 @@
     "embla-carousel-svelte": "^8.6.0",
     "formsnap": "2.0.1",
     "isomorphic-dompurify": "^2.28.0",
-    "layerchart": "^2.0.0-next.38",
+    "layerchart": "^2.0.0-next.43",
     "luxon": "3.7.2",
     "mode-watcher": "^1.1.0",
     "package-manager-detector": "^1.3.0",
     "paneforge": "^1.0.2",
     "publint": "0.3.15",
-    "runed": "^0.35.1",
-    "shiki": "3.14.0",
-    "svelte": "5.43.2",
+    "runed": "^0.36.0",
+    "shiki": "3.15.0",
+    "svelte": "5.44.1",
     "svelte-easy-crop": "^5.0.0",
     "svelte-sonner": "^1.0.5",
     "svelte-tel-input": "^3.6.0",
     "svelte-toolbelt": "^0.10.5",
-    "sveltekit-superforms": "2.28.0",
+    "sveltekit-superforms": "2.28.1",
     "tailwind-merge": "^3.3.1",
     "tailwind-variants": "^3.1.1",
-    "tailwindcss": "4.1.16",
+    "tailwindcss": "4.1.17",
     "tw-animate-css": "1.4.0",
     "typescript": "5.9.3",
     "vaul-svelte": "^1.0.0-next.7",
-    "vite": "7.1.12",
+    "vite": "7.2.4",
     "yeezy-dates": "^1.0.1",
-    "zod": "4.1.12"
+    "zod": "4.1.13"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "7.0.0",
     "prettier": "3.6.2",
     "prettier-plugin-svelte": "3.4.0",
     "prettier-plugin-tailwindcss": "0.7.1",
-    "svelte-check": "4.3.3"
+    "svelte-check": "4.3.4"
   }
 }

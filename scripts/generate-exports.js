@@ -26,8 +26,11 @@ function walk(dir, baseDir) {
       if (fs.existsSync(path.join(fullPath, 'index.ts'))) {
         const relativeDir = path.relative(baseDir, fullPath);
         const exportKey = `./${relativeDir}`;
+        let skip =
+          relativeDir === 'components/ui/dropdown-menu' ||
+          relativeDir === 'components/ui-extra/dropdown-menu';
         exports[exportKey] = {
-          types: `./dist/${relativeDir}/index.d.ts`,
+          types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`,
           svelte: `./dist/${relativeDir}/index.js`
         };
       } else {
