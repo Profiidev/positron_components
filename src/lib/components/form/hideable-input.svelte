@@ -1,6 +1,11 @@
 <script lang="ts" generics="S extends FormRecord = FormRecord">
-  import type { FormRecord, SuperForm, FormPath } from '$lib/components/form';
-  import { Input, Label } from '$lib/components/ui';
+  import type {
+    FormRecord,
+    SuperForm,
+    FormPath
+  } from '$lib/components/form/types';
+  import { Input } from '$lib/components/ui/input';
+  import { Label } from '$lib/components/ui/label';
   import type { Snippet } from 'svelte';
 
   interface Props {
