@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.12.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.12.2...positron-components-v1.12.3) (2025-11-26)
+
+
+### Bug Fixes
+
+* added missing reexports ([fa25e40](https://github.com/Profiidev/positron_components/commit/fa25e40f9deb12f9a587d5cff07a2d3b3f32d178))
+* added missing reexports ([68dc8e8](https://github.com/Profiidev/positron_components/commit/68dc8e80077757a8db90c0a21fd9227040421292))
+
 ## [1.12.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.12.1...positron-components-v1.12.2) (2025-11-26)
 
 ### Bug Fixes
