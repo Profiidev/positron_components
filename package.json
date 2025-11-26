@@ -550,6 +550,10 @@
     "./util/utils": {
       "types": "./dist/util/utils.d.ts",
       "svelte": "./dist/util/utils.js"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "svelte": "./dist/utils.js"
     }
   },
   "svelte": "./dist/index.js",
