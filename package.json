@@ -469,6 +469,10 @@
       "types": "./dist/components/util/datepicker.svelte.d.ts",
       "svelte": "./dist/components/util/datepicker.svelte"
     },
+    "./components/util/general": {
+      "types": "./dist/components/util/general.d.ts",
+      "svelte": "./dist/components/util/general.js"
+    },
     "./components/util/simple-avatar.svelte": {
       "types": "./dist/components/util/simple-avatar.svelte.d.ts",
       "svelte": "./dist/components/util/simple-avatar.svelte"
