@@ -628,6 +628,8 @@
     "prettier": "3.7.3",
     "prettier-plugin-svelte": "3.4.0",
     "prettier-plugin-tailwindcss": "0.7.2",
-    "svelte-check": "4.3.4"
+    "svelte-check": "4.3.4",
+    "@jsrepo/transform-prettier": "^0.0.6",
+    "jsrepo": "^3.0.5"
   }
 }
