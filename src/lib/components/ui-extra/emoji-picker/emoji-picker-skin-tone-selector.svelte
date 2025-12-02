@@ -31,7 +31,7 @@
   {variant}
   {size}
   class={cn('size-8', className)}
-  onclick={(e: Parameters<NonNullable<ButtonElementProps['onclick']>>[0]) => {
+  onclick={(e: Parameters[0]) => {
     onclick?.(e);
     skinState.cycleSkinTone();
   }}
