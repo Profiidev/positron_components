@@ -18,7 +18,7 @@ jobs:
       - name: Update components
         run: |
           npx -y shadcn-svelte@latest update -ay
-          npx -y jsrepo update --all -A -y
+          npx -y jsrepo update --all --yes --overwrite
           npx -y prettier -cw .
           git restore package.json
 
