@@ -27,6 +27,50 @@
       "types": "./dist/backend/index.d.ts",
       "svelte": "./dist/backend/index.js"
     },
+    "./blocks/casing": {
+      "types": "./dist/blocks/casing.d.ts",
+      "svelte": "./dist/blocks/casing.js"
+    },
+    "./blocks/ipv4-address": {
+      "types": "./dist/blocks/ipv4-address.d.ts",
+      "svelte": "./dist/blocks/ipv4-address.js"
+    },
+    "./blocks/is-letter": {
+      "types": "./dist/blocks/is-letter.d.ts",
+      "svelte": "./dist/blocks/is-letter.js"
+    },
+    "./blocks/is-number": {
+      "types": "./dist/blocks/is-number.d.ts",
+      "svelte": "./dist/blocks/is-number.js"
+    },
+    "./blocks/result": {
+      "types": "./dist/blocks/result.d.ts",
+      "svelte": "./dist/blocks/result.js"
+    },
+    "./blocks/typewriter.svelte": {
+      "types": "./dist/blocks/typewriter.svelte.d.ts",
+      "svelte": "./dist/blocks/typewriter.svelte.js"
+    },
+    "./blocks/use-auto-scroll.svelte": {
+      "types": "./dist/blocks/use-auto-scroll.svelte.d.ts",
+      "svelte": "./dist/blocks/use-auto-scroll.svelte.js"
+    },
+    "./blocks/use-clipboard.svelte": {
+      "types": "./dist/blocks/use-clipboard.svelte.d.ts",
+      "svelte": "./dist/blocks/use-clipboard.svelte.js"
+    },
+    "./blocks/use-frecency.svelte": {
+      "types": "./dist/blocks/use-frecency.svelte.d.ts",
+      "svelte": "./dist/blocks/use-frecency.svelte.js"
+    },
+    "./blocks/use-toc.svelte": {
+      "types": "./dist/blocks/use-toc.svelte.d.ts",
+      "svelte": "./dist/blocks/use-toc.svelte.js"
+    },
+    "./blocks/utils": {
+      "types": "./dist/blocks/utils.d.ts",
+      "svelte": "./dist/blocks/utils.js"
+    },
     "./components/form/base-form.svelte": {
       "types": "./dist/components/form/base-form.svelte.d.ts",
       "svelte": "./dist/components/form/base-form.svelte"
