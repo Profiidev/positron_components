@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import type {
     Command as CommandPrimitive,
@@ -10,7 +6,7 @@
   import type { Snippet } from 'svelte';
   import Command from './command.svelte';
   import * as Dialog from '$lib/components/ui-extra/dialog/index.js';
-  import type { WithoutChildrenOrChild } from '$lib/util/utils.js';
+  import type { WithoutChildrenOrChild } from '../../../blocks/utils.js';
 
   let {
     open = $bindable(false),

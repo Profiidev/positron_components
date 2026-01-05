@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { useModalSub } from './modal.svelte.js';
   import * as Dialog from '$lib/components/ui-extra/dialog/index.js';

@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { onDestroy } from 'svelte';
   import { useTerminalLoop } from './terminal.svelte.js';

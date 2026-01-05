@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import PhoneInput from './phone-input.svelte';
 import type { TelInputOptions } from 'svelte-tel-input/types';
 

@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 export type TextElementTagNames =
   | 'a'
   | 'abbr'

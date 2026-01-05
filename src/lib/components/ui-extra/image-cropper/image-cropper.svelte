@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { box } from 'svelte-toolbelt';
   import { useImageCropperRoot } from './image-cropper.svelte.js';

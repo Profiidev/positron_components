@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import Root from './modal.svelte';
 import Trigger from './modal-trigger.svelte';
 import Content from './modal-content.svelte';

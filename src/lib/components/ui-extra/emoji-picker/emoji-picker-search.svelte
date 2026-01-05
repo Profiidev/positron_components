@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import SearchIcon from '@lucide/svelte/icons/search';
   import { Command as CommandPrimitive } from 'bits-ui';

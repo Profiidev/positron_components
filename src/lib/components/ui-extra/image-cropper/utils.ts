@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import type { CropArea } from 'svelte-easy-crop';
 
 export const getFileFromUrl = async (

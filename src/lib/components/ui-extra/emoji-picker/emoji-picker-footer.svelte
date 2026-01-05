@@ -1,11 +1,7 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import type { EmojiPickerFooterProps } from './types';
   import { useEmojiPickerFooter } from './emoji-picker.svelte.js';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     class: className,

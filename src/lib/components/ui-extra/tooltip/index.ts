@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import { Tooltip as TooltipPrimitive } from 'bits-ui';
 import Trigger from './tooltip-trigger.svelte';
 import Content from './tooltip-content.svelte';

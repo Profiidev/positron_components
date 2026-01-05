@@ -1,11 +1,7 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { Root } from '$lib/components/ui-extra/avatar';
   import { Avatar as AvatarPrimitive } from 'bits-ui';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),

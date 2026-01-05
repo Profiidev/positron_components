@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn, type WithElementRef } from '$lib/util/utils.js';
+  import { cn, type WithElementRef } from '../../../blocks/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
 
   let {

@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import UploadIcon from '@lucide/svelte/icons/upload';
   import { displaySize } from '.';
   import { useId } from 'bits-ui';

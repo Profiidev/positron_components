@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import * as Command from '$lib/components/ui-extra/command';
   import { parseDate } from 'yeezy-dates';

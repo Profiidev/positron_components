@@ -1,11 +1,7 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { CopyButton } from '$lib/components/ui-extra/copy-button';
   import type { PasswordCopyButtonProps } from './types.js';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
   import { usePasswordCopy } from './password.svelte.js';
 
   let {

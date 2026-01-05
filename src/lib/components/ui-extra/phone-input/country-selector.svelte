@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import * as Popover from '$lib/components/ui-extra/popover';
   import { Button } from '$lib/components/ui-extra/button';
@@ -9,7 +5,7 @@
   import { ScrollArea } from '$lib/components/ui-extra/scroll-area';
   import CheckIcon from '@lucide/svelte/icons/check';
   import ChevronsUpDownIcon from '@lucide/svelte/icons/chevrons-up-down';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import Flag from './flag.svelte';
   import type { Country, CountryCode } from 'svelte-tel-input/types';
 

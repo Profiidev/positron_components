@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import type { HTMLAnchorAttributes } from 'svelte/elements';
 
   let { children, class: className, ...rest }: HTMLAnchorAttributes = $props();

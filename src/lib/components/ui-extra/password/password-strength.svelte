@@ -1,13 +1,9 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { tv } from 'tailwind-variants';
   import { usePasswordStrength } from './password.svelte.js';
   import type { PasswordStrengthProps } from './types.js';
   import { Meter } from 'bits-ui';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let { strength = $bindable(), class: className }: PasswordStrengthProps =
     $props();
