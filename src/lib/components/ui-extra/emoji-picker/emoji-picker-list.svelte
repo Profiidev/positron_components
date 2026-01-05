@@ -1,19 +1,15 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import * as Command from '$lib/components/ui-extra/command';
   import { Command as CommandPrimitive } from 'bits-ui';
   import data, { type EmojiMartData } from '@emoji-mart/data';
-  import * as casing from '$lib/util/casing';
+  import * as casing from '../../../blocks/casing';
   import type { EmojiPickerListProps } from './types';
   import {
     makeValue,
     parseValue,
     useEmojiPickerList
   } from './emoji-picker.svelte.js';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),

@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import { box, mergeProps } from 'svelte-toolbelt';
   import { usePasswordInput } from './password.svelte.js';
   import type { PasswordInputProps } from './types.js';

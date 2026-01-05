@@ -1,10 +1,6 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),

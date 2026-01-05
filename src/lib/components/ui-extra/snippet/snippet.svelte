@@ -1,12 +1,8 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts" module>
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import { tv, type VariantProps } from 'tailwind-variants';
   import { CopyButton } from '$lib/components/ui-extra/copy-button';
-  import type { UseClipboard } from '$lib/hooks/use-clipboard.svelte';
+  import type { UseClipboard } from '../../../blocks/use-clipboard.svelte';
 
   const style = tv({
     base: 'bg-background relative w-full max-w-full rounded-md border py-2.5 pr-12 pl-3',

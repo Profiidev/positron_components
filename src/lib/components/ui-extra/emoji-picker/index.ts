@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import Root from './emoji-picker.svelte';
 import List from './emoji-picker-list.svelte';
 import Viewport from './emoji-picker-viewport.svelte';

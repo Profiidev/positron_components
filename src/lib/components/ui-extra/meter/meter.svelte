@@ -1,13 +1,9 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import {
     Meter as MeterPrimitive,
     type WithoutChildrenOrChild
   } from 'bits-ui';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),
@@ -29,7 +25,7 @@
   {...restProps}
 >
   <div
-    class="h-full w-full flex-1 bg-(--meter-background) transition-all"
+    class="h-full w-full flex-1 bg-(--meter-background) transition-[color,transform]"
     style={`transform: translateX(-${100 - (100 * (value ?? 0)) / (max ?? 1)}%)`}
   ></div>
 </MeterPrimitive.Root>

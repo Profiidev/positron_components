@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts" module>
   import { tv, type VariantProps } from 'tailwind-variants';
 
@@ -28,7 +24,7 @@
 </script>
 
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import type { Command, Agent } from 'package-manager-detector';
   import { resolveCommand } from 'package-manager-detector/commands';
   import CopyButton from '$lib/components/ui-extra/copy-button/copy-button.svelte';

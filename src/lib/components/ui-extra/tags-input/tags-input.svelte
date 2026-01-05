@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import type { TagsInputProps } from './types';
   import TagsInputTag from './tags-input-tag.svelte';
   import { untrack } from 'svelte';
@@ -26,6 +22,7 @@
     class: className,
     disabled = false,
     validate = defaultValidate,
+    onValueChange,
     ...rest
   }: TagsInputProps = $props();
 
@@ -55,6 +52,7 @@
     }
 
     value = [...value, validated];
+    onValueChange?.(value);
     inputValue = '';
   };
 
@@ -179,6 +177,7 @@
 
   const deleteIndex = (index: number) => {
     value = [...value.slice(0, index), ...value.slice(index + 1)];
+    onValueChange?.(value);
   };
 
   const blur = () => {

@@ -1,13 +1,9 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { box } from 'svelte-toolbelt';
   import type { EmojiPickerRootProps } from './types';
   import { useEmojiPicker } from './emoji-picker.svelte.js';
   import { Command as CommandPrimitive } from 'bits-ui';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     value = $bindable(''),

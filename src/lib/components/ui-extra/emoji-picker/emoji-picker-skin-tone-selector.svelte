@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { box } from 'svelte-toolbelt';
   import { useEmojiPickerSkinToneSelector } from './emoji-picker.svelte.js';
@@ -10,7 +6,7 @@
     Button,
     type ButtonElementProps
   } from '$lib/components/ui-extra/button';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     previewEmoji = '👋',

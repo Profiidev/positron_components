@@ -1,10 +1,6 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { isNumber } from '$lib/util/is-number';
-  import { cn } from '$lib/util/utils';
+  import { isNumber } from '../../../blocks/is-number';
+  import { cn } from '../../../blocks/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
 
   type Props = {

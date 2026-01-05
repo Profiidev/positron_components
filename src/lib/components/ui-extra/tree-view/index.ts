@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import TreeView from './tree-view.svelte';
 import TreeViewFile from './tree-view-file.svelte';
 import TreeViewFolder from './tree-view-folder.svelte';

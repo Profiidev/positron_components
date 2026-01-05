@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts" module>
   import { type VariantProps, tv } from 'tailwind-variants';
 
@@ -32,7 +28,7 @@
 
 <script lang="ts">
   import { Toggle as TogglePrimitive } from 'bits-ui';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),

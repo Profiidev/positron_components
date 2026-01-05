@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 export type Language = {
   /** Language code (e.g., 'en', 'de') */
   code: string;

@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import { Context } from 'runed';
 
 export type Timeout = ReturnType<typeof setTimeout> | undefined;

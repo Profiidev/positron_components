@@ -1,12 +1,8 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { DropdownMenu as DropdownMenuPrimitive } from 'bits-ui';
   import CheckIcon from '@lucide/svelte/icons/check';
   import MinusIcon from '@lucide/svelte/icons/minus';
-  import { cn, type WithoutChildrenOrChild } from '$lib/util/utils.js';
+  import { cn, type WithoutChildrenOrChild } from '../../../blocks/utils.js';
   import type { Snippet } from 'svelte';
 
   let {

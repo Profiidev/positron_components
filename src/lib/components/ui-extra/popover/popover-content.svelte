@@ -1,9 +1,5 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
   import { Popover as PopoverPrimitive } from 'bits-ui';
 
   let {

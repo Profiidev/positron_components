@@ -1,10 +1,6 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { Window } from '$lib/components/ui-extra/window';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import { useTerminalRoot } from './terminal.svelte.js';
   import { onMount } from 'svelte';
   import type { TerminalRootProps } from './types.js';

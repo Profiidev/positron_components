@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import Root from './image-cropper.svelte';
 import UploadTrigger from './image-cropper-upload-trigger.svelte';
 import Preview from './image-cropper-preview.svelte';

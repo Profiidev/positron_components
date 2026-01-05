@@ -1,12 +1,8 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import { box } from 'svelte-toolbelt';
   import { usePassword } from './password.svelte.js';
   import type { PasswordRootProps } from './types';
-  import { cn } from '$lib/util/utils.js';
+  import { cn } from '../../../blocks/utils.js';
 
   let {
     ref = $bindable(null),

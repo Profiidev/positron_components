@@ -1,13 +1,9 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import Input from './ipv4address-input-input.svelte';
   import { safeParseIPv4Address } from '.';
-  import { isNumber } from '$lib/util/is-number';
-  import * as ipv4address from '$lib/util/ipv4-address';
+  import { isNumber } from '../../../blocks/is-number';
+  import * as ipv4address from '../../../blocks/ipv4-address';
   import type { IPv4AddressInputProps } from './types';
 
   let {

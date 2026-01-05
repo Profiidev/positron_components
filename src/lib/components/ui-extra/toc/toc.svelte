@@ -1,7 +1,3 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts" module>
   export type TocProps = {
     toc: Heading[];
@@ -12,8 +8,8 @@
 </script>
 
 <script lang="ts">
-  import type { Heading } from '$lib/hooks/use-toc.svelte';
-  import { cn } from '$lib/util/utils';
+  import type { Heading } from '../../../blocks/use-toc.svelte';
+  import { cn } from '../../../blocks/utils.js';
   import Self from './toc.svelte';
 
   let { toc, isChild = false, class: className }: TocProps = $props();

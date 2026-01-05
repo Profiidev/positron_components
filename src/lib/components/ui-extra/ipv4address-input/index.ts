@@ -1,8 +1,4 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
-import { isNumber } from '$lib/util/is-number';
+import { isNumber } from '../../../blocks/is-number';
 import IPv4AddressInput from './ipv4address-input.svelte';
 
 /** Attempts to parse the provided address into a valid IP. Returns undefined for

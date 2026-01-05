@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import Root from './rename.svelte';
 import Provider from './rename-provider.svelte';
 import Cancel from './rename-cancel.svelte';

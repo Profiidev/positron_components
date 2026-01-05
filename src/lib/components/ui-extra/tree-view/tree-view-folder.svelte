@@ -1,12 +1,8 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import * as Collapsible from '$lib/components/ui-extra/collapsible/index.js';
   import FolderIcon from '@lucide/svelte/icons/folder';
   import FolderOpenIcon from '@lucide/svelte/icons/folder-open';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import type { TreeViewFolderProps } from './types';
 
   let {

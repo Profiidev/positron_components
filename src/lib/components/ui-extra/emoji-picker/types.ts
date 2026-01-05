@@ -1,7 +1,3 @@
-/*
-	Installed from @ieedan/shadcn-svelte-extras
-*/
-
 import type { Emoji } from '@emoji-mart/data';
 import type { WithChildren, WithoutChild, WithoutChildren } from 'bits-ui';
 import type { Command as CommandPrimitive } from 'bits-ui';

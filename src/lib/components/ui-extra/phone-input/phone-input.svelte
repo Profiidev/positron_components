@@ -1,11 +1,7 @@
-<!--
-	Installed from @ieedan/shadcn-svelte-extras
--->
-
 <script lang="ts">
   import CountrySelector from './country-selector.svelte';
   import { defaultOptions, type PhoneInputProps } from '.';
-  import { cn } from '$lib/util/utils';
+  import { cn } from '../../../blocks/utils.js';
   import { TelInput, normalizedCountries } from 'svelte-tel-input';
   import 'svelte-tel-input/styles/flags.css';
 
