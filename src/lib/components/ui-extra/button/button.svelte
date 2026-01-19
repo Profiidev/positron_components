@@ -43,6 +43,7 @@
     variant?: ButtonVariant;
     size?: ButtonSize;
     loading?: boolean;
+    'data-slot'?: string;
     onClickPromise?: (
       e: MouseEvent & {
         currentTarget: EventTarget & HTMLButtonElement;
@@ -83,6 +84,7 @@
     onclick,
     onClickPromise,
     class: className,
+    'data-slot': dataSlot = 'button',
     children,
     ...rest
   }: ButtonProps = $props();
@@ -92,7 +94,7 @@
 <svelte:element
   this={href ? 'a' : 'button'}
   {...rest}
-  data-slot="button"
+  data-slot={dataSlot}
   type={href ? undefined : type}
   href={href && !disabled ? href : undefined}
   disabled={href ? undefined : disabled || loading}
