@@ -27,6 +27,8 @@ jobs:
         with:
           node-version: 24
           registry-url: "https://registry.npmjs.org"
+      - name: Update npm
+        run: npm update -g npm
       - uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
