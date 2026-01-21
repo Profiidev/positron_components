@@ -5,8 +5,13 @@ on:
 
 name: release-please
 
+permissions:
+  contents: read
+  id-token: write
+
 jobs:
   release-please:
+    environment: release
     runs-on: ubuntu-latest
     steps:
       - uses: googleapis/release-please-action@v4
@@ -23,7 +28,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: 22
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: "https://registry.npmjs.org"
         if: ${{ steps.release.outputs.release_created }}
       - uses: bahmutov/npm-install@v1
         if: ${{ steps.release.outputs.release_created }}
@@ -32,6 +37,4 @@ jobs:
       - run: npm run prepack
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
         if: ${{ steps.release.outputs.release_created }}
