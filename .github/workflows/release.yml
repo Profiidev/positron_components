@@ -1,5 +1,7 @@
 on:
-  pull_request:
+  push:
+    branches:
+      - main
 
 name: release-please
 
@@ -11,16 +13,27 @@ jobs:
       contents: read
       id-token: write
     steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.RELEASE_PLZ_TOKEN }}
+          release-type: node
+          include-component-in-tag: true
         # The logic below handles the npm publication:
       - uses: actions/checkout@v6
         # these if statements ensure that a publication only occurs when
         # a new release is created:
+        if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v6
         with:
           node-version: 24
           registry-url: "https://registry.npmjs.org"
+        if: ${{ steps.release.outputs.release_created }}
       - uses: bahmutov/npm-install@v1
+        if: ${{ steps.release.outputs.release_created }}
         with:
           useLockFile: false
       - run: npm run prepack
-      - run: npm publish --access public --dry-run
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm publish --provenance --access public
+        if: ${{ steps.release.outputs.release_created }}
