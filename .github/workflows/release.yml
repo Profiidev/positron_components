@@ -33,9 +33,16 @@ jobs:
         with:
           useLockFile: false
       - run: npm run prepack
+      - name: Inspect OIDC Claims
+        run: |
+          # This fetches the token GitHub would send to npm
+          # and decodes the payload so we can see the strings.
+          ID_TOKEN=$(curl -v -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://registry.npmjs.org" | jq -r '.value')
+
+          echo "--- OIDC PAYLOAD DATA ---"
+          echo $ID_TOKEN | cut -d. -f2 | base64 -d | jq .
       - run: |
-          ls -a
-          ls -a ~
           npm whoami
           npm publish --provenance --access public
         env:
