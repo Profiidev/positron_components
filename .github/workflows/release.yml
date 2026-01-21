@@ -27,23 +27,10 @@ jobs:
         with:
           node-version: 24
           registry-url: "https://registry.npmjs.org"
-      - name: Update npm
-        run: npm update -g npm
       - uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
       - run: npm run prepack
-      - name: Inspect OIDC Claims
-        run: |
-          # This fetches the token GitHub would send to npm
-          # and decodes the payload so we can see the strings.
-          ID_TOKEN=$(curl -v -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
-            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://registry.npmjs.org" | jq -r '.value')
-
-          echo "--- OIDC PAYLOAD DATA ---"
-          echo $ID_TOKEN | cut -d. -f2 | base64 -d | jq .
-      - run: |
-          npm whoami
-          npm publish --provenance --access public
+      - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ""

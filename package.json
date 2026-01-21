@@ -2,8 +2,8 @@
   "name": "positron-components",
   "version": "1.13.0",
   "repository": {
-    "url": "git+https://github.com/ProfiiDev/positron_components.git",
-    "type": "git"
+    "type": "git",
+    "url": "https://github.com/Profiidev/positron_components"
   },
   "sideEffects": [
     "**/*.css"
