@@ -31,4 +31,5 @@ jobs:
         with:
           useLockFile: false
       - run: npm run prepack
-      - run: npm publish --provenance --access public
+      - run: |
+          unset NODE_AUTH_TOKEN && npm publish --provenance --access public
