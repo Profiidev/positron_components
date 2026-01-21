@@ -36,6 +36,7 @@ jobs:
       - run: |
           ls -a
           ls -a ~
+          npm whoami
           npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ""
