@@ -5,14 +5,13 @@ on:
 
 name: release-please
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
   release-please:
     environment: release
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -36,5 +35,5 @@ jobs:
           useLockFile: false
       - run: npm run prepack
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish --access public
+      - run: npm publish --provenance --access public
         if: ${{ steps.release.outputs.release_created }}
