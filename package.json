@@ -183,10 +183,6 @@
       "types": "./dist/components/ui-extra/chat/index.d.ts",
       "svelte": "./dist/components/ui-extra/chat/index.js"
     },
-    "./components/ui-extra/code": {
-      "types": "./dist/components/ui-extra/code/index.d.ts",
-      "svelte": "./dist/components/ui-extra/code/index.js"
-    },
     "./components/ui-extra/collapsible": {
       "types": "./dist/components/ui-extra/collapsible/index.d.ts",
       "svelte": "./dist/components/ui-extra/collapsible/index.js"
