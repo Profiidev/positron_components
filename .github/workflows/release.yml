@@ -36,5 +36,5 @@ jobs:
           useLockFile: false
       - run: npm run prepack
         if: ${{ steps.release.outputs.release_created }}
-      - run: npm publish
+      - run: npm publish --access public
         if: ${{ steps.release.outputs.release_created }}
