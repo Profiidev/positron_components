@@ -36,4 +36,3 @@ jobs:
       - run: npm run prepack
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish --provenance --access public
-        if: ${{ steps.release.outputs.release_created }}
