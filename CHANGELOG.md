@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.0...positron-components-v1.13.1) (2026-01-22)
+
+
+### Bug Fixes
+
+* dropdown menu .d.ts file is generated again ([1e0b813](https://github.com/Profiidev/positron_components/commit/1e0b813fb61c0fdec0c5cf3c7c14e314d5dcb0ea))
+
 ## [1.13.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.12.3...positron-components-v1.13.0) (2026-01-21)
 
 ### Features
