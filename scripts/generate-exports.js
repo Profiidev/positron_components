@@ -26,9 +26,8 @@ function walk(dir, baseDir) {
       if (fs.existsSync(path.join(fullPath, 'index.ts'))) {
         const relativeDir = path.relative(baseDir, fullPath);
         const exportKey = `./${relativeDir}`;
-        let skip =
-          relativeDir === 'components/ui/dropdown-menu' ||
-          relativeDir === 'components/ui-extra/dropdown-menu';
+        // used when .d.ts files are not generated for folders (only has happened ones for dropdown-menu)
+        let skip = false;
         exports[exportKey] = {
           types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`,
           svelte: `./dist/${relativeDir}/index.js`
