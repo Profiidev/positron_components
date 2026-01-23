@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.1...positron-components-v1.13.2) (2026-01-23)
+
+
+### Bug Fixes
+
+* new fetch wrapper options ([6d3972c](https://github.com/Profiidev/positron_components/commit/6d3972c468167b363630017be95c1afefd77fe3e))
+
 ## [1.13.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.0...positron-components-v1.13.1) (2026-01-22)
 
 ### Bug Fixes
