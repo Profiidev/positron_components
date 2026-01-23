@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.1...positron-components-v2.0.0) (2026-01-23)
+
+
+### ⚠ BREAKING CHANGES
+
+* new fetch wrapper options
+
+### Code Refactoring
+
+* new fetch wrapper options ([999c11e](https://github.com/Profiidev/positron_components/commit/999c11e644090fe53c40110e64eae383dbd18faa))
+
 ## [1.13.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.0...positron-components-v1.13.1) (2026-01-22)
 
 ### Bug Fixes
