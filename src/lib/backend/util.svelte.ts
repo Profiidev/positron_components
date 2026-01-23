@@ -1,62 +1,55 @@
 import { RequestError, ResponseType } from './types.svelte';
 
-export const patch = async <T>(
+export interface RequestOptions {
+  res_type?: ResponseType;
+  body?: any;
+  content_type?: string;
+  signal?: AbortSignal;
+  fetch?: typeof fetch;
+}
+
+export const patch = async <T = undefined>(
   path: string,
-  res_type: ResponseType,
-  body: any,
-  content_type?: string,
-  signal?: AbortSignal
+  options: RequestOptions = {}
 ): Promise<T | RequestError> => {
-  return await request(path, 'PATCH', res_type, body, content_type, signal);
+  return await request(path, 'PATCH', options);
 };
 
-export const put = async <T>(
+export const put = async <T = undefined>(
   path: string,
-  res_type: ResponseType,
-  body: any,
-  content_type?: string,
-  signal?: AbortSignal
+  options: RequestOptions = {}
 ): Promise<T | RequestError> => {
-  return await request(path, 'PUT', res_type, body, content_type, signal);
+  return await request(path, 'PUT', options);
 };
 
-export const delete_ = async <T>(
+export const delete_ = async <T = undefined>(
   path: string,
-  res_type: ResponseType,
-  body: any,
-  content_type?: string,
-  signal?: AbortSignal
+  options: RequestOptions = {}
 ): Promise<T | RequestError> => {
-  return await request(path, 'DELETE', res_type, body, content_type, signal);
+  return await request(path, 'DELETE', options);
 };
 
-export const post = async <T>(
+export const post = async <T = undefined>(
   path: string,
-  res_type: ResponseType,
-  body: any,
-  content_type?: string,
-  signal?: AbortSignal
+  options: RequestOptions = {}
 ): Promise<T | RequestError> => {
-  return await request(path, 'POST', res_type, body, content_type, signal);
+  return await request(path, 'POST', options);
 };
 
-export const get = async <T>(
+export const get = async <T = undefined>(
   path: string,
-  res_type: ResponseType,
-  content_type?: string,
-  signal?: AbortSignal
+  options: Omit<RequestOptions, 'body'> = {}
 ): Promise<T | RequestError> => {
-  return await request(path, 'GET', res_type, undefined, content_type, signal);
+  return await request(path, 'GET', options);
 };
 
-export const request = async <T>(
+export const request = async <T = undefined>(
   path: string,
   method: string,
-  res_type: ResponseType,
-  body?: any,
-  content_type?: string,
-  signal?: AbortSignal
+  { res_type, body, content_type, signal, fetch }: RequestOptions = {}
 ): Promise<T | RequestError> => {
+  res_type = res_type ?? ResponseType.None;
+
   if (body instanceof ArrayBuffer) {
     content_type = 'application/octet-stream';
   } else if (body instanceof Blob) {
@@ -73,6 +66,8 @@ export const request = async <T>(
   if (content_type) {
     headers['Content-Type'] = content_type;
   }
+
+  fetch = fetch ?? globalThis.fetch;
 
   try {
     let res = await fetch!(`${path}`, {
