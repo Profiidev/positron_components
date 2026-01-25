@@ -19,7 +19,7 @@
     variant="secondary"
     onclick={edit}
     disabled={edit_disabled}
-    class="ml-auto"
+    class="ml-auto cursor-pointer"
   >
     <Pencil />
   </Button>
@@ -28,6 +28,7 @@
     variant="destructive"
     onclick={remove}
     disabled={delete_disabled}
+    class="cursor-pointer"
   >
     <Trash />
   </Button>

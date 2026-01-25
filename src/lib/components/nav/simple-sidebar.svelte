@@ -29,7 +29,7 @@
       variant="ghost"
       class={cn(
         !isActive && 'hover:underline',
-        'relative justify-start hover:bg-transparent'
+        'relative cursor-pointer justify-start hover:bg-transparent'
       )}
       data-sveltekit-noscroll
     >

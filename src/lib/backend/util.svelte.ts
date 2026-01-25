@@ -80,12 +80,42 @@ export const request = async <T = undefined>(
     switch (res.status) {
       case 200:
         break;
+      case 400:
+        return RequestError.BadRequest;
       case 401:
         return RequestError.Unauthorized;
+      case 403:
+        return RequestError.Forbidden;
+      case 404:
+        return RequestError.NotFound;
+      case 406:
+        return RequestError.NotAcceptable;
+      case 408:
+        return RequestError.RequestTimeout;
       case 409:
         return RequestError.Conflict;
       case 410:
         return RequestError.Gone;
+      case 413:
+        return RequestError.ContentTooLarge;
+      case 415:
+        return RequestError.UnsupportedMediaType;
+      case 422:
+        return RequestError.UnprocessableEntity;
+      case 429:
+        return RequestError.TooManyRequests;
+      case 500:
+        return RequestError.InternalServerError;
+      case 501:
+        return RequestError.NotImplemented;
+      case 502:
+        return RequestError.BadGateway;
+      case 503:
+        return RequestError.ServiceUnavailable;
+      case 504:
+        return RequestError.GatewayTimeout;
+      case 507:
+        return RequestError.InsufficientStorage;
       default:
         return RequestError.Other;
     }
