@@ -2,15 +2,13 @@
 
 ## [1.14.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.2...positron-components-v1.14.0) (2026-01-25)
 
-
 ### Features
 
-* added new request error types ([026cac2](https://github.com/Profiidev/positron_components/commit/026cac22b786aeab88fba5f959ad7cd86d0fd202))
-
+- added new request error types ([026cac2](https://github.com/Profiidev/positron_components/commit/026cac22b786aeab88fba5f959ad7cd86d0fd202))
 
 ### Bug Fixes
 
-* added missing cursor pointer to buttons ([c29d815](https://github.com/Profiidev/positron_components/commit/c29d8150ad1afcfdfc10d1b35f1d4ed42a147cc6))
+- added missing cursor pointer to buttons ([c29d815](https://github.com/Profiidev/positron_components/commit/c29d8150ad1afcfdfc10d1b35f1d4ed42a147cc6))
 
 ## [1.13.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.1...positron-components-v1.13.2) (2026-01-23)
 
