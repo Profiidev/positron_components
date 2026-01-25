@@ -17,7 +17,7 @@ import {
 import { createRawSnippet } from 'svelte';
 import TableHead from './table-head.svelte';
 
-export const createColumnHeader = <T, C>(
+export const createColumnHeader = <C>(
   key: string,
   title: string
 ): ColumnDef<C> => {

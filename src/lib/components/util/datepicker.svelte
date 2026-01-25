@@ -30,7 +30,7 @@
       <Button
         variant="outline"
         class={cn(
-          'w-[280px] justify-start text-left font-normal',
+          'w-70 justify-start text-left font-normal cursor-pointer',
           !value && 'text-muted-foreground',
           className
         )}

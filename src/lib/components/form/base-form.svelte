@@ -122,7 +122,7 @@
 )}
   {@const prop = { ...props }}
   <FormButton
-    class={prop.className}
+    class={cn('cursor-pointer', prop.className)}
     type="submit"
     disabled={isLoading}
     variant={prop.variant}

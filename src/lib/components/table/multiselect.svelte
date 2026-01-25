@@ -109,7 +109,7 @@
         variant="outline"
         {...props}
         role="combobox"
-        class={cn('block truncate', className)}
+        class={cn('block cursor-pointer truncate', className)}
         {disabled}
       >
         {#if selected.length === 0}
@@ -124,7 +124,7 @@
     <Command.Root>
       <Command.Input placeholder={`Search ${label.toLowerCase()}...`} />
       <Command.List class="h-full overflow-hidden">
-        <ScrollArea class="max-h-[300px] overflow-y-auto">
+        <ScrollArea class="max-h-75 overflow-y-auto">
           <Command.Empty>No {label} found</Command.Empty>
           {#each filtered as group}
             <Command.Group heading={group.label}>
