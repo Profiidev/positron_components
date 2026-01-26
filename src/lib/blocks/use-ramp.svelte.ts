@@ -34,12 +34,14 @@ export function useRamp({
   canRamp
 }: UseRampOptions) {
   let active = $state(false);
+  let ramping = $state(false);
   let rampStartTimeout: ReturnType<typeof setTimeout> | undefined;
   let rampIntervalTimeout: ReturnType<typeof setTimeout> | undefined;
   let rampStartedAt: number | undefined;
 
   function rampUp() {
     if (!active) return;
+    ramping = true;
     const timeSinceStart = Date.now() - (rampStartedAt ?? 0);
     const freq =
       rampUpTime === 0 ? 0 : Math.min(timeSinceStart, rampUpTime) / rampUpTime;
@@ -59,6 +61,7 @@ export function useRamp({
     clearTimeout(rampIntervalTimeout);
     rampStartedAt = undefined;
     active = false;
+    ramping = false;
   }
 
   function start() {
@@ -72,6 +75,9 @@ export function useRamp({
     reset,
     get active() {
       return active;
+    },
+    get ramping() {
+      return ramping;
     }
   };
 }
