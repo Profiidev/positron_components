@@ -64,9 +64,9 @@
     } else {
       let index = selected.findIndex((i) => compare(i, value));
       if (index !== -1) {
-        selected.splice(index, 1);
+        selected = [...selected.slice(0, index), ...selected.slice(index + 1)];
       } else {
-        selected.push(value);
+        selected = [...selected, value];
       }
     }
     onSelectChange?.(selected);
