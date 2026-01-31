@@ -2,10 +2,9 @@
 
 ## [1.14.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.0...positron-components-v1.14.1) (2026-01-31)
 
-
 ### Bug Fixes
 
-* multiselect in forms ([339fdb1](https://github.com/Profiidev/positron_components/commit/339fdb110b29531a31c68945ec412e249dd96ab0))
+- multiselect in forms ([339fdb1](https://github.com/Profiidev/positron_components/commit/339fdb110b29531a31c68945ec412e249dd96ab0))
 
 ## [1.14.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.13.2...positron-components-v1.14.0) (2026-01-25)
 
