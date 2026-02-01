@@ -677,7 +677,7 @@
   "dependencies": {
     "@emoji-mart/data": "^1.2.1",
     "@internationalized/date": "^3.10.1",
-    "@lucide/svelte": "^0.562.0",
+    "@lucide/svelte": "^0.563.1",
     "@shikijs/langs": "^3.21.0",
     "@shikijs/themes": "^3.21.0",
     "@sveltejs/kit": "^2.50.0",
