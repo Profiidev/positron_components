@@ -1,7 +1,7 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils';
-  import { useStepperItem } from './stepper.svelte.js';
-  import type { StepperItemProps } from './types';
+  import { useStepperItem } from '$lib/components/ui-extra/stepper/stepper.svelte.js';
+  import type { StepperItemProps } from '$lib/components/ui-extra/stepper/types';
 
   const uid = $props.id();
 

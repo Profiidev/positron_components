@@ -1,7 +1,7 @@
 <script lang="ts">
-  import LoadingDots from './loading-dots.svelte';
+  import LoadingDots from '$lib/components/ui-extra/chat/loading-dots.svelte';
   import { cn } from '../../../blocks/utils.js';
-  import type { ChatBubbleMessageProps } from './types';
+  import type { ChatBubbleMessageProps } from '$lib/components/ui-extra/chat/types';
 
   let {
     ref = $bindable(null),

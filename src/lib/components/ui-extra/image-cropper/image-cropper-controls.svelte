@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils.js';
-  import type { ImageCropperControlsProps } from './types';
+  import type { ImageCropperControlsProps } from '$lib/components/ui-extra/image-cropper/types';
 
   let {
     ref = $bindable(null),

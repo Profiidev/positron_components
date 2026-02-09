@@ -6,7 +6,7 @@
   import CheckIcon from '@lucide/svelte/icons/check';
   import ChevronsUpDownIcon from '@lucide/svelte/icons/chevrons-up-down';
   import { cn } from '../../../blocks/utils.js';
-  import Flag from './flag.svelte';
+  import Flag from '$lib/components/ui-extra/phone-input/flag.svelte';
   import type { Country, CountryCode } from 'svelte-tel-input/types';
 
   interface Props {

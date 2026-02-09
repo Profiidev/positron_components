@@ -3,7 +3,7 @@
   import MoonIcon from '@lucide/svelte/icons/moon';
   import { toggleMode } from 'mode-watcher';
   import { Button } from '$lib/components/ui-extra/button/index.js';
-  import type { LightSwitchProps } from './types';
+  import type { LightSwitchProps } from '$lib/components/ui-extra/light-switch/types';
 
   let { variant = 'outline' }: LightSwitchProps = $props();
 </script>

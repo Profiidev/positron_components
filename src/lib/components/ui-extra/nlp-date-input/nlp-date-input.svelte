@@ -1,7 +1,7 @@
 <script lang="ts">
   import * as Command from '$lib/components/ui-extra/command';
   import { parseDate } from 'yeezy-dates';
-  import type { NLPDateInputProps } from './types';
+  import type { NLPDateInputProps } from '$lib/components/ui-extra/nlp-date-input/types';
 
   let {
     placeholder = 'E.g. "tomorrow at 5pm" or "in 2 hours"',

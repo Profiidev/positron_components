@@ -3,12 +3,12 @@
   import { Command as CommandPrimitive } from 'bits-ui';
   import data, { type EmojiMartData } from '@emoji-mart/data';
   import * as casing from '../../../blocks/casing';
-  import type { EmojiPickerListProps } from './types';
+  import type { EmojiPickerListProps } from '$lib/components/ui-extra/emoji-picker/types';
   import {
     makeValue,
     parseValue,
     useEmojiPickerList
-  } from './emoji-picker.svelte.js';
+  } from '$lib/components/ui-extra/emoji-picker/emoji-picker.svelte.js';
   import { cn } from '../../../blocks/utils.js';
 
   let {

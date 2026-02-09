@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils.js';
-  import type { FieldSetFooterProps } from './types';
+  import type { FieldSetFooterProps } from '$lib/components/ui-extra/field-set/types';
 
   let {
     ref = $bindable(null),

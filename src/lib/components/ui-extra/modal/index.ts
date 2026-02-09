@@ -1,9 +1,9 @@
-import Root from './modal.svelte';
-import Trigger from './modal-trigger.svelte';
-import Content from './modal-content.svelte';
-import Footer from './modal-footer.svelte';
-import Header from './modal-header.svelte';
-import Title from './modal-title.svelte';
-import Description from './modal-description.svelte';
+import Root from '$lib/components/ui-extra/modal/modal.svelte';
+import Trigger from '$lib/components/ui-extra/modal/modal-trigger.svelte';
+import Content from '$lib/components/ui-extra/modal/modal-content.svelte';
+import Footer from '$lib/components/ui-extra/modal/modal-footer.svelte';
+import Header from '$lib/components/ui-extra/modal/modal-header.svelte';
+import Title from '$lib/components/ui-extra/modal/modal-title.svelte';
+import Description from '$lib/components/ui-extra/modal/modal-description.svelte';
 
 export { Root, Trigger, Content, Footer, Header, Title, Description };

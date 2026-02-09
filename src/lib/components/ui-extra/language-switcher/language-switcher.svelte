@@ -3,7 +3,7 @@
   import * as DropdownMenu from '$lib/components/ui-extra/dropdown-menu';
   import { buttonVariants } from '$lib/components/ui-extra/button';
   import { cn } from '../../../blocks/utils.js';
-  import type { LanguageSwitcherProps } from './types';
+  import type { LanguageSwitcherProps } from '$lib/components/ui-extra/language-switcher/types';
 
   let {
     languages = [],

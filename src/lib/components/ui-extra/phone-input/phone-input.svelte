@@ -1,6 +1,9 @@
 <script lang="ts">
-  import CountrySelector from './country-selector.svelte';
-  import { defaultOptions, type PhoneInputProps } from '.';
+  import CountrySelector from '$lib/components/ui-extra/phone-input/country-selector.svelte';
+  import {
+    defaultOptions,
+    type PhoneInputProps
+  } from '$lib/components/ui-extra/phone-input';
   import { cn } from '../../../blocks/utils.js';
   import { TelInput, normalizedCountries } from 'svelte-tel-input';
   import 'svelte-tel-input/styles/flags.css';
