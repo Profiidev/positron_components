@@ -1,6 +1,6 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils.js';
-  import type { AvatarGroupRootProps } from './types';
+  import type { AvatarGroupRootProps } from '$lib/components/ui-extra/avatar-group/types';
 
   let {
     ref = $bindable(null),

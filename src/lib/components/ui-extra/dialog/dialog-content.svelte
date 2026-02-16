@@ -2,7 +2,7 @@
   import { Dialog as DialogPrimitive } from 'bits-ui';
   import XIcon from '@lucide/svelte/icons/x';
   import type { Snippet } from 'svelte';
-  import * as Dialog from './index.js';
+  import * as Dialog from '$lib/components/ui-extra/dialog/index.js';
   import { cn, type WithoutChildrenOrChild } from '../../../blocks/utils.js';
 
   let {

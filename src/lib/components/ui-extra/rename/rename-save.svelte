@@ -4,7 +4,7 @@
     Button,
     type ButtonElementProps
   } from '$lib/components/ui-extra/button';
-  import { useRenameSave } from './rename.svelte.js';
+  import { useRenameSave } from '$lib/components/ui-extra/rename/rename.svelte.js';
 
   const saveState = useRenameSave();
 

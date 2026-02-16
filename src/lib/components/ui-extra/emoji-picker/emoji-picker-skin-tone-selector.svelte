@@ -1,7 +1,7 @@
 <script lang="ts">
   import { box } from 'svelte-toolbelt';
-  import { useEmojiPickerSkinToneSelector } from './emoji-picker.svelte.js';
-  import type { EmojiPickerSkinProps } from './types.js';
+  import { useEmojiPickerSkinToneSelector } from '$lib/components/ui-extra/emoji-picker/emoji-picker.svelte.js';
+  import type { EmojiPickerSkinProps } from '$lib/components/ui-extra/emoji-picker/types.js';
   import {
     Button,
     type ButtonElementProps
