@@ -1,6 +1,6 @@
-import Root from './avatar.svelte';
-import Image from './avatar-image.svelte';
-import Fallback from './avatar-fallback.svelte';
+import Root from '$lib/components/ui-extra/avatar/avatar.svelte';
+import Image from '$lib/components/ui-extra/avatar/avatar-image.svelte';
+import Fallback from '$lib/components/ui-extra/avatar/avatar-fallback.svelte';
 
 export {
   Root,

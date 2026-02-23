@@ -1,13 +1,13 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils.js';
-  import Input from './ipv4address-input-input.svelte';
-  import { safeParseIPv4Address } from '.';
+  import Input from '$lib/components/ui-extra/ipv4address-input/ipv4address-input-input.svelte';
+  import { safeParseIPv4Address } from '$lib/components/ui-extra/ipv4address-input';
   import { isNumber } from '../../../blocks/is-number';
   import * as ipv4address from '../../../blocks/ipv4-address';
-  import type { IPv4AddressInputProps } from './types';
+  import type { IPv4AddressInputProps } from '$lib/components/ui-extra/ipv4address-input/types';
 
   let {
-    separator = '.',
+    separator = '$lib/components/ui-extra/ipv4address-input',
     value = $bindable(null),
     placeholder,
     class: className,

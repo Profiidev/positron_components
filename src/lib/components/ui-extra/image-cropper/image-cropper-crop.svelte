@@ -3,7 +3,7 @@
     type ButtonElementProps,
     Button
   } from '$lib/components/ui-extra/button';
-  import { useImageCropperCrop } from './image-cropper.svelte.js';
+  import { useImageCropperCrop } from '$lib/components/ui-extra/image-cropper/image-cropper.svelte.js';
   import CropIcon from '@lucide/svelte/icons/crop';
 
   let {

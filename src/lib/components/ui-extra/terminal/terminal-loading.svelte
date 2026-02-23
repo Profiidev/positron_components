@@ -1,9 +1,9 @@
 <script lang="ts">
   import { cn } from '../../../blocks/utils.js';
   import { onDestroy } from 'svelte';
-  import { useAnimation } from './terminal.svelte.js';
+  import { useAnimation } from '$lib/components/ui-extra/terminal/terminal.svelte.js';
   import { fly } from 'svelte/transition';
-  import type { TerminalLoadingProps } from './types';
+  import type { TerminalLoadingProps } from '$lib/components/ui-extra/terminal/types';
 
   const frames = ['◒', '◐', '◓', '◑'];
 

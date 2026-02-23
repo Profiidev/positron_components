@@ -3,7 +3,7 @@
     type ButtonElementProps,
     Button
   } from '$lib/components/ui-extra/button';
-  import { useImageCropperCancel } from './image-cropper.svelte.js';
+  import { useImageCropperCancel } from '$lib/components/ui-extra/image-cropper/image-cropper.svelte.js';
   import Trash2Icon from '@lucide/svelte/icons/trash-2';
 
   let {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ChatBubbleProps } from './types';
+  import type { ChatBubbleProps } from '$lib/components/ui-extra/chat/types';
 
   let {
     ref = $bindable(null),

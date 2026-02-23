@@ -1,5 +1,5 @@
 import { isNumber } from '../../../blocks/is-number';
-import IPv4AddressInput from './ipv4address-input.svelte';
+import IPv4AddressInput from '$lib/components/ui-extra/ipv4address-input/ipv4address-input.svelte';
 
 /** Attempts to parse the provided address into a valid IP. Returns undefined for
  * undefined returns a valid IP in array form for a valid IP and returns a 0 filled array for a incomplete IP.
@@ -46,4 +46,4 @@ export const safeParseIPv4Address = (
 
 export { IPv4AddressInput };
 
-export type * from './types';
+export type * from '$lib/components/ui-extra/ipv4address-input/types';
