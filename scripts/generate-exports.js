@@ -27,7 +27,7 @@ function walk(dir, baseDir) {
         const relativeDir = path.relative(baseDir, fullPath);
         const exportKey = `./${relativeDir}`;
         // used when .d.ts files are not generated for folders (only has happened ones for dropdown-menu)
-        let skip = exportKey.includes("ui-extra/tooltip");
+        let skip = exportKey.includes('ui-extra/tooltip');
         exports[exportKey] = {
           types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`,
           svelte: `./dist/${relativeDir}/index.js`
