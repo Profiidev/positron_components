@@ -1,12 +1,12 @@
-import Root from './image-cropper.svelte';
-import UploadTrigger from './image-cropper-upload-trigger.svelte';
-import Preview from './image-cropper-preview.svelte';
-import Dialog from './image-cropper-dialog.svelte';
-import Cropper from './image-cropper-cropper.svelte';
-import Controls from './image-cropper-controls.svelte';
-import Crop from './image-cropper-crop.svelte';
-import Cancel from './image-cropper-cancel.svelte';
-import { getFileFromUrl } from './utils';
+import Root from '$lib/components/ui-extra/image-cropper/image-cropper.svelte';
+import UploadTrigger from '$lib/components/ui-extra/image-cropper/image-cropper-upload-trigger.svelte';
+import Preview from '$lib/components/ui-extra/image-cropper/image-cropper-preview.svelte';
+import Dialog from '$lib/components/ui-extra/image-cropper/image-cropper-dialog.svelte';
+import Cropper from '$lib/components/ui-extra/image-cropper/image-cropper-cropper.svelte';
+import Controls from '$lib/components/ui-extra/image-cropper/image-cropper-controls.svelte';
+import Crop from '$lib/components/ui-extra/image-cropper/image-cropper-crop.svelte';
+import Cancel from '$lib/components/ui-extra/image-cropper/image-cropper-cancel.svelte';
+import { getFileFromUrl } from '$lib/components/ui-extra/image-cropper/utils';
 
 export {
   Root,
@@ -20,4 +20,4 @@ export {
   getFileFromUrl
 };
 
-export type * from './types';
+export type * from '$lib/components/ui-extra/image-cropper/types';

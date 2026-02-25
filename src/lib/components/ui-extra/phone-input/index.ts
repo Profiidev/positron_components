@@ -1,4 +1,4 @@
-import PhoneInput from './phone-input.svelte';
+import PhoneInput from '$lib/components/ui-extra/phone-input/phone-input.svelte';
 import type { TelInputOptions } from 'svelte-tel-input/types';
 
 export const defaultOptions: TelInputOptions = {
@@ -9,4 +9,4 @@ export const defaultOptions: TelInputOptions = {
 
 export { PhoneInput };
 
-export type * from './types';
+export type * from '$lib/components/ui-extra/phone-input/types';

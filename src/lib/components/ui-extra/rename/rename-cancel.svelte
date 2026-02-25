@@ -4,7 +4,7 @@
     Button,
     type ButtonElementProps
   } from '$lib/components/ui-extra/button';
-  import { useRenameCancel } from './rename.svelte.js';
+  import { useRenameCancel } from '$lib/components/ui-extra/rename/rename.svelte.js';
 
   const cancelState = useRenameCancel();
 

@@ -1,7 +1,7 @@
 import type { ReadableBoxedValues, WritableBoxedValues } from 'svelte-toolbelt';
 import { Context } from 'runed';
 import type { CropArea, DispatchEvents } from 'svelte-easy-crop';
-import { getCroppedImg } from './utils';
+import { getCroppedImg } from '$lib/components/ui-extra/image-cropper/utils';
 
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/img#supported_image_formats
 export const VALID_IMAGE_TYPES = [

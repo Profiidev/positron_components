@@ -1,5 +1,5 @@
 import type { ReadableBoxedValues } from 'svelte-toolbelt';
-import type { FileRejectedReason } from './types';
+import type { FileRejectedReason } from '$lib/components/ui-extra/file-drop-zone/types';
 import { Context } from 'runed';
 import type { HTMLAttributes } from 'svelte/elements';
 
@@ -87,7 +87,7 @@ class FileDropZoneState {
 
     const isAcceptable = acceptedTypes.some((pattern) => {
       // check extension like .mp4
-      if (fileType.startsWith('.')) {
+      if (fileType === '' || pattern.startsWith('.')) {
         return fileName.endsWith(pattern);
       }
 

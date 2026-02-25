@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import { useRename } from './rename.svelte.js';
+  import { useRename } from '$lib/components/ui-extra/rename/rename.svelte.js';
 
   useRename();
 
