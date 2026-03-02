@@ -5,6 +5,7 @@
   import { Meter } from 'bits-ui';
   import { cn } from '../../../blocks/utils.js';
 
+  // eslint-disable-next-line no-useless-assignment
   let { strength = $bindable(), class: className }: PasswordStrengthProps =
     $props();
 

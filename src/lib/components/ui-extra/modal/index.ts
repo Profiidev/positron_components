@@ -5,5 +5,15 @@ import Footer from '$lib/components/ui-extra/modal/modal-footer.svelte';
 import Header from '$lib/components/ui-extra/modal/modal-header.svelte';
 import Title from '$lib/components/ui-extra/modal/modal-title.svelte';
 import Description from '$lib/components/ui-extra/modal/modal-description.svelte';
+import NestedRoot from '$lib/components/ui-extra/modal/modal-nested-root.svelte';
 
-export { Root, Trigger, Content, Footer, Header, Title, Description };
+export {
+  Root,
+  Trigger,
+  Content,
+  Footer,
+  Header,
+  Title,
+  Description,
+  NestedRoot
+};
