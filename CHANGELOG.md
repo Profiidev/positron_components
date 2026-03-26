@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.14.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.1...positron-components-v1.14.2) (2026-03-26)
+
+### Bug Fixes
+
+- removed unused deps ([1ce3ec5](https://github.com/Profiidev/positron_components/commit/1ce3ec5ec81aa9642ae1eecfa23736f348419359))
+
 ## [1.14.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.0...positron-components-v1.14.1) (2026-01-31)
 
 ### Bug Fixes
