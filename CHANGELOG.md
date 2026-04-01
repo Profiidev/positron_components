@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.2...positron-components-v1.14.3) (2026-04-01)
+
+
+### Bug Fixes
+
+* deps ([ff6fdac](https://github.com/Profiidev/positron_components/commit/ff6fdac4026f86a57a80a230524236d011dab278))
+
 ## [1.14.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.1...positron-components-v1.14.2) (2026-03-26)
 
 ### Bug Fixes
