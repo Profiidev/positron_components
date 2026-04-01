@@ -1,5 +1,6 @@
 import { Context } from 'runed';
 import type { ReadableBoxedValues, WritableBoxedValues } from 'svelte-toolbelt';
+import type { FormEventHandler } from 'svelte/elements';
 import type { ButtonElementProps } from '$lib/components/ui-extra/button';
 import { useRamp, type UseRampOptions } from '../../../blocks/use-ramp.svelte';
 
@@ -30,8 +31,8 @@ export class NumberFieldRootContext {
 export class NumberFieldInputContext {
   constructor(readonly rootState: NumberFieldRootContext) {}
 
-  oninput(e: Parameters<NonNullable<HTMLInputElement['oninput']>>[0]) {
-    const value = (e.currentTarget as HTMLInputElement).value;
+  oninput: FormEventHandler<HTMLInputElement> = (e) => {
+    const value = e.currentTarget.value;
 
     if (
       this.rootState.opts.min?.current !== undefined &&
@@ -45,11 +46,11 @@ export class NumberFieldInputContext {
     ) {
       this.rootState.opts.value.current = this.rootState.opts.max.current;
     }
-  }
+  };
 
   props = $derived.by(() => ({
     type: 'number',
-    oninput: this.oninput.bind(this),
+    oninput: this.oninput,
     min: this.rootState.opts.min?.current,
     max: this.rootState.opts.max?.current,
     'aria-invalid': !this.rootState.valid,
