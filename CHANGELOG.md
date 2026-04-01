@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.14.4](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.3...positron-components-v1.14.4) (2026-04-01)
+
+
+### Bug Fixes
+
+* base form recreation ([654e71c](https://github.com/Profiidev/positron_components/commit/654e71c626a4cce4d8220c0d2f647987c78b34c8))
+
 ## [1.14.3](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.2...positron-components-v1.14.3) (2026-04-01)
 
 ### Bug Fixes
