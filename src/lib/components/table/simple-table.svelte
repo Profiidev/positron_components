@@ -116,25 +116,23 @@
     return searchTerms.some((term) => info.includes(term.toLowerCase()));
   };
 
-  let table = $state(
-    createTable(
-      [],
-      columns(
-        () => {},
-        () => {},
-        columnData
-      ),
-      filterFn
-    )
-  );
+  const editItem = (id: string) => {
+    selected = data?.find((item) => toId(item) === id);
+    if (selected) {
+      setEditValue(selected);
+      startEdit?.(selected);
+    }
+    editOpen = true;
+  };
 
-  $effect(() => {
-    table = createTable(
-      data || [],
-      columns(editItem, deleteItem, columnData),
-      filterFn
-    );
-  });
+  const deleteItem = (id: string) => {
+    selected = data?.find((item) => toId(item) === id);
+    deleteOpen = true;
+  };
+
+  let table = $derived(
+    createTable(data || [], columns(editItem, deleteItem, columnData), filterFn)
+  );
 
   const createItem = async (form: FormValue<CV>) => {
     let ret = await createItemFn(form);
@@ -148,20 +146,6 @@
     } else {
       toast.success(`Created ${label}`);
     }
-  };
-
-  const editItem = (id: string) => {
-    selected = data?.find((item) => toId(item) === id);
-    if (selected) {
-      setEditValue(selected);
-      startEdit?.(selected);
-    }
-    editOpen = true;
-  };
-
-  const deleteItem = (id: string) => {
-    selected = data?.find((item) => toId(item) === id);
-    deleteOpen = true;
   };
 
   const editItemConfirm = async (form: FormValue<EV>) => {

@@ -27,7 +27,7 @@
     ...restProps
   }: InputProps & Props = $props();
 
-  let file = fileProxy(form, key);
+  let file = $derived(fileProxy(form, key));
   let value = $state();
 </script>
 
