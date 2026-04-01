@@ -55,38 +55,36 @@
     enctype
   }: Props = $props();
 
-  let form = $derived(
-    superForm(
-      defaults(
-        initialValue,
-        zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>
-      ),
-      {
-        validators: zod4(schema),
-        SPA: true,
-        onUpdate: async ({ form, cancel }) => {
-          if (!form.valid) return;
+  let form = superForm(
+    defaults(
+      initialValue,
+      zod4(schema) as ValidationAdapter<FormValue<V>, FormValue<V>>
+    ),
+    {
+      validators: zod4(schema),
+      SPA: true,
+      onUpdate: async ({ form, cancel }) => {
+        if (!form.valid) return;
 
-          error = '';
-          isLoading = true;
+        error = '';
+        isLoading = true;
 
-          let ret = await onsubmit(form.data);
+        let ret = await onsubmit(form.data);
 
-          isLoading = false;
-          if (ret) {
-            if (ret.field) {
-              setError(form, ret.field as '', ret.error, undefined);
-            } else {
-              if (ret.error !== '') error = ret.error;
-              cancel();
-            }
+        isLoading = false;
+        if (ret) {
+          if (ret.field) {
+            setError(form, ret.field as '', ret.error, undefined);
+          } else {
+            if (ret.error !== '') error = ret.error;
+            cancel();
           }
         }
       }
-    )
+    }
   );
 
-  let { enhance } = $derived(form);
+  let { enhance } = form;
 
   export const setValue = (value: FormValue<V>) => {
     let old = get(form.form);
