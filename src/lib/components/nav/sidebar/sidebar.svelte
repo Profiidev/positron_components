@@ -12,7 +12,7 @@
     version: string;
     app_name: string;
     items: NavGroup[];
-    logout: () => Promise<{ error?: string }>;
+    logout: () => Promise<{ error?: any }>;
   }
 
   const { children, user, version, app_name, items, logout }: Props = $props();
