@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.15.0...positron-components-v1.15.1) (2026-04-06)
+
+
+### Bug Fixes
+
+* websocket reexport ([9be594c](https://github.com/Profiidev/positron_components/commit/9be594c70ff07e8fd6bca75a82058a3396f888ec))
+
 ## [1.15.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.4...positron-components-v1.15.0) (2026-04-06)
 
 ### Features
