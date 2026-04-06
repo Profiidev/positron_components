@@ -106,6 +106,14 @@
       "types": "./dist/components/form/base-form.svelte.d.ts",
       "svelte": "./dist/components/form/base-form.svelte"
     },
+    "./components/form/form-checkbox.svelte": {
+      "types": "./dist/components/form/form-checkbox.svelte.d.ts",
+      "svelte": "./dist/components/form/form-checkbox.svelte"
+    },
+    "./components/form/form-date-input.svelte": {
+      "types": "./dist/components/form/form-date-input.svelte.d.ts",
+      "svelte": "./dist/components/form/form-date-input.svelte"
+    },
     "./components/form/form-dialog.svelte": {
       "types": "./dist/components/form/form-dialog.svelte.d.ts",
       "svelte": "./dist/components/form/form-dialog.svelte"
@@ -113,6 +121,14 @@
     "./components/form/form-file.svelte": {
       "types": "./dist/components/form/form-file.svelte.d.ts",
       "svelte": "./dist/components/form/form-file.svelte"
+    },
+    "./components/form/form-input-password.svelte": {
+      "types": "./dist/components/form/form-input-password.svelte.d.ts",
+      "svelte": "./dist/components/form/form-input-password.svelte"
+    },
+    "./components/form/form-input-tooltip.svelte": {
+      "types": "./dist/components/form/form-input-tooltip.svelte.d.ts",
+      "svelte": "./dist/components/form/form-input-tooltip.svelte"
     },
     "./components/form/form-input.svelte": {
       "types": "./dist/components/form/form-input.svelte.d.ts",
@@ -134,6 +150,10 @@
       "types": "./dist/components/form/login-other-options.svelte.d.ts",
       "svelte": "./dist/components/form/login-other-options.svelte"
     },
+    "./components/form/multistep-form.svelte": {
+      "types": "./dist/components/form/multistep-form.svelte.d.ts",
+      "svelte": "./dist/components/form/multistep-form.svelte"
+    },
     "./components/form/totp-6.svelte": {
       "types": "./dist/components/form/totp-6.svelte.d.ts",
       "svelte": "./dist/components/form/totp-6.svelte"
@@ -141,6 +161,26 @@
     "./components/form/types": {
       "types": "./dist/components/form/types.d.ts",
       "svelte": "./dist/components/form/types.js"
+    },
+    "./components/nav/sidebar/sidebar-content.svelte": {
+      "types": "./dist/components/nav/sidebar/sidebar-content.svelte.d.ts",
+      "svelte": "./dist/components/nav/sidebar/sidebar-content.svelte"
+    },
+    "./components/nav/sidebar/sidebar-header.svelte": {
+      "types": "./dist/components/nav/sidebar/sidebar-header.svelte.d.ts",
+      "svelte": "./dist/components/nav/sidebar/sidebar-header.svelte"
+    },
+    "./components/nav/sidebar/sidebar-user.svelte": {
+      "types": "./dist/components/nav/sidebar/sidebar-user.svelte.d.ts",
+      "svelte": "./dist/components/nav/sidebar/sidebar-user.svelte"
+    },
+    "./components/nav/sidebar/sidebar.svelte": {
+      "types": "./dist/components/nav/sidebar/sidebar.svelte.d.ts",
+      "svelte": "./dist/components/nav/sidebar/sidebar.svelte"
+    },
+    "./components/nav/sidebar/types": {
+      "types": "./dist/components/nav/sidebar/types.d.ts",
+      "svelte": "./dist/components/nav/sidebar/types.js"
     },
     "./components/nav/simple-sidebar.svelte": {
       "types": "./dist/components/nav/simple-sidebar.svelte.d.ts",
@@ -153,6 +193,10 @@
     "./components/table/base-table.svelte": {
       "types": "./dist/components/table/base-table.svelte.d.ts",
       "svelte": "./dist/components/table/base-table.svelte"
+    },
+    "./components/table/clean-table.svelte": {
+      "types": "./dist/components/table/clean-table.svelte.d.ts",
+      "svelte": "./dist/components/table/clean-table.svelte"
     },
     "./components/table/helpers.svelte": {
       "types": "./dist/components/table/helpers.svelte.d.ts",
