@@ -12,7 +12,7 @@
     name: string;
     email: string;
     avatar: string;
-    logout: () => Promise<{ error?: string }>;
+    logout: () => Promise<{ error?: any }>;
   }
 
   let { name, email, avatar, logout }: Props = $props();

@@ -16,5 +16,5 @@ export interface SidebarUserInfo {
   permissions: string[];
   name: string;
   email: string;
-  avatar?: string;
+  avatar?: string | undefined | null;
 }
