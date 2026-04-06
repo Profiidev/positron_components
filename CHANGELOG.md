@@ -2,18 +2,16 @@
 
 ## [1.15.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.4...positron-components-v1.15.0) (2026-04-06)
 
-
 ### Features
 
-* added clean table ([70e16ea](https://github.com/Profiidev/positron_components/commit/70e16ea1ec6e9be8751efbf241881e6061f82f63))
-* added form components ([5c13f3f](https://github.com/Profiidev/positron_components/commit/5c13f3fb87762460823cb6d7589e210bf25f46ac))
-* added sidebar components ([b349323](https://github.com/Profiidev/positron_components/commit/b349323eb5b49ebf414b04df2fd9e81c3bdbd945))
-* added websocket connection ([415fd6e](https://github.com/Profiidev/positron_components/commit/415fd6ebab6046ad1cbf67cf3c6082ae180f5b1e))
-
+- added clean table ([70e16ea](https://github.com/Profiidev/positron_components/commit/70e16ea1ec6e9be8751efbf241881e6061f82f63))
+- added form components ([5c13f3f](https://github.com/Profiidev/positron_components/commit/5c13f3fb87762460823cb6d7589e210bf25f46ac))
+- added sidebar components ([b349323](https://github.com/Profiidev/positron_components/commit/b349323eb5b49ebf414b04df2fd9e81c3bdbd945))
+- added websocket connection ([415fd6e](https://github.com/Profiidev/positron_components/commit/415fd6ebab6046ad1cbf67cf3c6082ae180f5b1e))
 
 ### Bug Fixes
 
-* added option for href for table actions ([2b4adcf](https://github.com/Profiidev/positron_components/commit/2b4adcfbe4c41e0ee2f838fd87f2d610b19d5a71))
+- added option for href for table actions ([2b4adcf](https://github.com/Profiidev/positron_components/commit/2b4adcfbe4c41e0ee2f838fd87f2d610b19d5a71))
 
 ## [1.14.4](https://github.com/Profiidev/positron_components/compare/positron-components-v1.14.3...positron-components-v1.14.4) (2026-04-01)
 
