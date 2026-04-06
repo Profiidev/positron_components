@@ -6,7 +6,7 @@
   interface Props {
     edit_disabled: boolean;
     delete_disabled: boolean;
-    edit: () => void;
+    edit?: (() => void) | string;
     remove: () => void;
   }
 
@@ -17,7 +17,8 @@
   <Button
     size="icon"
     variant="secondary"
-    onclick={edit}
+    onclick={typeof edit === 'function' ? edit : undefined}
+    href={typeof edit === 'string' ? edit : undefined}
     disabled={edit_disabled}
     class="ml-auto cursor-pointer"
   >
