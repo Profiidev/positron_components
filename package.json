@@ -719,7 +719,7 @@
     "@lucide/svelte": "1.7.0",
     "@shikijs/langs": "4.0.2",
     "@shikijs/themes": "4.0.2",
-    "@sveltejs/kit": "2.55.0",
+    "@sveltejs/kit": "2.57.1",
     "@sveltejs/package": "^2.5.7",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@tailwindcss/typography": "^0.5.19",
