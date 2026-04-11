@@ -3,7 +3,7 @@
   import SidebarHeader from './sidebar-header.svelte';
   import SidebarContent from './sidebar-content.svelte';
   import SidebarUser from './sidebar-user.svelte';
-  import type { Snippet } from 'svelte';
+  import type { Component, Snippet } from 'svelte';
   import type { NavGroup, SidebarUserInfo } from './types';
 
   interface Props {
@@ -11,17 +11,19 @@
     children: Snippet;
     version: string;
     app_name: string;
+    app_icon?: Component;
     items: NavGroup[];
     logout: () => Promise<{ error?: any }>;
   }
 
-  const { children, user, version, app_name, items, logout }: Props = $props();
+  const { children, user, version, app_name, app_icon, items, logout }: Props =
+    $props();
 </script>
 
 <Sidebar.Provider>
   <Sidebar.Root collapsible="icon" variant="floating">
     <Sidebar.Header>
-      <SidebarHeader {app_name} {version} />
+      <SidebarHeader {app_name} {app_icon} {version} />
     </Sidebar.Header>
     <Sidebar.Content>
       <SidebarContent {items} {user} />
