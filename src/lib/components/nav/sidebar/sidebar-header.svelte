@@ -3,16 +3,19 @@
   import Snowflake from '@lucide/svelte/icons/snowflake';
   import PanelLeftOpen from '@lucide/svelte/icons/panel-left-open';
   import PanelLeftClose from '@lucide/svelte/icons/panel-left-close';
+  import type { Component } from 'svelte';
 
   interface Props {
     version: string;
     app_name: string;
+    app_icon?: Component;
   }
 
-  let { version, app_name }: Props = $props();
+  let { version, app_name, app_icon }: Props = $props();
 
   let sidebar = Sidebar.useSidebar();
   let isOpen = $derived(sidebar.props.open());
+  let AppIcon = $derived(app_icon ?? Snowflake);
 </script>
 
 <Sidebar.Menu>
@@ -27,7 +30,7 @@
           <div
             class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg"
           >
-            <Snowflake class="size-4 text-[#9db6ed]" />
+            <AppIcon class="size-4 text-[#9db6ed]" />
           </div>
           <div class="flex flex-col gap-0.5 leading-none">
             <span class="font-medium text-nowrap">{app_name}</span>
