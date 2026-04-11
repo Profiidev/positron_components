@@ -2,11 +2,10 @@
 
 ## [1.15.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.15.1...positron-components-v1.15.2) (2026-04-11)
 
-
 ### Bug Fixes
 
-* updated typescript ([432e174](https://github.com/Profiidev/positron_components/commit/432e174e41d96db48ca153f2ba019c700e30caa2))
-* wider deps pinning ([8e647c9](https://github.com/Profiidev/positron_components/commit/8e647c982ba929475aa09879f4638d90582011bb))
+- updated typescript ([432e174](https://github.com/Profiidev/positron_components/commit/432e174e41d96db48ca153f2ba019c700e30caa2))
+- wider deps pinning ([8e647c9](https://github.com/Profiidev/positron_components/commit/8e647c982ba929475aa09879f4638d90582011bb))
 
 ## [1.15.1](https://github.com/Profiidev/positron_components/compare/positron-components-v1.15.0...positron-components-v1.15.1) (2026-04-06)
 
