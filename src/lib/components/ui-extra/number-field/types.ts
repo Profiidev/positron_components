@@ -1,6 +1,6 @@
 import type { Snippet } from 'svelte';
 import type { HTMLInputAttributes } from 'svelte/elements';
-import type { ButtonElementProps } from '$lib/components/ui-extra/button';
+import type { ButtonProps } from '../../../blocks/button.svelte';
 import type { UseRampOptions } from '../../../blocks/use-ramp.svelte';
 import type { WithElementRef } from '../../../blocks/utils';
 
@@ -13,7 +13,7 @@ export type NumberFieldRootProps = {
   children: Snippet;
 };
 
-export type NumberFieldButtonProps = Omit<ButtonElementProps, 'disabled'> & {
+export type NumberFieldButtonProps = Omit<ButtonProps, 'disabled'> & {
   disabled?: boolean;
 };
 

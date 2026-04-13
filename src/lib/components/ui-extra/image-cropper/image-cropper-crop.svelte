@@ -1,8 +1,5 @@
 <script lang="ts">
-  import {
-    type ButtonElementProps,
-    Button
-  } from '$lib/components/ui-extra/button';
+  import Button, { type ButtonProps } from '../../../blocks/button.svelte';
   import { useImageCropperCrop } from '$lib/components/ui-extra/image-cropper/image-cropper.svelte.js';
   import CropIcon from '@lucide/svelte/icons/crop';
 
@@ -12,13 +9,13 @@
     size = 'sm',
     onclick,
     ...rest
-  }: ButtonElementProps = $props();
+  }: ButtonProps = $props();
 
   const cropState = useImageCropperCrop();
 </script>
 
 <Button
-  {...rest}
+  {...rest as /* eslint-disable-line @typescript-eslint/no-explicit-any */ any}
   bind:ref
   {size}
   {variant}

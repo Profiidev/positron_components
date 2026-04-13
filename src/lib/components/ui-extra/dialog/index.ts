@@ -1,5 +1,5 @@
-import { Dialog as DialogPrimitive } from 'bits-ui';
-
+import Root from '$lib/components/ui-extra/dialog/dialog.svelte';
+import Portal from '$lib/components/ui-extra/dialog/dialog-portal.svelte';
 import Title from '$lib/components/ui-extra/dialog/dialog-title.svelte';
 import Footer from '$lib/components/ui-extra/dialog/dialog-footer.svelte';
 import Header from '$lib/components/ui-extra/dialog/dialog-header.svelte';
@@ -8,9 +8,6 @@ import Content from '$lib/components/ui-extra/dialog/dialog-content.svelte';
 import Description from '$lib/components/ui-extra/dialog/dialog-description.svelte';
 import Trigger from '$lib/components/ui-extra/dialog/dialog-trigger.svelte';
 import Close from '$lib/components/ui-extra/dialog/dialog-close.svelte';
-
-const Root = DialogPrimitive.Root;
-const Portal = DialogPrimitive.Portal;
 
 export {
   Root,

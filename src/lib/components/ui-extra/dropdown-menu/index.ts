@@ -14,15 +14,18 @@ import Trigger from '$lib/components/ui-extra/dropdown-menu/dropdown-menu-trigge
 import SubContent from '$lib/components/ui-extra/dropdown-menu/dropdown-menu-sub-content.svelte';
 import SubTrigger from '$lib/components/ui-extra/dropdown-menu/dropdown-menu-sub-trigger.svelte';
 import GroupHeading from '$lib/components/ui-extra/dropdown-menu/dropdown-menu-group-heading.svelte';
+import Portal from '$lib/components/ui-extra/dropdown-menu/dropdown-menu-portal.svelte';
 
 export {
   CheckboxGroup,
   CheckboxItem,
   Content,
+  Portal,
   Root as DropdownMenu,
   CheckboxGroup as DropdownMenuCheckboxGroup,
   CheckboxItem as DropdownMenuCheckboxItem,
   Content as DropdownMenuContent,
+  Portal as DropdownMenuPortal,
   Group as DropdownMenuGroup,
   Item as DropdownMenuItem,
   Label as DropdownMenuLabel,

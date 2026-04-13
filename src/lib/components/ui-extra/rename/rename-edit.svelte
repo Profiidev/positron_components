@@ -1,14 +1,11 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import {
-    Button,
-    type ButtonElementProps
-  } from '$lib/components/ui-extra/button';
+  import Button, { type ButtonProps } from '../../../blocks/button.svelte';
   import { useRenameEdit } from '$lib/components/ui-extra/rename/rename.svelte.js';
 
   const editState = useRenameEdit();
 
-  type Props = Omit<ButtonElementProps, 'type' | 'onclick'> & {
+  type Props = Omit<ButtonProps, 'type' | 'onclick'> & {
     child?: Snippet<[{ edit: () => void }]>;
   };
 

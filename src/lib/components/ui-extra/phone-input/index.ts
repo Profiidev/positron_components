@@ -4,4 +4,4 @@ import PhoneInput, {
 
 export { PhoneInput, defaultOptions };
 
-export type * from '$lib/components/ui-extra/phone-input/types';
+export type { PhoneInputProps } from '$lib/components/ui-extra/phone-input/types';

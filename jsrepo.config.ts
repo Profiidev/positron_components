@@ -12,7 +12,8 @@ export default defineConfig({
     action: 'src/lib/blocks',
     hook: 'src/lib/blocks',
     lib: 'src/lib/blocks',
-    util: 'src/lib/blocks'
+    util: 'src/lib/blocks',
+    component: 'src/lib/blocks'
   },
   transforms: [prettier()]
 });

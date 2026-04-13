@@ -7,4 +7,16 @@ import SkinToneSelector from '$lib/components/ui-extra/emoji-picker/emoji-picker
 
 export { Root, List, Viewport, Search, Footer, SkinToneSelector };
 
-export type * from '$lib/components/ui-extra/emoji-picker/types';
+export type {
+  SelectedEmoji,
+  EmojiPickerSkin,
+  EmojiPickerRootPropsWithoutHTML,
+  EmojiPickerRootProps,
+  EmojiPickerListPropsWithoutHTML,
+  EmojiPickerListProps,
+  EmojiPickerSearchProps,
+  EmojiPickerFooterPropsWithoutHTML,
+  EmojiPickerFooterProps,
+  EmojiPickerSkinPropsWithoutHTML,
+  EmojiPickerSkinProps
+} from '$lib/components/ui-extra/emoji-picker/types';

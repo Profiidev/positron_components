@@ -1,6 +1,9 @@
 import Root from '$lib/components/ui-extra/tabs/tabs.svelte';
 import Content from '$lib/components/ui-extra/tabs/tabs-content.svelte';
-import List from '$lib/components/ui-extra/tabs/tabs-list.svelte';
+import List, {
+  tabsListVariants,
+  type TabsListVariant
+} from '$lib/components/ui-extra/tabs/tabs-list.svelte';
 import Trigger from '$lib/components/ui-extra/tabs/tabs-trigger.svelte';
 
 export {
@@ -8,6 +11,8 @@ export {
   Content,
   List,
   Trigger,
+  tabsListVariants,
+  type TabsListVariant,
   //
   Root as Tabs,
   Content as TabsContent,
