@@ -2,4 +2,4 @@ import NLPDateInput from '$lib/components/ui-extra/nlp-date-input/nlp-date-input
 
 export { NLPDateInput };
 
-export type * from '$lib/components/ui-extra/nlp-date-input/types';
+export type { NLPDateInputProps } from '$lib/components/ui-extra/nlp-date-input/nlp-date-input.svelte';

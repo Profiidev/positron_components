@@ -4,6 +4,7 @@
   import { useAnimation } from '$lib/components/ui-extra/terminal/terminal.svelte.js';
   import type { TerminalAnimationProps } from '$lib/components/ui-extra/terminal/types';
   import { fly } from 'svelte/transition';
+  import { box } from 'svelte-toolbelt';
 
   let {
     children,
@@ -24,7 +25,7 @@
 
   const duration = $derived(300 / animationSpeed);
 
-  const animation = useAnimation({ delay, play });
+  const animation = useAnimation({ delay: box.with(() => delay), play });
 
   onDestroy(() => {
     animation.dispose();

@@ -3,11 +3,8 @@
 
   let {
     open = $bindable(false),
-    children,
     ...restProps
   }: DropdownMenuPrimitive.RootProps = $props();
 </script>
 
-<DropdownMenuPrimitive.Root bind:open {...restProps}>
-  {@render children?.()}
-</DropdownMenuPrimitive.Root>
+<DropdownMenuPrimitive.Root bind:open {...restProps} />

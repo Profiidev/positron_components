@@ -1,8 +1,5 @@
 <script lang="ts">
-  import {
-    type ButtonElementProps,
-    Button
-  } from '$lib/components/ui-extra/button';
+  import Button, { type ButtonProps } from '../../../blocks/button.svelte';
   import { useImageCropperCancel } from '$lib/components/ui-extra/image-cropper/image-cropper.svelte.js';
   import Trash2Icon from '@lucide/svelte/icons/trash-2';
 
@@ -12,13 +9,13 @@
     size = 'sm',
     onclick,
     ...rest
-  }: ButtonElementProps = $props();
+  }: ButtonProps = $props();
 
   const cancelState = useImageCropperCancel();
 </script>
 
 <Button
-  {...rest}
+  {...rest as /* eslint-disable-line @typescript-eslint/no-explicit-any */ any}
   bind:ref
   {size}
   {variant}

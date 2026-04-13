@@ -16,4 +16,11 @@ export {
   BubbleAvatarFallback
 };
 
-export type * from '$lib/components/ui-extra/chat/types';
+export type {
+  ChatListPropsWithoutHTML,
+  ChatListProps,
+  ChatBubblePropsWithoutHTML,
+  ChatBubbleProps,
+  ChatBubbleMessagePropsWithoutHTML,
+  ChatBubbleMessageProps
+} from '$lib/components/ui-extra/chat/types';

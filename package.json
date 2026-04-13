@@ -34,6 +34,10 @@
       "types": "./dist/blocks/active.svelte.d.ts",
       "svelte": "./dist/blocks/active.svelte.js"
     },
+    "./blocks/button.svelte": {
+      "types": "./dist/blocks/button.svelte.d.ts",
+      "svelte": "./dist/blocks/button.svelte"
+    },
     "./blocks/casing": {
       "types": "./dist/blocks/casing.d.ts",
       "svelte": "./dist/blocks/casing.js"
@@ -274,6 +278,10 @@
       "types": "./dist/components/ui-extra/input/index.d.ts",
       "svelte": "./dist/components/ui-extra/input/index.js"
     },
+    "./components/ui-extra/input-group": {
+      "types": "./dist/components/ui-extra/input-group/index.d.ts",
+      "svelte": "./dist/components/ui-extra/input-group/index.js"
+    },
     "./components/ui-extra/language-switcher": {
       "types": "./dist/components/ui-extra/language-switcher/index.d.ts",
       "svelte": "./dist/components/ui-extra/language-switcher/index.js"
@@ -330,6 +338,10 @@
       "types": "./dist/components/ui-extra/snippet/index.d.ts",
       "svelte": "./dist/components/ui-extra/snippet/index.js"
     },
+    "./components/ui-extra/spinner": {
+      "types": "./dist/components/ui-extra/spinner/index.d.ts",
+      "svelte": "./dist/components/ui-extra/spinner/index.js"
+    },
     "./components/ui-extra/star-rating": {
       "types": "./dist/components/ui-extra/star-rating/index.d.ts",
       "svelte": "./dist/components/ui-extra/star-rating/index.js"
@@ -349,6 +361,10 @@
     "./components/ui-extra/terminal": {
       "types": "./dist/components/ui-extra/terminal/index.d.ts",
       "svelte": "./dist/components/ui-extra/terminal/index.js"
+    },
+    "./components/ui-extra/textarea": {
+      "types": "./dist/components/ui-extra/textarea/index.d.ts",
+      "svelte": "./dist/components/ui-extra/textarea/index.js"
     },
     "./components/ui-extra/theme-selector": {
       "types": "./dist/components/ui-extra/theme-selector/index.d.ts",

@@ -4,6 +4,7 @@
   import { useAnimation } from '$lib/components/ui-extra/terminal/terminal.svelte.js';
   import type { TerminalAnimationProps } from '$lib/components/ui-extra/terminal/types';
   import { typewriter } from '../../../blocks/typewriter.svelte';
+  import { box } from 'svelte-toolbelt';
 
   let {
     children,
@@ -19,7 +20,7 @@
     animationSpeed = speed;
   };
 
-  const animation = useAnimation({ delay, play });
+  const animation = useAnimation({ delay: box.with(() => delay), play });
 
   onDestroy(() => animation.dispose());
 </script>

@@ -20,4 +20,15 @@ export {
   getFileFromUrl
 };
 
-export type * from '$lib/components/ui-extra/image-cropper/types';
+export type {
+  ImageCropperRootPropsWithoutHTML,
+  ImageCropperRootProps,
+  ImageCropperDialogProps,
+  ImageCropperCropperProps,
+  ImageCropperControlsWithoutHTML,
+  ImageCropperControlsProps,
+  ImageCropperPreviewPropsWithoutHTML,
+  ImageCropperPreviewProps,
+  ImageCropperUploadTriggerPropsWithoutHTML,
+  ImageCropperUploadTriggerProps
+} from '$lib/components/ui-extra/image-cropper/types';

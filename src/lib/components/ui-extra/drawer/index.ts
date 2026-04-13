@@ -1,5 +1,3 @@
-import { Drawer as DrawerPrimitive } from 'vaul-svelte';
-
 import Root from '$lib/components/ui-extra/drawer/drawer.svelte';
 import Content from '$lib/components/ui-extra/drawer/drawer-content.svelte';
 import Description from '$lib/components/ui-extra/drawer/drawer-description.svelte';
@@ -10,8 +8,7 @@ import Title from '$lib/components/ui-extra/drawer/drawer-title.svelte';
 import NestedRoot from '$lib/components/ui-extra/drawer/drawer-nested.svelte';
 import Close from '$lib/components/ui-extra/drawer/drawer-close.svelte';
 import Trigger from '$lib/components/ui-extra/drawer/drawer-trigger.svelte';
-
-const Portal: typeof DrawerPrimitive.Portal = DrawerPrimitive.Portal;
+import Portal from '$lib/components/ui-extra/drawer/drawer-portal.svelte';
 
 export {
   Root,
