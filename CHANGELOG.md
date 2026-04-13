@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.16.0](https://github.com/Profiidev/positron_components/compare/positron-components-v1.15.2...positron-components-v1.16.0) (2026-04-13)
+
+
+### Features
+
+* added option to set sidebar app icon ([7ba5107](https://github.com/Profiidev/positron_components/commit/7ba510772d0370f538ff4b4a73c39fcdf60bf455))
+
 ## [1.15.2](https://github.com/Profiidev/positron_components/compare/positron-components-v1.15.1...positron-components-v1.15.2) (2026-04-11)
 
 ### Bug Fixes
