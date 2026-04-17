@@ -19,8 +19,8 @@
   "svelte": "./dist/index.js",
   "exports": {
     ".": {
-      "svelte": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
     },
     "./actions/active.svelte": {
       "types": "./dist/actions/active.svelte.d.ts",
