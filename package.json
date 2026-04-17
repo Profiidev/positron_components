@@ -714,6 +714,7 @@
   "types": "./dist/index.d.ts",
   "files": [
     "dist",
+    ".oxlintrc.base.json",
     "!dist/**/*.test.*",
     "!dist/**/*.spec.*"
   ],
@@ -771,7 +772,10 @@
     "@sveltejs/package": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@tailwindcss/typography": "^0.5.0",
+    "@types/node": "^25.6.0",
     "jsrepo": "^3.0.0",
+    "oxlint": "^1.60.0",
+    "oxlint-tsgolint": "^0.21.1",
     "prettier": "^3.0.0",
     "prettier-plugin-svelte": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.7.0",
