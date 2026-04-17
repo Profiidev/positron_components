@@ -1,9 +1,9 @@
 {
-  "name": "positron-components",
+  "name": "@profidev/pleiades",
   "version": "1.15.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Profiidev/positron_components"
+    "url": "https://github.com/Profiidev/pleiades"
   },
   "files": [
     "dist",
