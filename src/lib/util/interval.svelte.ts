@@ -79,7 +79,7 @@ export const wait_for = (
           clearTimeout(timeout);
         }
         resolve(false);
-      }, max);
+      }, max) as unknown as number;
     }
   });
 };
