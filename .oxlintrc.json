@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "extends": [".oxlintrc.base.json"],
+  "ignorePatterns": [
+    "*.svelte",
+    "scripts/**",
+    "src/lib/actions/**",
+    "src/lib/blocks/**",
+    "src/lib/components/ui/**",
+    "src/lib/components/ui-extra/**",
+    "src/lib/hooks/**",
+    "src/lib/util/**",
+    "src/lib/utils.ts"
+  ]
+}

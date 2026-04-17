@@ -11,126 +11,148 @@ export interface RequestOptions {
 export const patch = async <T = undefined>(
   path: string,
   options: RequestOptions = {}
-): Promise<T | RequestError> => {
-  return await request(path, 'PATCH', options);
-};
+): Promise<T | RequestError> => await request(path, 'PATCH', options);
 
 export const put = async <T = undefined>(
   path: string,
   options: RequestOptions = {}
-): Promise<T | RequestError> => {
-  return await request(path, 'PUT', options);
-};
+): Promise<T | RequestError> => await request(path, 'PUT', options);
 
 export const delete_ = async <T = undefined>(
   path: string,
   options: RequestOptions = {}
-): Promise<T | RequestError> => {
-  return await request(path, 'DELETE', options);
-};
+): Promise<T | RequestError> => await request(path, 'DELETE', options);
 
 export const post = async <T = undefined>(
   path: string,
   options: RequestOptions = {}
-): Promise<T | RequestError> => {
-  return await request(path, 'POST', options);
-};
+): Promise<T | RequestError> => await request(path, 'POST', options);
 
 export const get = async <T = undefined>(
   path: string,
   options: Omit<RequestOptions, 'body'> = {}
-): Promise<T | RequestError> => {
-  return await request(path, 'GET', options);
-};
+): Promise<T | RequestError> => await request(path, 'GET', options);
 
+// oxlint-disable-next-line complexity
 export const request = async <T = undefined>(
   path: string,
   method: string,
   { res_type, body, content_type, signal, fetch }: RequestOptions = {}
 ): Promise<T | RequestError> => {
-  res_type = res_type ?? ResponseType.None;
+  const res_type_ = res_type ?? ResponseType.None;
+  let content_type_ = content_type;
+  let body_ = body;
 
-  if (body instanceof ArrayBuffer) {
-    content_type = 'application/octet-stream';
-  } else if (body instanceof Blob) {
-    content_type = body.type;
-    body = body.stream();
-  } else if (typeof body === 'string') {
-    content_type = 'text/plain';
-  } else if (typeof body === 'object' && body !== null) {
-    content_type = 'application/json';
-    body = JSON.stringify(body);
+  if (body_ instanceof ArrayBuffer) {
+    content_type_ = 'application/octet-stream';
+  } else if (body_ instanceof Blob) {
+    content_type_ = body_.type;
+    body_ = body_.stream();
+  } else if (typeof body_ === 'string') {
+    content_type_ = 'text/plain';
+  } else if (typeof body_ === 'object' && body_ !== null) {
+    content_type_ = 'application/json';
+    body_ = JSON.stringify(body_);
   }
 
-  let headers: HeadersInit = {};
-  if (content_type) {
-    headers['Content-Type'] = content_type;
+  const headers: HeadersInit = {};
+  if (content_type_) {
+    headers['Content-Type'] = content_type_;
   }
 
-  fetch = fetch ?? globalThis.fetch;
+  const fetch_ = fetch ?? globalThis.fetch;
 
   try {
-    let res = await fetch!(`${path}`, {
-      method,
+    const res = await fetch_(path, {
+      body: body_,
       headers,
-      body,
+      method,
       signal
     });
 
     switch (res.status) {
-      case 200:
+      case 200: {
         break;
-      case 400:
+      }
+      case 400: {
         return RequestError.BadRequest;
-      case 401:
+      }
+      case 401: {
         return RequestError.Unauthorized;
-      case 403:
+      }
+      case 403: {
         return RequestError.Forbidden;
-      case 404:
+      }
+      case 404: {
         return RequestError.NotFound;
-      case 406:
+      }
+      case 406: {
         return RequestError.NotAcceptable;
-      case 408:
+      }
+      case 408: {
         return RequestError.RequestTimeout;
-      case 409:
+      }
+      case 409: {
         return RequestError.Conflict;
-      case 410:
+      }
+      case 410: {
         return RequestError.Gone;
-      case 413:
+      }
+      case 413: {
         return RequestError.ContentTooLarge;
-      case 415:
+      }
+      case 415: {
         return RequestError.UnsupportedMediaType;
-      case 422:
+      }
+      case 422: {
         return RequestError.UnprocessableEntity;
-      case 429:
+      }
+      case 429: {
         return RequestError.TooManyRequests;
-      case 500:
+      }
+      case 500: {
         return RequestError.InternalServerError;
-      case 501:
+      }
+      case 501: {
         return RequestError.NotImplemented;
-      case 502:
+      }
+      case 502: {
         return RequestError.BadGateway;
-      case 503:
+      }
+      case 503: {
         return RequestError.ServiceUnavailable;
-      case 504:
+      }
+      case 504: {
         return RequestError.GatewayTimeout;
-      case 507:
+      }
+      case 507: {
         return RequestError.InsufficientStorage;
-      default:
+      }
+      default: {
         return RequestError.Other;
+      }
     }
 
-    switch (res_type) {
-      case ResponseType.Json:
-        let json = await res.json();
+    switch (res_type_) {
+      case ResponseType.Json: {
+        const json = await res.json();
+        // oxlint-disable-next-line no-unsafe-type-assertion
         return json as T;
-      case ResponseType.Text:
-        let text = await res.text();
+      }
+      case ResponseType.Text: {
+        const text = await res.text();
+        // oxlint-disable-next-line no-unsafe-type-assertion
         return text as T;
-      case ResponseType.None:
+      }
+      case ResponseType.None: {
+        // oxlint-disable-next-line no-unsafe-type-assertion
         return undefined as T;
+      }
+      default: {
+        return RequestError.Other;
+      }
     }
-  } catch (_) {
+  } catch {
     return RequestError.Other;
   }
 };
