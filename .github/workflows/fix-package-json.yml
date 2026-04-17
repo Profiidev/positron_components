@@ -10,18 +10,26 @@ jobs:
       checks: write
       contents: write
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/create-github-app-token@1b10c78c7865c340bc4f6099eb2f838309f1e8c3 # v3
+        id: app-token
         with:
-          token: ${{ secrets.RELEASE_PLZ_TOKEN }}
+          client-id: ${{ secrets.COMMIT_BOT_CLIENT_ID }}
+          private-key: ${{ secrets.COMMIT_BOT_PRIVATE_KEY }}
+      - uses: actions/checkout@v6
+      - uses: bahmutov/npm-install@v1
+        with:
+          useLockFile: false
 
       - name: Fix package.json
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git fetch --no-tags --depth=1 origin ${{ github.event.pull_request.head.ref }}
-          git branch --force ${{ github.event.pull_request.head.ref }} --track origin/${{ github.event.pull_request.head.ref }}
-          git checkout ${{ github.event.pull_request.head.ref }}
           node scripts/generate-exports.js
-          git add package.json
-          git commit -am "chore: fix package.json exports" --no-verify || echo "No changes to commit"
-          git push
+          npx oxlint --fix
+          npx prettier -cw .
+
+      - uses: planetscale/ghcommit-action@v0.2.20
+        with:
+          commit_message: "chore: fix package.json exports"
+          repo: ${{ github.repository }}
+          branch: ${{ github.head_ref || github.ref_name }}
+        env:
+          GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}

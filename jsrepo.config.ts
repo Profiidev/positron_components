@@ -2,18 +2,18 @@ import { defineConfig } from 'jsrepo';
 import prettier from '@jsrepo/transform-prettier';
 
 export default defineConfig({
-  registries: ['@ieedan/shadcn-svelte-extras'],
   paths: {
     '*': '$lib/blocks',
-    ui: '$lib/components/ui-extra',
-    utils: '$lib/util',
-    hooks: '$lib/hooks',
-    actions: '$lib/actions',
     action: 'src/lib/blocks',
+    actions: '$lib/actions',
+    component: 'src/lib/blocks',
     hook: 'src/lib/blocks',
+    hooks: '$lib/hooks',
     lib: 'src/lib/blocks',
+    ui: '$lib/components/ui-extra',
     util: 'src/lib/blocks',
-    component: 'src/lib/blocks'
+    utils: '$lib/util'
   },
+  registries: ['@ieedan/shadcn-svelte-extras'],
   transforms: [prettier()]
 });

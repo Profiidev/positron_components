@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const packageJsonPath = path.join(__dirname, '../package.json');
 const libPath = path.join(__dirname, '../src/lib');
 
-const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 const exports = {
   '.': {
@@ -26,8 +26,8 @@ function walk(dir, baseDir) {
       if (fs.existsSync(path.join(fullPath, 'index.ts'))) {
         const relativeDir = path.relative(baseDir, fullPath);
         const exportKey = `./${relativeDir}`;
-        // used when .d.ts files are not generated for folders (only has happened ones for dropdown-menu)
-        let skip = exportKey.includes('ui-extra/tooltip');
+        // Used when .d.ts files are not generated for folders (only has happened ones for dropdown-menu)
+        const skip = exportKey.includes('ui-extra/tooltip');
         exports[exportKey] = {
           types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`,
           svelte: `./dist/${relativeDir}/index.js`
@@ -40,8 +40,12 @@ function walk(dir, baseDir) {
       const ext = path.extname(file);
       const name = path.basename(file, ext);
 
-      if (file === 'index.ts') continue; // Handled by directory check
-      if (file.endsWith('.d.ts')) continue; // Ignore d.ts files
+      if (file === 'index.ts') {
+        continue;
+      } // Handled by directory check
+      if (file.endsWith('.d.ts')) {
+        continue;
+      } // Ignore d.ts files
 
       let exportKey;
       let typesPath;
@@ -56,7 +60,7 @@ function walk(dir, baseDir) {
         sveltePath = `./dist/${relativeDir}${file}`;
       } else if (file.endsWith('.svelte.ts')) {
         // .svelte.ts -> .svelte.js
-        const baseName = path.basename(file, '.ts'); // file.svelte
+        const baseName = path.basename(file, '.ts'); // File.svelte
         exportKey = `./${relativeDir}${baseName}`;
         typesPath = `./dist/${relativeDir}${baseName}.d.ts`;
         sveltePath = `./dist/${relativeDir}${baseName}.js`;
@@ -80,7 +84,7 @@ walk(libPath, libPath);
 
 // Sort exports
 const sortedExports = Object.keys(exports)
-  .sort()
+  .toSorted()
   .reduce((acc, key) => {
     acc[key] = exports[key];
     return acc;
@@ -88,5 +92,5 @@ const sortedExports = Object.keys(exports)
 
 pkg.exports = sortedExports;
 
-fs.writeFileSync(packageJsonPath, JSON.stringify(pkg, null, 2) + '\n');
+fs.writeFileSync(packageJsonPath, JSON.stringify(pkg, undefined, 2) + '\n');
 console.log('Updated package.json exports');
