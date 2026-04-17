@@ -10,8 +10,8 @@ const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 
 const exports = {
   '.': {
-    svelte: './dist/index.js',
-    types: './dist/index.d.ts'
+    types: './dist/index.d.ts',
+    svelte: './dist/index.js'
   }
 };
 
@@ -29,8 +29,8 @@ function walk(dir, baseDir) {
         // Used when .d.ts files are not generated for folders (only has happened ones for dropdown-menu)
         const skip = exportKey.includes('ui-extra/tooltip');
         exports[exportKey] = {
-          svelte: `./dist/${relativeDir}/index.js`,
-          types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`
+          types: skip ? undefined : `./dist/${relativeDir}/index.d.ts`,
+          svelte: `./dist/${relativeDir}/index.js`
         };
       } else {
         walk(fullPath, baseDir);
@@ -73,8 +73,8 @@ function walk(dir, baseDir) {
       }
 
       exports[exportKey] = {
-        svelte: sveltePath,
-        types: typesPath
+        types: typesPath,
+        svelte: sveltePath
       };
     }
   }
