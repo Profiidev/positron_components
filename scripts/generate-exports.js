@@ -40,8 +40,12 @@ function walk(dir, baseDir) {
       const ext = path.extname(file);
       const name = path.basename(file, ext);
 
-      if (file === 'index.ts') {continue;} // Handled by directory check
-      if (file.endsWith('.d.ts')) {continue;} // Ignore d.ts files
+      if (file === 'index.ts') {
+        continue;
+      } // Handled by directory check
+      if (file.endsWith('.d.ts')) {
+        continue;
+      } // Ignore d.ts files
 
       let exportKey;
       let typesPath;
