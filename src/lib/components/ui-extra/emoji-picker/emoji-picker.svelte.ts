@@ -1,6 +1,9 @@
 import { Context, watch } from 'runed';
 import type { ReadableBoxedValues, WritableBoxedValues } from 'svelte-toolbelt';
-import type { EmojiPickerSkin, SelectedEmoji } from '$lib/components/ui-extra/emoji-picker/types';
+import type {
+  EmojiPickerSkin,
+  SelectedEmoji
+} from '$lib/components/ui-extra/emoji-picker/types';
 import data, { type EmojiMartData } from '@emoji-mart/data';
 import { UseFrecency } from '../../../blocks/use-frecency.svelte';
 

@@ -226,6 +226,10 @@
       "types": "./dist/components/table/table-head.svelte.d.ts",
       "svelte": "./dist/components/table/table-head.svelte"
     },
+    "./components/ui-extra/alert-dialog": {
+      "types": "./dist/components/ui-extra/alert-dialog/index.d.ts",
+      "svelte": "./dist/components/ui-extra/alert-dialog/index.js"
+    },
     "./components/ui-extra/avatar": {
       "types": "./dist/components/ui-extra/avatar/index.d.ts",
       "svelte": "./dist/components/ui-extra/avatar/index.js"
@@ -238,6 +242,10 @@
       "types": "./dist/components/ui-extra/button/index.d.ts",
       "svelte": "./dist/components/ui-extra/button/index.js"
     },
+    "./components/ui-extra/button-group": {
+      "types": "./dist/components/ui-extra/button-group/index.d.ts",
+      "svelte": "./dist/components/ui-extra/button-group/index.js"
+    },
     "./components/ui-extra/chat": {
       "types": "./dist/components/ui-extra/chat/index.d.ts",
       "svelte": "./dist/components/ui-extra/chat/index.js"
@@ -249,6 +257,10 @@
     "./components/ui-extra/command": {
       "types": "./dist/components/ui-extra/command/index.d.ts",
       "svelte": "./dist/components/ui-extra/command/index.js"
+    },
+    "./components/ui-extra/confirm-delete-dialog": {
+      "types": "./dist/components/ui-extra/confirm-delete-dialog/index.d.ts",
+      "svelte": "./dist/components/ui-extra/confirm-delete-dialog/index.js"
     },
     "./components/ui-extra/copy-button": {
       "types": "./dist/components/ui-extra/copy-button/index.d.ts",
@@ -277,6 +289,10 @@
     "./components/ui-extra/file-drop-zone": {
       "types": "./dist/components/ui-extra/file-drop-zone/index.d.ts",
       "svelte": "./dist/components/ui-extra/file-drop-zone/index.js"
+    },
+    "./components/ui-extra/github-button": {
+      "types": "./dist/components/ui-extra/github-button/index.d.ts",
+      "svelte": "./dist/components/ui-extra/github-button/index.js"
     },
     "./components/ui-extra/image-cropper": {
       "types": "./dist/components/ui-extra/image-cropper/index.d.ts",
@@ -342,6 +358,14 @@
       "types": "./dist/components/ui-extra/scroll-area/index.d.ts",
       "svelte": "./dist/components/ui-extra/scroll-area/index.js"
     },
+    "./components/ui-extra/select": {
+      "types": "./dist/components/ui-extra/select/index.d.ts",
+      "svelte": "./dist/components/ui-extra/select/index.js"
+    },
+    "./components/ui-extra/separator": {
+      "types": "./dist/components/ui-extra/separator/index.d.ts",
+      "svelte": "./dist/components/ui-extra/separator/index.js"
+    },
     "./components/ui-extra/snippet": {
       "types": "./dist/components/ui-extra/snippet/index.d.ts",
       "svelte": "./dist/components/ui-extra/snippet/index.js"
@@ -349,6 +373,10 @@
     "./components/ui-extra/spinner": {
       "types": "./dist/components/ui-extra/spinner/index.d.ts",
       "svelte": "./dist/components/ui-extra/spinner/index.js"
+    },
+    "./components/ui-extra/split-button": {
+      "types": "./dist/components/ui-extra/split-button/index.d.ts",
+      "svelte": "./dist/components/ui-extra/split-button/index.js"
     },
     "./components/ui-extra/star-rating": {
       "types": "./dist/components/ui-extra/star-rating/index.d.ts",

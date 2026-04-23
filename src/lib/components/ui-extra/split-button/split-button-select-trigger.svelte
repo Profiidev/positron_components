@@ -1,6 +1,9 @@
 <script lang="ts" module>
   import type { WithoutChild } from '../../../blocks/utils.js';
-  import type { ButtonSize, ButtonVariant } from '$lib/components/ui-extra/button';
+  import type {
+    ButtonSize,
+    ButtonVariant
+  } from '$lib/components/ui-extra/button';
 
   export type SplitButtonSelectTriggerProps =
     WithoutChild<SelectPrimitive.TriggerProps> & {
